@@ -1,0 +1,1022 @@
+Sandbox logs:
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"684dd443-c023-45cf-9d37-acd3479c5751\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"684dd443-c023-45cf-9d37-acd3479c5751\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 0
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"9a8c7a1a-e0ee-41ae-9632-028da51b5059\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"9a8c7a1a-e0ee-41ae-9632-028da51b5059\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"a619b500-5286-4ea7-b9c0-918dc5f5e691\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"a619b500-5286-4ea7-b9c0-918dc5f5e691\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"3897c8f1-e157-49ec-9467-9e38a5d73718\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"3897c8f1-e157-49ec-9467-9e38a5d73718\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"f49d45d3-6de6-46cd-8b98-86336010049d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"f49d45d3-6de6-46cd-8b98-86336010049d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"42d8a529-f9bd-44d4-90fd-a7a2e1376129\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"42d8a529-f9bd-44d4-90fd-a7a2e1376129\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"fd4f490b-eb82-4b5c-80cf-a8d0a0a9bd87\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"fd4f490b-eb82-4b5c-80cf-a8d0a0a9bd87\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"3241b7e9-9137-46ec-9669-6ff9d58fc679\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"3241b7e9-9137-46ec-9669-6ff9d58fc679\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"0fe79e85-f00f-4ac1-9b11-6f16b797886e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"0fe79e85-f00f-4ac1-9b11-6f16b797886e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"45fb32bb-9fb2-4bad-8aff-76dec9d315ea\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"45fb32bb-9fb2-4bad-8aff-76dec9d315ea\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"343b78b7-f4b5-4134-9db9-e427388b4609\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"343b78b7-f4b5-4134-9db9-e427388b4609\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 1000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"048bc26c-091e-4e62-b749-b4148e5d38a8\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"048bc26c-091e-4e62-b749-b4148e5d38a8\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 1100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"bf54eed8-cce4-4dbe-8a86-4883f60e93b4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"bf54eed8-cce4-4dbe-8a86-4883f60e93b4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 1200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"726763ff-7a51-49b3-b899-231f93b91308\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"726763ff-7a51-49b3-b899-231f93b91308\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 1300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"c645121a-8167-459b-b5a9-13661343c6e4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"c645121a-8167-459b-b5a9-13661343c6e4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 1400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"9955a047-a69f-4063-84ae-d59d8cb71553\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"9955a047-a69f-4063-84ae-d59d8cb71553\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 1500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"68a7caa4-dcb2-486d-80dc-d36904348967\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"68a7caa4-dcb2-486d-80dc-d36904348967\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 1600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"d6ba9d4c-6bc0-451c-9599-1b7c9cc69e3d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"d6ba9d4c-6bc0-451c-9599-1b7c9cc69e3d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 1700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"28fe15eb-bbe5-4955-9b34-71e7dbe89482\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"28fe15eb-bbe5-4955-9b34-71e7dbe89482\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 1800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"572177fe-f3e1-4a36-b07b-5f3c145a2fdb\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"572177fe-f3e1-4a36-b07b-5f3c145a2fdb\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 1900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"2b1f8383-d24a-491c-9680-a9fc45d53e9e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"2b1f8383-d24a-491c-9680-a9fc45d53e9e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 2000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"6584980f-fb31-4878-9ab2-75bfa3403231\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"6584980f-fb31-4878-9ab2-75bfa3403231\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 2100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"1ca95327-6c60-48a9-ba99-22e805e098c6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"1ca95327-6c60-48a9-ba99-22e805e098c6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 2200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"a1a023f3-363b-4ebb-a23d-38af0590ea6a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"a1a023f3-363b-4ebb-a23d-38af0590ea6a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 2300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"b9252385-843d-4e69-8d1c-0be7e7d61ba9\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"b9252385-843d-4e69-8d1c-0be7e7d61ba9\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 2400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"33684c0f-d66e-429b-9fab-f63b47532ad7\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"33684c0f-d66e-429b-9fab-f63b47532ad7\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 2500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"1cb4cf2d-321c-40be-8a58-283fe1529ab1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"1cb4cf2d-321c-40be-8a58-283fe1529ab1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 2600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"e0a4e306-52f1-4f9d-96b7-eab6ebf6661f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"e0a4e306-52f1-4f9d-96b7-eab6ebf6661f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 2700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"d8e6bf31-08bc-4e7c-838a-fe95680e1f41\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"d8e6bf31-08bc-4e7c-838a-fe95680e1f41\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 2800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"15fd8b25-e0fc-4b80-b280-d784b50cc638\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"15fd8b25-e0fc-4b80-b280-d784b50cc638\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 2900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"8a193816-9461-4134-9ddd-04c4a292e4fc\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"8a193816-9461-4134-9ddd-04c4a292e4fc\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 3000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"554bfbab-de37-41ef-95a6-3a26564c7878\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"554bfbab-de37-41ef-95a6-3a26564c7878\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 3100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"2333043a-33b0-40a7-af8d-034ccc2c1406\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"2333043a-33b0-40a7-af8d-034ccc2c1406\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 3200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"036e3cbf-5b1f-47d8-b5ae-28ed8755d47a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"036e3cbf-5b1f-47d8-b5ae-28ed8755d47a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 3300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"56ce7c85-a939-42f1-91e3-5a794793f70e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"56ce7c85-a939-42f1-91e3-5a794793f70e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 3400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"727724d2-b7fa-4e57-801a-19490e4c9edc\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"727724d2-b7fa-4e57-801a-19490e4c9edc\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 3500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"7b00f17b-5335-4fbc-9db4-71a353c030d1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"7b00f17b-5335-4fbc-9db4-71a353c030d1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 3600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"f12c2323-e35a-443a-804a-868084417bb1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"f12c2323-e35a-443a-804a-868084417bb1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 3700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"c42f9902-19a0-498d-863f-15b0f9f95324\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"c42f9902-19a0-498d-863f-15b0f9f95324\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 3800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"09c56497-2a6b-4ac4-a74a-52a60fb76d3e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"09c56497-2a6b-4ac4-a74a-52a60fb76d3e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 3900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"a54fac79-79a8-4214-9603-b03c47d94350\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"a54fac79-79a8-4214-9603-b03c47d94350\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 4000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"91474905-460c-47e3-b7de-b1289d35b428\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"91474905-460c-47e3-b7de-b1289d35b428\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 4100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"270a5066-6e38-4602-a9bf-02bcaa43e653\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"270a5066-6e38-4602-a9bf-02bcaa43e653\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 4200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"6b2eef34-84bf-4fc4-847a-b770a44dcd45\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"6b2eef34-84bf-4fc4-847a-b770a44dcd45\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 4300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"dca0f00f-f8ee-4b36-97b5-b3a1c351988a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"dca0f00f-f8ee-4b36-97b5-b3a1c351988a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 4400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"cf6767cb-19b4-49a9-b572-738a49fc68ac\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"cf6767cb-19b4-49a9-b572-738a49fc68ac\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 4500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"ac6642e8-96e3-4cae-8fc2-ccf87b9d5045\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"ac6642e8-96e3-4cae-8fc2-ccf87b9d5045\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 4600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"bf36dec5-cb70-4342-935a-94d6698d0414\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"bf36dec5-cb70-4342-935a-94d6698d0414\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 4700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"f4c9c066-f29b-4b6c-bfe7-241e234fc50c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"f4c9c066-f29b-4b6c-bfe7-241e234fc50c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 4800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"378f4962-1f2a-4c3c-bd84-1b10757a0175\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"378f4962-1f2a-4c3c-bd84-1b10757a0175\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 4900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"96fdc743-c3aa-465a-a69d-09ca1d5ecdfa\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"96fdc743-c3aa-465a-a69d-09ca1d5ecdfa\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 5000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"b0a67497-b3a1-4280-9040-f6e5766e608f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"b0a67497-b3a1-4280-9040-f6e5766e608f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 5100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"1ad103d1-e243-4e77-a424-0924176497a7\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"1ad103d1-e243-4e77-a424-0924176497a7\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 5200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"6eb305e4-cd4f-49a6-a2aa-6cfd9a0197e3\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"6eb305e4-cd4f-49a6-a2aa-6cfd9a0197e3\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 5300
+}
+{
+  "sandboxLog": "Lambda errors have reached maximum value for submission c31441a8-f072-4c08-a722-f2a6c7457d4b",
+  "lambdaLog": null,
+  "timestamp": 5324
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"43070067-20a9-43a3-a764-617fdeda813e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"43070067-20a9-43a3-a764-617fdeda813e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 5400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"a7f82864-8fd6-4635-8f10-295fe076e068\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"a7f82864-8fd6-4635-8f10-295fe076e068\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 5500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"250969e0-f984-48e4-83ff-11673673e1e9\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"250969e0-f984-48e4-83ff-11673673e1e9\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 5600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"0c7d838a-42a2-41e4-9526-ce3f1ee00ec0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"0c7d838a-42a2-41e4-9526-ce3f1ee00ec0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 5700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"63a5a98f-7e7b-4965-9a00-b36bc2de11fc\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"63a5a98f-7e7b-4965-9a00-b36bc2de11fc\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 5800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"14d6b393-0927-4b1e-905a-04b601c84dbd\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"14d6b393-0927-4b1e-905a-04b601c84dbd\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 5900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"c31ab6ed-714b-4ece-b020-74f54cc7e58c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"c31ab6ed-714b-4ece-b020-74f54cc7e58c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 6000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"ab46d2b4-be1b-4718-ac32-a2fcfdddb7c3\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"ab46d2b4-be1b-4718-ac32-a2fcfdddb7c3\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 6100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"06338926-7785-43e7-8e64-f70a40c1d5e4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"06338926-7785-43e7-8e64-f70a40c1d5e4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 6200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"ac334688-995c-432a-9047-304fd18632b8\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"ac334688-995c-432a-9047-304fd18632b8\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 6300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"b03a7ec1-c1ac-4346-870a-45dc8be1ecd6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"b03a7ec1-c1ac-4346-870a-45dc8be1ecd6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 6400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"abafe053-0da8-448f-902c-6266117b040c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"abafe053-0da8-448f-902c-6266117b040c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 6500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"ecafd9d8-d755-44fc-a3a9-83ee2b8c40c6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"ecafd9d8-d755-44fc-a3a9-83ee2b8c40c6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 6600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"fc53bc20-7615-4ba7-9df4-e95b2fceeb73\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"fc53bc20-7615-4ba7-9df4-e95b2fceeb73\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 6700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"402e231f-967e-4072-907d-74f24478a320\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"402e231f-967e-4072-907d-74f24478a320\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 6800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"428baeef-2fed-43e9-977a-ffd1b952f5f5\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"428baeef-2fed-43e9-977a-ffd1b952f5f5\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 6900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"4424672d-5bc9-409f-b094-73f59588d400\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"4424672d-5bc9-409f-b094-73f59588d400\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 7000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"aa97c3c1-0b47-4f7b-a657-81ddae42dd0b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"aa97c3c1-0b47-4f7b-a657-81ddae42dd0b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 7100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"249e022e-77a9-4a01-bc4e-f3fabc85c902\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"249e022e-77a9-4a01-bc4e-f3fabc85c902\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 7200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"093be3e3-a833-4561-9252-96a864e5867b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"093be3e3-a833-4561-9252-96a864e5867b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 7300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"106571f2-9038-4625-bcd2-56d57f289542\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"106571f2-9038-4625-bcd2-56d57f289542\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 7400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"8c6cd863-8b53-49d8-8132-3595871fd817\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"8c6cd863-8b53-49d8-8132-3595871fd817\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 7500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"81fed9a4-a4de-4d73-945d-ad5f6e126e7c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"81fed9a4-a4de-4d73-945d-ad5f6e126e7c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 7600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"fa21d0dc-0339-4b40-924b-2261628f06e4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"fa21d0dc-0339-4b40-924b-2261628f06e4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 7700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"cf18a205-1f9e-4cc8-8403-57535773a826\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"cf18a205-1f9e-4cc8-8403-57535773a826\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 7800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"073f4aee-b57c-4858-b873-fa67a11047f4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"073f4aee-b57c-4858-b873-fa67a11047f4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 7900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"08354404-4de1-4e7e-84e9-5ff056a946d2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"08354404-4de1-4e7e-84e9-5ff056a946d2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 8000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"c898ffec-cf82-43e5-937e-179c6a5310b0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"c898ffec-cf82-43e5-937e-179c6a5310b0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 8100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"3ef2e70a-805d-49bc-a4dc-766c0b023464\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"3ef2e70a-805d-49bc-a4dc-766c0b023464\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 8200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"540e5e17-cd0d-4f7b-8d5a-cffd387aaa78\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"540e5e17-cd0d-4f7b-8d5a-cffd387aaa78\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 8300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"58c9f76f-dd18-4e7b-82bc-8be8dc60842f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"58c9f76f-dd18-4e7b-82bc-8be8dc60842f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 8400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"010a918c-88bd-46b9-82cf-53c31f2971cb\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"010a918c-88bd-46b9-82cf-53c31f2971cb\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 8500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"a994f3bc-8021-46d2-8db3-fdf541a434dd\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"a994f3bc-8021-46d2-8db3-fdf541a434dd\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 8600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"4b27fe86-9771-4cff-b629-5cdfa453c269\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"4b27fe86-9771-4cff-b629-5cdfa453c269\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 8700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"6b8a619c-813b-4508-a003-4cd7c1f3f755\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"6b8a619c-813b-4508-a003-4cd7c1f3f755\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 8800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"f96f3b62-f7fb-42be-a2d9-5bf0bd7aa029\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"f96f3b62-f7fb-42be-a2d9-5bf0bd7aa029\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 8900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"80ed904c-a631-4bef-a62b-9802b9f731d3\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"80ed904c-a631-4bef-a62b-9802b9f731d3\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 9000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"7064887e-cab9-493f-8f6c-f04ac4b35f46\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"7064887e-cab9-493f-8f6c-f04ac4b35f46\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 9100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"9687d447-9d97-43c7-b156-a30c2dd577b4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"9687d447-9d97-43c7-b156-a30c2dd577b4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 9200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"ff6c9eaa-8488-48b5-9089-a68b25c7a091\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"ff6c9eaa-8488-48b5-9089-a68b25c7a091\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 9300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"dba63fe1-1bbc-4c51-b826-10d14da6eda0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"dba63fe1-1bbc-4c51-b826-10d14da6eda0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 9400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"657b807d-86c7-4e6b-951f-3a0b9e68ea3a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"657b807d-86c7-4e6b-951f-3a0b9e68ea3a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 9500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"dfc20876-616c-46e1-ac9b-11b318442595\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"dfc20876-616c-46e1-ac9b-11b318442595\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 9600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"5f0062f8-6fb9-49fe-9aeb-c8af65219306\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"5f0062f8-6fb9-49fe-9aeb-c8af65219306\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 9700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"7eceada4-8c68-48eb-8034-b941550d3f96\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"7eceada4-8c68-48eb-8034-b941550d3f96\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 9800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"aee07afa-1bff-412f-b0ec-25c23de196ee\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"aee07afa-1bff-412f-b0ec-25c23de196ee\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 9900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"75c1a720-ac56-4260-8dfd-c642681e85fa\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"75c1a720-ac56-4260-8dfd-c642681e85fa\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 10000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"ab8d80f8-19a5-4d79-ba2a-3cfb3cad9d88\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"ab8d80f8-19a5-4d79-ba2a-3cfb3cad9d88\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 10100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"7cb0fbe5-e17f-4e12-ad26-aaf739128c31\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"7cb0fbe5-e17f-4e12-ad26-aaf739128c31\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 10200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"7a74fea0-1500-476d-b51e-70bd4ebb16e0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"7a74fea0-1500-476d-b51e-70bd4ebb16e0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 10300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"e22be85f-5674-4c47-a614-bd7213557611\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"e22be85f-5674-4c47-a614-bd7213557611\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 10400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"020bfcee-f0d9-4dc3-a596-22378312449f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"020bfcee-f0d9-4dc3-a596-22378312449f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 10500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"4b830ef6-51ca-4a74-807d-509c8fc60f44\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"4b830ef6-51ca-4a74-807d-509c8fc60f44\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 10600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"9b367fdc-380d-4e74-85c5-3234ca9bc73a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"9b367fdc-380d-4e74-85c5-3234ca9bc73a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 10700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"cb736cc3-7834-413e-8de0-861986cd9af1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"cb736cc3-7834-413e-8de0-861986cd9af1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 10800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"40485a73-0c98-4de8-b250-49dcdcc9b3c3\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"40485a73-0c98-4de8-b250-49dcdcc9b3c3\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 10900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"2710e895-9bd1-434e-8628-46ddf01617cf\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"2710e895-9bd1-434e-8628-46ddf01617cf\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 11000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"c998b5bc-04ef-4fc4-8ee5-a97b4b3e9c21\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"c998b5bc-04ef-4fc4-8ee5-a97b4b3e9c21\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 11100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"69fd4d1b-55c3-42bb-8612-dd8cc8c1d14e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"69fd4d1b-55c3-42bb-8612-dd8cc8c1d14e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 11200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"1a5ab3a8-c694-4b66-8785-993385428eb7\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"1a5ab3a8-c694-4b66-8785-993385428eb7\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 11300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"bc6fea79-2d52-4cb7-aee4-4802e6ee7625\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"bc6fea79-2d52-4cb7-aee4-4802e6ee7625\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 11400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"75eb7a01-36c4-4133-bf2c-8c8ba7d71f4f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"75eb7a01-36c4-4133-bf2c-8c8ba7d71f4f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 11500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"cb017670-1365-4d91-8d65-da57ffae05c7\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"cb017670-1365-4d91-8d65-da57ffae05c7\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 11600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"99089040-1411-4dc6-a317-e70599fbfd86\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"99089040-1411-4dc6-a317-e70599fbfd86\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 11700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"ef88d0d8-72f3-4a61-95c2-f057b6a60379\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"ef88d0d8-72f3-4a61-95c2-f057b6a60379\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 11800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"7ae1989b-2880-4291-a405-c034ae28783a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"7ae1989b-2880-4291-a405-c034ae28783a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 11900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"82f4493d-a8d6-4708-bf7d-dd9fcdb1bc96\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"82f4493d-a8d6-4708-bf7d-dd9fcdb1bc96\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 12000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"6b183208-2b36-4493-b059-e3f87fa293ed\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"6b183208-2b36-4493-b059-e3f87fa293ed\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 12100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"3d5b8ec3-c1c6-4175-a70b-eb0958f8f707\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"3d5b8ec3-c1c6-4175-a70b-eb0958f8f707\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 12200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"d48ba068-44c1-4f8a-a5a7-dd60141dc8a5\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"d48ba068-44c1-4f8a-a5a7-dd60141dc8a5\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 12300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"5ba9ee3a-b5ea-46de-8629-fd12c8a00686\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"5ba9ee3a-b5ea-46de-8629-fd12c8a00686\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 12400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"11557d0a-1548-413b-b1b1-15f537f40d48\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"11557d0a-1548-413b-b1b1-15f537f40d48\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 12500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"f409b8df-750a-4425-a33f-3faf2e9b0313\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"f409b8df-750a-4425-a33f-3faf2e9b0313\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 12600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"4dca8065-6f79-472f-ba83-5ce37097e434\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"4dca8065-6f79-472f-ba83-5ce37097e434\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 12700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"ef03b60f-ca75-4c00-aca8-52e343a9ca38\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"ef03b60f-ca75-4c00-aca8-52e343a9ca38\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 12800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"4d35ddf6-ab40-45e3-b0fb-a68a2d7ecce1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"4d35ddf6-ab40-45e3-b0fb-a68a2d7ecce1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 12900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"53f130a9-05c3-470f-ae0b-50d0e55bc538\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"53f130a9-05c3-470f-ae0b-50d0e55bc538\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 13000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"b07ee05b-5bba-4976-805a-9576d5c482be\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"b07ee05b-5bba-4976-805a-9576d5c482be\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 13100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"ce68e39c-de78-48ea-86d8-8143e82935db\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"ce68e39c-de78-48ea-86d8-8143e82935db\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 13200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"0b56a676-e3a8-401d-b4c6-7f55b35e8e90\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"0b56a676-e3a8-401d-b4c6-7f55b35e8e90\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 13300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"839bed55-bf96-4365-aabf-d725ce1c59bb\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"839bed55-bf96-4365-aabf-d725ce1c59bb\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 13400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"b27979a0-22d8-4288-bed2-d71222603ec2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"b27979a0-22d8-4288-bed2-d71222603ec2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 13500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"ed74ad99-f73c-4383-b3cf-44e3dbd62fd0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"ed74ad99-f73c-4383-b3cf-44e3dbd62fd0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 13600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"7a820562-3b5c-471f-99f8-41dab860efc6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"7a820562-3b5c-471f-99f8-41dab860efc6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 13700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"218de5b0-06b7-43e6-9ba3-deab8d6ec456\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"218de5b0-06b7-43e6-9ba3-deab8d6ec456\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 13800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"84152638-39ce-4a35-997f-25d08e1bdc27\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"84152638-39ce-4a35-997f-25d08e1bdc27\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 13900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"7019a61e-db1a-4d62-8b79-d0054212c33f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"7019a61e-db1a-4d62-8b79-d0054212c33f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 14000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"6963d7fb-38e0-4e75-b6c9-33b737bbf9ab\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"6963d7fb-38e0-4e75-b6c9-33b737bbf9ab\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 14100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"39213a76-625a-4b39-863f-a16f0acfa580\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"39213a76-625a-4b39-863f-a16f0acfa580\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 14200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"cf9b8405-0881-482f-bb0f-5da7e8bf199d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"cf9b8405-0881-482f-bb0f-5da7e8bf199d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 14300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"c6798e0d-4d6d-4c0b-b0be-413cdc4cc32d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"c6798e0d-4d6d-4c0b-b0be-413cdc4cc32d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 14400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"878ec2e4-edf2-46e1-9b61-b755b7aaf366\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"878ec2e4-edf2-46e1-9b61-b755b7aaf366\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 14500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"58ef61a2-f9bf-4e3e-a2e6-c6d6f2d2ae9f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"58ef61a2-f9bf-4e3e-a2e6-c6d6f2d2ae9f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 14600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"d4d1a679-6bc6-4616-910c-dfbc3d804818\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"d4d1a679-6bc6-4616-910c-dfbc3d804818\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 14700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"87fbb306-6eca-4e32-bf34-909e4970fc71\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"87fbb306-6eca-4e32-bf34-909e4970fc71\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 14800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"115a9a67-ac5f-454e-a5f7-e97ed75e5582\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"115a9a67-ac5f-454e-a5f7-e97ed75e5582\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 14900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"f52fddf3-f072-4f22-9531-ed1710dc889f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"f52fddf3-f072-4f22-9531-ed1710dc889f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 15000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"b737da04-f652-4520-ac93-ac2c5e039a44\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"b737da04-f652-4520-ac93-ac2c5e039a44\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 15100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"6d48925d-db42-4b03-a0eb-6a4f1f59408d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"6d48925d-db42-4b03-a0eb-6a4f1f59408d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 15200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"891e22fc-8b8f-460a-aeab-5aa2a60aad2d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"891e22fc-8b8f-460a-aeab-5aa2a60aad2d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 15300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"36175bda-8ee7-40d4-9510-f67e5c62b1ba\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"36175bda-8ee7-40d4-9510-f67e5c62b1ba\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 15400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"8bbee894-8ce7-4343-a34b-b51acc5b001b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"8bbee894-8ce7-4343-a34b-b51acc5b001b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 15500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"e86e88cf-a98c-4376-a603-f2b5673a98e9\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"e86e88cf-a98c-4376-a603-f2b5673a98e9\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 15600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"9f3f0a6f-021c-46e8-a7b5-29d51a3504d5\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"9f3f0a6f-021c-46e8-a7b5-29d51a3504d5\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 15700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"650e90f5-5e3c-4e7b-9976-60334b9365ea\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"650e90f5-5e3c-4e7b-9976-60334b9365ea\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 15800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"35a5dbf6-2f06-43d5-8249-380b6a2bce16\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"35a5dbf6-2f06-43d5-8249-380b6a2bce16\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 15900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"7792a988-9181-439c-ac1d-c68fb7a73cce\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"7792a988-9181-439c-ac1d-c68fb7a73cce\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 16000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"4f8945f8-4ab4-4153-8ce2-a0258b7f18c7\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"4f8945f8-4ab4-4153-8ce2-a0258b7f18c7\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 16100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"9fef4f58-a4ae-4e79-882d-0f93239b6bf2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"9fef4f58-a4ae-4e79-882d-0f93239b6bf2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 16200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"3122600d-8503-4b22-9762-6c53e1804f66\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"3122600d-8503-4b22-9762-6c53e1804f66\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 16300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"25841011-3d0d-43ad-b615-ac1272c37491\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"25841011-3d0d-43ad-b615-ac1272c37491\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 16400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"8257d656-b739-4be1-8b58-94e6c97bdea9\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"8257d656-b739-4be1-8b58-94e6c97bdea9\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 16500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"ae9f7004-bd3f-4df7-91f5-7cc869cd1279\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"ae9f7004-bd3f-4df7-91f5-7cc869cd1279\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 16600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"6cacb426-a92c-4937-be04-fd74afb687f0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"6cacb426-a92c-4937-be04-fd74afb687f0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 16700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"06ed716b-017c-44bc-89ca-dceb52e7417f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"06ed716b-017c-44bc-89ca-dceb52e7417f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 16800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"98bde74a-81f9-4e37-8d9a-7476a68bc8c1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"98bde74a-81f9-4e37-8d9a-7476a68bc8c1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 16900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"e94beb54-041f-4738-ad09-24ddc0a0a18e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"e94beb54-041f-4738-ad09-24ddc0a0a18e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 17000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"f581895a-c78d-4eb7-ba4d-1938ae6f3e2a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"f581895a-c78d-4eb7-ba4d-1938ae6f3e2a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 17100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"1fb15369-bcda-45af-8aac-4ba2ceb76cc8\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"1fb15369-bcda-45af-8aac-4ba2ceb76cc8\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 17200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"6bd2c24b-233a-492b-b4bd-6efa1b5d0230\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"6bd2c24b-233a-492b-b4bd-6efa1b5d0230\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 17300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"0d13acec-d2d1-4e30-b1b6-c5b531880c22\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"0d13acec-d2d1-4e30-b1b6-c5b531880c22\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 17400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"2cab8814-cb72-483d-9e2a-c3ea4d460d02\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"2cab8814-cb72-483d-9e2a-c3ea4d460d02\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 17500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"40aa8085-36e9-4f22-8628-86191a0af403\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"40aa8085-36e9-4f22-8628-86191a0af403\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 17600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"461abeda-42c2-450b-b089-d8b1bc3d4cf9\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"461abeda-42c2-450b-b089-d8b1bc3d4cf9\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 17700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"1eac2bc8-494c-4f5f-baaa-94494b9a63ab\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"1eac2bc8-494c-4f5f-baaa-94494b9a63ab\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 17800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"0f93cec6-3960-4db6-a02a-54880d10e39c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"0f93cec6-3960-4db6-a02a-54880d10e39c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 17900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"0b23fa8b-bb8a-4cb6-8851-8f50162b7afe\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"0b23fa8b-bb8a-4cb6-8851-8f50162b7afe\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 18000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"84a0612d-507e-4a6a-ae13-aa0c07af847a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"84a0612d-507e-4a6a-ae13-aa0c07af847a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 18100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"2df583dc-a3c4-4ea6-9c8c-75cb9b93cd26\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"2df583dc-a3c4-4ea6-9c8c-75cb9b93cd26\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 18200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"bad13998-1f96-4b61-a7e1-072068b73232\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"bad13998-1f96-4b61-a7e1-072068b73232\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 18300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"67e8b6ae-e3e1-4213-8ce3-84d7f7a79456\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"67e8b6ae-e3e1-4213-8ce3-84d7f7a79456\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 18400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"e28b3695-cd8a-4359-a95b-cd52402cede4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"e28b3695-cd8a-4359-a95b-cd52402cede4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 18500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"055e87bf-53e3-41a1-b944-9732da08d9e2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"055e87bf-53e3-41a1-b944-9732da08d9e2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 18600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"655087dc-0d4c-4b42-9687-e72cf2ad53b0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"655087dc-0d4c-4b42-9687-e72cf2ad53b0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 18700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"81dea993-b8c5-42a8-a4ff-018ce303afb2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"81dea993-b8c5-42a8-a4ff-018ce303afb2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 18800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"1e1228fb-432c-41a8-b2f9-d6144d2e53b8\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"1e1228fb-432c-41a8-b2f9-d6144d2e53b8\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 18900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"212cd1a8-8b1a-4466-a67f-1964cdece44a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"212cd1a8-8b1a-4466-a67f-1964cdece44a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 19000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"a6b0c046-e78a-4d6f-985f-d07e418c639c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"a6b0c046-e78a-4d6f-985f-d07e418c639c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 19100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"77814f63-cc68-466c-967b-e1a69a835127\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"77814f63-cc68-466c-967b-e1a69a835127\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 19200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"e206ab79-305b-4717-8838-7d55dd28402b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"e206ab79-305b-4717-8838-7d55dd28402b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 19300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"66d893e1-a9e2-4088-a6f1-4ef60b3edb1d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"66d893e1-a9e2-4088-a6f1-4ef60b3edb1d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 19400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"330247bd-253f-41cb-bfe9-f6d73a6c1712\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"330247bd-253f-41cb-bfe9-f6d73a6c1712\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 19500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"107350e0-ab26-49b3-bc86-724122ceed8c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"107350e0-ab26-49b3-bc86-724122ceed8c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 19600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"c20ddee2-62d9-498a-aac3-72c932fa2287\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"c20ddee2-62d9-498a-aac3-72c932fa2287\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 19700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"9c1397c5-b1b5-450e-a7b0-931e34af9f7b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"9c1397c5-b1b5-450e-a7b0-931e34af9f7b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 19800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"2d7f3136-d9b7-40dd-babc-93a88d144a81\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"2d7f3136-d9b7-40dd-babc-93a88d144a81\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 19900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"bfa68e9a-a309-4d3d-90be-9360a1e58165\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"'dict' object has no attribute 'product'\", \"errorType\": \"AttributeError\", \"requestId\": \"bfa68e9a-a309-4d3d-90be-9360a1e58165\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 50, in run\\n    position = state.position[state.listings[product].product]\\n\"]}",
+  "timestamp": 20000
+}
+
+
+
+Activities log:
+day;timestamp;product;bid_price_1;bid_volume_1;bid_price_2;bid_volume_2;bid_price_3;bid_volume_3;ask_price_1;ask_volume_1;ask_price_2;ask_volume_2;ask_price_3;ask_volume_3;mid_price;profit_and_loss
+
+
+
+
+Trade History:
+null
