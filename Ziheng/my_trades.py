@@ -72,7 +72,7 @@ class Trader:
                         if average_val < ask:
                             break
                         else:
-                            ask_amount = position - ask_amount if abs(position - ask_amount) <= 20 else None
+                            ask_amount = position - ask_amount if abs(position - ask_amount) <= 20 else 0
                             orders.append(Order(product, ask, ask_amount))
 
                 # if its gonna go down
@@ -82,17 +82,17 @@ class Trader:
                         if average_val > bid:
                             break
                         else:
-                            bid_amount = position - bid_amount if abs(position - bid_amount) <= 20 else None
+                            bid_amount = position - bid_amount if abs(position - bid_amount) <= 20 else 0
                             orders.append(Order(product, bid, bid_amount))
 
                 result[product] = orders
     
 		    # String value holding Trader state data required. 
 				# It will be delivered as TradingState.traderData on next execution.
-        try:
-            traderData = "".join(past_10_gavg)
-        except:
-            if len(traderData_dict) > 0:
+        if len(traderData_dict) > 9:
+            traderData = "".join(past_10_avg)
+        else:
+            if len(traderData_dict) < 10:
                 traderData = traderData + f", {average_val_this_round}"
             else:
                 traderData = traderData + f"{average_val_this_round}"
@@ -128,7 +128,7 @@ class Trader:
         b_1 = SS_xy / SS_xx
         b_0 = m_y - b_1*m_x
         
-        return (b_0, b_1)
+        return (float(b_0), float(b_1))
     
     # the next price is always gonna go in the trend of the avg price
     
