@@ -60,7 +60,7 @@ class Trader:
             if len(order_depth.sell_orders) != 0:
                 best_ask, best_ask_amount = list(order_depth.sell_orders.items())[0]
                 # if int(best_ask) < acceptable_price:
-                if RSI < 33:
+                if RSI < 45:
                     # In case the lowest ask is lower than our fair value,
                     # This presents an opportunity for us to buy cheaply
                     # The code below therefore sends a BUY order at the price level of the ask,
@@ -71,7 +71,7 @@ class Trader:
     
             if len(order_depth.buy_orders) != 0:
                 best_bid, best_bid_amount = list(order_depth.buy_orders.items())[0]
-                if RSI > 67:
+                if RSI > 55:
 										# Similar situation with sell orders
                     print("SELL", str(best_bid_amount) + "x", best_bid)
                     orders.append(Order(product, best_bid, -best_bid_amount))
