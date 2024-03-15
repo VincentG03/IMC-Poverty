@@ -25,53 +25,46 @@ class Trader:
             # Calculate RSI
             RSI = self.calculate_rsi(traderData_list)
             print(f"RSI: {RSI}")
-            
-            # Check existing positions
-            existing_positions = self.get_existing_positions(order_depth)
-            
+
             if RSI <= 40:
-                if not existing_positions["BUY"]:
-                    # Buy 10 units immediately
-                    print("BUY 10 units immediately")
-                    orders.append(Order(product, "BUY", 10))
-                    existing_positions["BUY"] = True
-                
-                # Buy 2 units whenever RSI is lower than previous period
-                if len(existing_positions["BUY"]) < 20 and RSI < traderData_list[-1]:
-                    print("BUY 2 units")
-                    orders.append(Order(product, "BUY", 2))
-                    existing_positions["BUY"].append(2)
+                # Buy Condition
+                if not self.has_active_positions(orders, "BUY"):
+                    # No active buy positions, initiate buy
+                    print("Initiating buy position")
+                    orders.append(BuyOrder(product, 10))  # Initial buy of 10 units
+                    
+                elif len(orders) < 20 and traderData != "" and float(traderData_list[-1]) < float(traderData_list[-2]):
+                    # Buy 2 units whenever RSI is lower than previous period
+                    print("Buying 2 units")
+                    orders.append(BuyOrder(product, 2))
                 
                 if RSI >= 60:
-                    # Exit all "BUY" positions when RSI is Greater than or equals to 60
-                    print("Exit all BUY positions")
-                    orders.extend(self.exit_positions(existing_positions["BUY"], product))
-                    existing_positions["BUY"] = []
-
+                    # Exit all buy positions
+                    print("Exiting buy positions")
+                    orders = [order for order in orders if order.type != "BUY"]
+            
             elif RSI >= 60:
-                if not existing_positions["SELL"]:
-                    # Sell 10 units immediately
-                    print("SELL 10 units immediately")
-                    orders.append(Order(product, "SELL", 10))
-                    existing_positions["SELL"] = True
-                
-                # Sell 2 units whenever RSI is higher than previous period
-                if len(existing_positions["SELL"]) < 20 and RSI > traderData_list[-1]:
-                    print("SELL 2 units")
-                    orders.append(Order(product, "SELL", 2))
-                    existing_positions["SELL"].append(2)
+                # Sell Condition
+                if not self.has_active_positions(orders, "SELL"):
+                    # No active sell positions, initiate sell
+                    print("Initiating sell position")
+                    orders.append(SellOrder(product, 10))  # Initial sell of 10 units
+                    
+                elif len(orders) < 20 and traderData != "" and float(traderData_list[-1]) > float(traderData_list[-2]):
+                    # Sell 2 units whenever RSI is higher than previous period
+                    print("Selling 2 units")
+                    orders.append(SellOrder(product, 2))
                 
                 if RSI <= 40:
-                    # Exit all "SELL" positions when RSI is Lesser than or equals to 40
-                    print("Exit all SELL positions")
-                    orders.extend(self.exit_positions(existing_positions["SELL"], product))
-                    existing_positions["SELL"] = []
-
+                    # Exit all sell positions
+                    print("Exiting sell positions")
+                    orders = [order for order in orders if order.type != "SELL"]
+            
             result[product] = orders
 
             # Update traderData
             if len(traderData) < 15:
-                mid_price = (order_depth.best_bid + order_depth.best_ask) / 2
+                mid_price = (order_depth.buy_orders[0].price + order_depth.sell_orders[0].price) / 2
                 traderData = traderData + f"{mid_price} "
             else:
                 traderData = " ".join(traderData_list)
@@ -83,40 +76,14 @@ class Trader:
         """
         Calculate RSI (Relative Strength Index)
         """
-        gains_up = []
-        loss_down = []
-        
-        if len(prices) > 1:
-            for i in range(1, len(prices)):
-                if prices[i] > prices[i-1]:
-                    gains_up.append(prices[i] - prices[i-1])
-                elif prices[i] < prices[i-1]:
-                    loss_down.append(prices[i-1] - prices[i])
-        
-            if len(gains_up) > 0 and len(loss_down) > 0:
-                avg_gain = statistics.mean(gains_up)
-                avg_loss = statistics.mean(loss_down)
-                RS = avg_gain / avg_loss
-                RSI = 100 - (100 / (1 + RS))
-                return RSI
-        return 50  # Return 50 if not enough data to calculate RSI
+        # Implement your RSI calculation logic here
+        pass
     
-    def get_existing_positions(self, order_depth):
+    def has_active_positions(self, orders, position_type):
         """
-        Check existing positions
+        Check if there are active positions of given type
         """
-        existing_positions = {"BUY": [], "SELL": []}
-        # Implement logic to check existing positions from order_depth
-        # and update existing_positions dictionary accordingly
-        return existing_positions
-    
-    def exit_positions(self, positions, product):
-        """
-        Exit positions
-        """
-        exit_orders = []
-        for position in positions:
-            # Implement logic to create exit orders for each position
-            # and append them to exit_orders list
-            exit_orders.append(Order(product, "EXIT", position))
-        return exit_orders
+        for order in orders:
+            if order.type == position_type:
+                return True
+        return False
