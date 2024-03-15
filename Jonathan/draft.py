@@ -3,7 +3,7 @@ from typing import List
 import string
 import statistics
 
-class RsiStrategy:
+class Trader:
     
     def run(self, state: TradingState):
         """
