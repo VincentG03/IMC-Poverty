@@ -1,17 +1,5 @@
-"""
-Strategy: Market Making 
-
-Considerations: 
-- Send small order? So they don't just trade with 50% of the qty and have to close out 
-- Consider FOK orders to avoid issue above 
-
-"""
-
 from datamodel import OrderDepth, UserId, TradingState, Order
 from typing import List
-import pandas as pd
-import numpy as np
-import math 
 import string
 
 class Trader:
@@ -29,6 +17,7 @@ class Trader:
             print("Acceptable price : " + str(acceptable_price))
             print("Buy Order depth : " + str(len(order_depth.buy_orders)) + ", Sell order depth : " + str(len(order_depth.sell_orders)))
     
+            #Calculating to see if any orders can be sent (fulfilling conditions for SELL and BUY)
             if len(order_depth.sell_orders) != 0:
                 best_ask, best_ask_amount = list(order_depth.sell_orders.items())[0]
                 if int(best_ask) < acceptable_price:
