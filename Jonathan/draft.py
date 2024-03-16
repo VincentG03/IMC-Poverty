@@ -73,33 +73,42 @@ class Trader:
         conversions = 1
         return result, conversions, traderData
     
-    def calculate_rsi(self, prices):
+    def calculate_rsi(self, prices, period=14):
         """
         Calculate RSI (Relative Strength Index)
         """
-        if len(prices) < 2:
-            return None  # Return None if there's not enough data to calculate RSI
-
-        gains_up = []
-        loss_down = []
+        if len(prices) <= period:
+            return None  # Not enough data to calculate RSI
         
+        gains = []
+        losses = []
+        
+        # Calculate price changes
         for i in range(1, len(prices)):
-            if prices[i] > prices[i-1]:
-                gains_up.append(prices[i] - prices[i-1])
-            elif prices[i] < prices[i-1]:
-                loss_down.append(prices[i-1] - prices[i])
+            change = prices[i] - prices[i-1]
+            if change >= 0:
+                gains.append(change)
+                losses.append(0)
+            else:
+                gains.append(0)
+                losses.append(-change)
         
-        if len(gains_up) == 0:
-            return 0  # Return 0 if there are no gains
+        # Calculate average gains and losses
+        avg_gain = sum(gains[:period]) / period
+        avg_loss = sum(losses[:period]) / period
         
-        if len(loss_down) == 0:
-            return 100  # Return 100 if there are no losses
+        # Calculate initial RS and RSI
+        rs = avg_gain / avg_loss
+        rsi = 100 - (100 / (1 + rs))
         
-        avg_gain = statistics.mean(gains_up)
-        avg_loss = statistics.mean(loss_down)
-        RS = avg_gain / avg_loss
-        RSI = 100 - (100 / (1 + RS))
-        return RSI
+        # Calculate subsequent RS and RSI using exponential moving averages (EMAs)
+        for i in range(period, len(prices)):
+            avg_gain = (avg_gain * (period - 1) + gains[i]) / period
+            avg_loss = (avg_loss * (period - 1) + losses[i]) / period
+            rs = avg_gain / avg_loss
+            rsi = 100 - (100 / (1 + rs))
+        
+        return rsi
     
     def has_active_positions(self, orders, position_type):
         """
