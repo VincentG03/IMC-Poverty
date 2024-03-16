@@ -1,5 +1,5 @@
 import json
-from datamodel import Order, ProsperityEncoder, Symbol, TradingState, Trade
+from datamodel import Order, ProsperityEncoder, Symbol, TradingState, Trade, OrderDepth
 from typing import Any, List
 import statistics
 
@@ -8,7 +8,7 @@ class Logger:
     # local logs
     local: bool 
     # this is used as a buffer for logs
-    # instead of stdout
+    # instead of stdout 
     local_logs: dict[int, str] = {}
 
     def __init__(self, local=False) -> None:

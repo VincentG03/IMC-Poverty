@@ -1,5 +1,5 @@
 import json
-from datamodel import Order, ProsperityEncoder, Symbol, TradingState, Trade
+from datamodel import Order, ProsperityEncoder, Symbol, TradingState, Trade, OrderDepth
 from typing import Any, List
 import statistics
 
