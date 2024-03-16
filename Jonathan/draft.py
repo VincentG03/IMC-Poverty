@@ -118,3 +118,4 @@ class Trader:
             if order.type == position_type:
                 return True
         return False
+
