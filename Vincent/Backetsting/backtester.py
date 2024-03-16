@@ -1,4 +1,4 @@
-from Vincent.Backetsting.dontloseshells_algo import Trader
+from dontloseshells_algo import Trader
 
 from datamodel import *
 from typing import Any  #, Callable
