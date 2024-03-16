@@ -48,22 +48,22 @@ class Trader:
             #(!!!) There are no open positions --> Send orders to attempt to MM
             if product not in state.position or state.position.get(product) == 0:
                 #Get the maximum amount of orders to send. There should be no outstanding positions so max is position limit set. 
-                qty_to_mm = position_limit
+                qty_to_mm = abs(position_limit)
                
                 #Get mid price to ensure that our quoted bid and ask price are correct (bid < mid price, ask > mid price)
                 mid_price = ((list(order_depth.buy_orders.items())[0][0]) + (list(order_depth.sell_orders.items())[0][0]))/2
 
                 #Quote a better bid price (BUY order) and a better ask price (SELL order)
-                my_bid = list(order_depth.buy_orders.items())[0][0] + 1 
-                my_ask = list(order_depth.sell_orders.items())[0][0] - 1
+                my_bid = list(order_depth.buy_orders.items())[0][0] + 1
+                my_ask = list(order_depth.sell_orders.items())[0][0] - 1 
 
                 #Check if the order is valid - if not do nothing. 
                 if my_bid < mid_price and my_ask > mid_price and my_bid < my_ask: 
-                    print("SELL", str(qty_to_mm) + "x", my_ask)
-                    orders.append(Order(product, my_ask, -qty_to_mm))
-
-                    print("BUY", str(qty_to_mm) + "x", my_bid)
+                    print("(MM) BUY", str(qty_to_mm) + "x", product, my_bid)
                     orders.append(Order(product, my_bid, qty_to_mm))
+
+                    print("(MM) SELL", str(qty_to_mm) + "x", product, my_ask)
+                    orders.append(Order(product, my_ask, -qty_to_mm))
 
                     result[product] = orders
 
@@ -76,12 +76,12 @@ class Trader:
                 if qty_to_close is not None: 
                     if state.position[product] > 0: #SELL to close                    
                         best_bid = list(order_depth.buy_orders.items())[0][0]
-                        print("SELL", str(qty_to_close) + "x", best_bid)
+                        print("SELL", str(qty_to_close) + "x", product, best_bid)
                         orders.append(Order(product, best_bid, -qty_to_close))
                         
                     else: #BUY to close
                         best_ask = list(order_depth.sell_orders.items())[0][0]
-                        print("BUY", str(qty_to_close) + "x", best_ask)
+                        print("BUY", str(qty_to_close) + "x", product, best_ask)
                         orders.append(Order(product, best_ask, qty_to_close))
 
                     result[product] = orders 
