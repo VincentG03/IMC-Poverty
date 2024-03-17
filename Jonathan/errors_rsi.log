@@ -1,0 +1,1022 @@
+Sandbox logs:
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"58fb5a84-b128-425c-8fac-794301b1feb5\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"58fb5a84-b128-425c-8fac-794301b1feb5\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 0
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"6bc08273-64eb-4071-ab84-5a0b4c077ce0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"6bc08273-64eb-4071-ab84-5a0b4c077ce0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"c94c0d8b-8d9b-4087-bfd9-e3a26d20faed\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"c94c0d8b-8d9b-4087-bfd9-e3a26d20faed\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"99b41c4b-919f-4d89-8fac-d550b1c32c3d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"99b41c4b-919f-4d89-8fac-d550b1c32c3d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"0a5d1777-96a5-4abe-bb8c-b83062b508a0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"0a5d1777-96a5-4abe-bb8c-b83062b508a0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"d0469628-879a-4491-bdd6-2403752515e1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"d0469628-879a-4491-bdd6-2403752515e1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"b00fa10a-31ee-4737-a65e-27925ad1c685\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"b00fa10a-31ee-4737-a65e-27925ad1c685\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"d09b1b47-a535-46aa-b645-3ec9d1c05980\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"d09b1b47-a535-46aa-b645-3ec9d1c05980\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"de6cdb6f-8ca5-4887-b526-1d9e5e80a010\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"de6cdb6f-8ca5-4887-b526-1d9e5e80a010\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"53610209-429b-469e-86d5-7a5646a045f6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"53610209-429b-469e-86d5-7a5646a045f6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"5577f898-b9ef-43b9-8cbe-f6a727cecbbb\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"5577f898-b9ef-43b9-8cbe-f6a727cecbbb\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 1000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"dd97499c-8207-4bbd-85b0-20392e59f125\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"dd97499c-8207-4bbd-85b0-20392e59f125\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 1100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"5f7ea978-76b5-4f12-b239-6819e914340e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"5f7ea978-76b5-4f12-b239-6819e914340e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 1200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"faeb9af5-8aa9-44de-b73e-54031f837187\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"faeb9af5-8aa9-44de-b73e-54031f837187\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 1300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"54c3a477-c7bb-4331-ad23-0964c6c40dc2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"54c3a477-c7bb-4331-ad23-0964c6c40dc2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 1400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"a49a75de-2897-4b93-8725-70448f0b2871\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"a49a75de-2897-4b93-8725-70448f0b2871\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 1500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"5a45b2fa-f53e-4986-b0a9-41ed827a3b9b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"5a45b2fa-f53e-4986-b0a9-41ed827a3b9b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 1600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"b17cbd98-21eb-4ee6-a86e-cf4c0c58c424\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"b17cbd98-21eb-4ee6-a86e-cf4c0c58c424\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 1700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"985b93a5-cde3-4a94-b556-b67f9f84b54e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"985b93a5-cde3-4a94-b556-b67f9f84b54e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 1800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"8badac3b-d493-487e-97f8-d33877014fc7\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"8badac3b-d493-487e-97f8-d33877014fc7\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 1900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"4dbaf75c-980f-4867-b6ec-22b956365729\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"4dbaf75c-980f-4867-b6ec-22b956365729\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 2000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"09f9baf8-4667-4bb8-825a-1aa333fbdd96\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"09f9baf8-4667-4bb8-825a-1aa333fbdd96\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 2100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"278658f7-3ef9-4227-a739-7524df4b4cc4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"278658f7-3ef9-4227-a739-7524df4b4cc4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 2200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"3d312286-1300-4c9b-9a08-b1e615df2e9a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"3d312286-1300-4c9b-9a08-b1e615df2e9a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 2300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"81f11ded-a07c-4312-99b5-e2da44e76a85\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"81f11ded-a07c-4312-99b5-e2da44e76a85\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 2400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"2dae4169-71ae-4535-9408-0e81b568e760\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"2dae4169-71ae-4535-9408-0e81b568e760\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 2500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"0c0536e5-bd3b-4e7f-aa3b-aa40aa144c2b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"0c0536e5-bd3b-4e7f-aa3b-aa40aa144c2b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 2600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"8ee1dbc5-aedc-4123-9cf5-597de4088b48\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"8ee1dbc5-aedc-4123-9cf5-597de4088b48\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 2700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"d7506b4f-66ab-47b8-bb2e-96b55abec215\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"d7506b4f-66ab-47b8-bb2e-96b55abec215\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 2800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"f4ab3530-1ad1-49af-b9cf-c316aa7b4f84\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"f4ab3530-1ad1-49af-b9cf-c316aa7b4f84\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 2900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"1d794632-09c8-4253-8da4-28577f782091\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"1d794632-09c8-4253-8da4-28577f782091\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 3000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"476a1f03-8fa1-46e9-8e2c-e07732bd1c33\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"476a1f03-8fa1-46e9-8e2c-e07732bd1c33\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 3100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"589d4cb6-e16f-4413-8403-eb8e33284395\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"589d4cb6-e16f-4413-8403-eb8e33284395\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 3200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"d1fdc4ca-61b8-4fca-9883-87d16431c032\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"d1fdc4ca-61b8-4fca-9883-87d16431c032\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 3300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"22fe8af4-0da4-4b04-bd8c-99333cf3ae34\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"22fe8af4-0da4-4b04-bd8c-99333cf3ae34\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 3400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"a0e1de70-7c97-4679-91bc-b4726d6bdbf1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"a0e1de70-7c97-4679-91bc-b4726d6bdbf1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 3500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"1c93dc8c-e639-43be-81d1-4043b6900b66\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"1c93dc8c-e639-43be-81d1-4043b6900b66\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 3600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"c834e462-be43-4592-818e-25d62591a80b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"c834e462-be43-4592-818e-25d62591a80b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 3700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"dce7159c-d2bc-4acb-8330-47dc9af57d97\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"dce7159c-d2bc-4acb-8330-47dc9af57d97\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 3800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"56198168-fc42-41c2-ac4b-b10451b8a19a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"56198168-fc42-41c2-ac4b-b10451b8a19a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 3900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"e434bc48-bd29-4cb6-8cff-d9491ce87fea\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"e434bc48-bd29-4cb6-8cff-d9491ce87fea\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 4000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"a3420a2b-2df2-4adc-a88a-e23bc482f280\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"a3420a2b-2df2-4adc-a88a-e23bc482f280\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 4100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"42507f48-9bea-451b-832c-cdf252d9be17\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"42507f48-9bea-451b-832c-cdf252d9be17\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 4200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"d266fa58-3779-4a08-be09-96cb623ec056\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"d266fa58-3779-4a08-be09-96cb623ec056\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 4300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"b264bd77-7e65-4be3-ba75-1f92d3eb9a7f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"b264bd77-7e65-4be3-ba75-1f92d3eb9a7f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 4400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"734e9501-b98e-4f8c-a324-d9c71731da5a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"734e9501-b98e-4f8c-a324-d9c71731da5a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 4500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"4d8d75e4-3887-4feb-b562-9c31dc1504ab\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"4d8d75e4-3887-4feb-b562-9c31dc1504ab\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 4600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"903596cd-789b-4bf4-b46d-ae27ea0fe5e5\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"903596cd-789b-4bf4-b46d-ae27ea0fe5e5\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 4700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"ffc71220-3ec1-4230-8ab0-ff47ee1368ea\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"ffc71220-3ec1-4230-8ab0-ff47ee1368ea\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 4800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"8e8424d8-4b3b-4131-9581-f490e9f7b026\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"8e8424d8-4b3b-4131-9581-f490e9f7b026\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 4900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"f5e1cee7-50fd-40d0-adf9-63298e665311\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"f5e1cee7-50fd-40d0-adf9-63298e665311\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 5000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"0e1436d1-887f-461e-baf5-1aba05f2ec1a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"0e1436d1-887f-461e-baf5-1aba05f2ec1a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 5100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"3a050267-c083-4693-8074-d4bf5815b2d1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"3a050267-c083-4693-8074-d4bf5815b2d1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 5200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"cae47a1e-14da-42a1-a398-54f0ac6c026e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"cae47a1e-14da-42a1-a398-54f0ac6c026e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 5300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"23145af5-daf9-421e-b2b2-db8c6043bbcc\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"23145af5-daf9-421e-b2b2-db8c6043bbcc\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 5400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"1d970083-8e57-4f2d-9cde-8694778f50f4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"1d970083-8e57-4f2d-9cde-8694778f50f4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 5500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"e8071e3c-de0f-4457-950f-b4bedd5152d0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"e8071e3c-de0f-4457-950f-b4bedd5152d0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 5600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"ac047410-bcab-42d5-a591-a78cf57f14de\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"ac047410-bcab-42d5-a591-a78cf57f14de\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 5700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"e9ea91e3-5867-4df7-8340-3fff811bf45c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"e9ea91e3-5867-4df7-8340-3fff811bf45c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 5800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"77f33785-f7f2-421c-b892-cb700c65425a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"77f33785-f7f2-421c-b892-cb700c65425a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 5900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"e8e7f7f0-a4bf-47d1-ae51-dcdf5bae26e5\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"e8e7f7f0-a4bf-47d1-ae51-dcdf5bae26e5\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 6000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"4c477e6b-08a5-44d2-9d6b-de5707bf1165\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"4c477e6b-08a5-44d2-9d6b-de5707bf1165\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 6100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"dbb204eb-7841-4b63-9c4c-ab9f9c3c3e9c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"dbb204eb-7841-4b63-9c4c-ab9f9c3c3e9c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 6200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"3271f7b6-9663-4a48-a1aa-e979e836d0ec\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"3271f7b6-9663-4a48-a1aa-e979e836d0ec\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 6300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"2ad6e36c-e35e-4764-a02f-cb9421ae4b55\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"2ad6e36c-e35e-4764-a02f-cb9421ae4b55\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 6400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"cdc57dce-d4ee-4175-b596-7277dee89302\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"cdc57dce-d4ee-4175-b596-7277dee89302\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 6500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"acb3e72a-4a8e-4005-b0e5-cbd505e28d0b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"acb3e72a-4a8e-4005-b0e5-cbd505e28d0b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 6600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"ac244c0e-7108-429b-aa42-7cafaa91cf29\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"ac244c0e-7108-429b-aa42-7cafaa91cf29\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 6700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"51bf4123-b254-40b1-8bdc-b62c40238bec\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"51bf4123-b254-40b1-8bdc-b62c40238bec\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 6800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"8431cc69-30d8-4e28-87de-989a0e9b0e86\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"8431cc69-30d8-4e28-87de-989a0e9b0e86\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 6900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"03528c23-258d-4dbd-87b1-7ceb0cbb7ac6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"03528c23-258d-4dbd-87b1-7ceb0cbb7ac6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 7000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"ae765be8-eefd-4905-ae17-2c3d4fc64d14\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"ae765be8-eefd-4905-ae17-2c3d4fc64d14\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 7100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"fbd38211-9608-4de4-b846-b8a4edee97ce\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"fbd38211-9608-4de4-b846-b8a4edee97ce\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 7200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"8de49aad-85be-4f17-a852-8850561dbce4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"8de49aad-85be-4f17-a852-8850561dbce4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 7300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"d20f45af-cda5-4dc6-963c-1ce029df3cb9\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"d20f45af-cda5-4dc6-963c-1ce029df3cb9\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 7400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"9f13c3ad-ac51-4b8c-9a51-5f94df7ec989\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"9f13c3ad-ac51-4b8c-9a51-5f94df7ec989\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 7500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"c4383a79-c97e-461f-b4b6-d283cbe8d2fd\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"c4383a79-c97e-461f-b4b6-d283cbe8d2fd\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 7600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"886ba201-e458-4a07-8051-6509f8cc7b91\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"886ba201-e458-4a07-8051-6509f8cc7b91\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 7700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"054060d2-1ada-4be1-b90e-f4cc9a04585a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"054060d2-1ada-4be1-b90e-f4cc9a04585a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 7800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"9ee671d9-aefd-49ae-b527-f8b88b454e4d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"9ee671d9-aefd-49ae-b527-f8b88b454e4d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 7900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"b5ce9532-d21a-418a-97dd-ee162cfa3bb9\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"b5ce9532-d21a-418a-97dd-ee162cfa3bb9\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 8000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"2d3430ff-d6dc-4657-a1e7-d01902472eb1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"2d3430ff-d6dc-4657-a1e7-d01902472eb1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 8100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"6d8802bb-292f-4572-9b43-d409ba5ed5ae\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"6d8802bb-292f-4572-9b43-d409ba5ed5ae\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 8200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"9ff8b563-f1a3-4852-a43e-1484385bc3e0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"9ff8b563-f1a3-4852-a43e-1484385bc3e0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 8300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"e9c9761a-75bb-4d49-a46f-a2475bf46b54\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"e9c9761a-75bb-4d49-a46f-a2475bf46b54\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 8400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"55d741b5-55be-4319-b307-129326405e9a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"55d741b5-55be-4319-b307-129326405e9a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 8500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"5ee24cea-f1eb-41cf-8a26-28b8d2068f0a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"5ee24cea-f1eb-41cf-8a26-28b8d2068f0a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 8600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"e4ee1de2-38ae-4c13-951e-c5a4fae4696b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"e4ee1de2-38ae-4c13-951e-c5a4fae4696b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 8700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"67095b53-c80b-438b-984d-d33251cad8ea\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"67095b53-c80b-438b-984d-d33251cad8ea\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 8800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"05b8ae8d-baa1-47a7-af64-0dcef050368b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"05b8ae8d-baa1-47a7-af64-0dcef050368b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 8900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"02f035ce-2fe0-448e-816f-5969a3a23263\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"02f035ce-2fe0-448e-816f-5969a3a23263\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 9000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"14180074-3660-476d-bfb8-833321185301\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"14180074-3660-476d-bfb8-833321185301\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 9100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"107f781d-6bc5-4be4-b058-d5c91d4e78ed\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"107f781d-6bc5-4be4-b058-d5c91d4e78ed\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 9200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"3cf3a923-923c-4d2f-85ed-24372a48fae2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"3cf3a923-923c-4d2f-85ed-24372a48fae2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 9300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"ccc06fc8-cddc-423c-80e5-ed602792bcd4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"ccc06fc8-cddc-423c-80e5-ed602792bcd4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 9400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"dbc2eae0-2b11-4b8c-b74a-d4eeef2e2add\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"dbc2eae0-2b11-4b8c-b74a-d4eeef2e2add\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 9500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"b42c34fb-328d-4cf4-8aca-e06c72fb9e0c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"b42c34fb-328d-4cf4-8aca-e06c72fb9e0c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 9600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"336f5b78-41a3-4c7f-b485-4c182736b487\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"336f5b78-41a3-4c7f-b485-4c182736b487\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 9700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"b2a73b66-a39b-4d9c-980e-c0f41d0c59ae\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"b2a73b66-a39b-4d9c-980e-c0f41d0c59ae\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 9800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"7cc24547-efd5-4eb1-882a-26622dad60d2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"7cc24547-efd5-4eb1-882a-26622dad60d2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 9900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"47655352-1df3-4506-829d-4f35b0a2c82a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"47655352-1df3-4506-829d-4f35b0a2c82a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 10000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"0b2a5012-fdd6-48d9-bd35-c2a3a3b0b875\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"0b2a5012-fdd6-48d9-bd35-c2a3a3b0b875\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 10100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"f070f150-dc96-41f8-8981-76bf816c4150\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"f070f150-dc96-41f8-8981-76bf816c4150\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 10200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"d0fd2583-eba0-444d-b972-b4392a634fda\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"d0fd2583-eba0-444d-b972-b4392a634fda\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 10300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"4a171f29-6b15-4b7d-bad8-956fe30fb4b5\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"4a171f29-6b15-4b7d-bad8-956fe30fb4b5\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 10400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"c9811205-0a90-4550-bf8f-42f3a21fbc21\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"c9811205-0a90-4550-bf8f-42f3a21fbc21\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 10500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"452b4b53-3d96-4e2f-ae7d-6cf827e1013d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"452b4b53-3d96-4e2f-ae7d-6cf827e1013d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 10600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"bc0be337-fc0b-4785-bd73-493f1af6397d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"bc0be337-fc0b-4785-bd73-493f1af6397d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 10700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"3c965f92-437e-455e-9673-4afa8f81b266\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"3c965f92-437e-455e-9673-4afa8f81b266\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 10800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"5af70581-2c80-48b6-b137-d2cbc0ef7201\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"5af70581-2c80-48b6-b137-d2cbc0ef7201\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 10900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"6833f3e8-c7ac-495b-a433-4b23ee67f65b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"6833f3e8-c7ac-495b-a433-4b23ee67f65b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 11000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"a12ed8a8-1ef7-4ca5-ac8d-74a352a81769\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"a12ed8a8-1ef7-4ca5-ac8d-74a352a81769\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 11100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"ef255cd7-4733-48cf-b281-1183dcf82527\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"ef255cd7-4733-48cf-b281-1183dcf82527\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 11200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"1e2947eb-8e4a-44a1-9c78-1662c9e39466\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"1e2947eb-8e4a-44a1-9c78-1662c9e39466\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 11300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"479b874f-eea5-47a1-bc04-b6eeff33f674\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"479b874f-eea5-47a1-bc04-b6eeff33f674\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 11400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"df78e41e-7d7d-407d-9954-37aafb8f78ea\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"df78e41e-7d7d-407d-9954-37aafb8f78ea\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 11500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"bb50ca4c-aa20-40ce-8112-5fb1a48f0c6f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"bb50ca4c-aa20-40ce-8112-5fb1a48f0c6f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 11600
+}
+{
+  "sandboxLog": "Lambda errors have reached maximum value for submission 00f29e50-fc97-44a6-bfce-82f56ecb3efd",
+  "lambdaLog": null,
+  "timestamp": 11656
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"f52e4308-cbe4-437a-8dd3-f2135a7c12e9\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"f52e4308-cbe4-437a-8dd3-f2135a7c12e9\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 11700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"2aa1561e-dd13-4e9b-8596-05d2bc9a3186\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"2aa1561e-dd13-4e9b-8596-05d2bc9a3186\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 11800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"e741cf69-65b0-4807-a9ca-a14ea139e37a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"e741cf69-65b0-4807-a9ca-a14ea139e37a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 11900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"d7201d65-d1b7-4a36-9547-2d996646452c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"d7201d65-d1b7-4a36-9547-2d996646452c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 12000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"93c97441-56d4-4d9c-bbf5-5670b551783d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"93c97441-56d4-4d9c-bbf5-5670b551783d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 12100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"595c93a7-6b17-4bc3-b1dd-92b44a761606\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"595c93a7-6b17-4bc3-b1dd-92b44a761606\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 12200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"4269e8ae-88e6-4357-b059-da18e3f1e0a6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"4269e8ae-88e6-4357-b059-da18e3f1e0a6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 12300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"5f4c3e9d-3bd4-4044-a15c-fe96b45c1caa\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"5f4c3e9d-3bd4-4044-a15c-fe96b45c1caa\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 12400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"3023fb8d-bead-43a9-b0c0-f0b007e4d03a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"3023fb8d-bead-43a9-b0c0-f0b007e4d03a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 12500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"06df0132-e731-44cd-9ba6-779a8421b00a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"06df0132-e731-44cd-9ba6-779a8421b00a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 12600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"39282139-d75d-40c9-9bbd-81880d3f7293\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"39282139-d75d-40c9-9bbd-81880d3f7293\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 12700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"830c5698-b0a3-4191-8407-3e94dd9ddac6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"830c5698-b0a3-4191-8407-3e94dd9ddac6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 12800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"2199d7c0-cbfa-4f44-b4c4-065420a0a33e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"2199d7c0-cbfa-4f44-b4c4-065420a0a33e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 12900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"a572e715-b550-477e-bb4a-509fabd1180e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"a572e715-b550-477e-bb4a-509fabd1180e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 13000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"9d9b3641-f8e8-456d-9f84-addae7054c55\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"9d9b3641-f8e8-456d-9f84-addae7054c55\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 13100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"e6519cf1-c5c8-4440-8735-3d0ce391ea6d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"e6519cf1-c5c8-4440-8735-3d0ce391ea6d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 13200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"2c1306fa-7790-4deb-bbe1-6211d32bc9f5\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"2c1306fa-7790-4deb-bbe1-6211d32bc9f5\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 13300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"b54d2163-21b2-44c9-b2c8-a2b2d7dafbe7\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"b54d2163-21b2-44c9-b2c8-a2b2d7dafbe7\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 13400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"9cc33cce-add2-4e3a-9ce8-bddab2820655\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"9cc33cce-add2-4e3a-9ce8-bddab2820655\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 13500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"ca7bbc7e-ea71-4b51-8b19-6a8839ac2c46\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"ca7bbc7e-ea71-4b51-8b19-6a8839ac2c46\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 13600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"84b4d9f4-3d0f-4848-853f-7ae32ea7ee0d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"84b4d9f4-3d0f-4848-853f-7ae32ea7ee0d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 13700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"a628b396-7085-48e4-a68f-3d17ffef07c3\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"a628b396-7085-48e4-a68f-3d17ffef07c3\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 13800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"79104299-ae22-4701-a8f9-0e3266131e11\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"79104299-ae22-4701-a8f9-0e3266131e11\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 13900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"0135ff7f-d9fc-4050-9a23-81a03092b607\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"0135ff7f-d9fc-4050-9a23-81a03092b607\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 14000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"dbbb9242-9223-4240-89a8-7af23c60b6fe\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"dbbb9242-9223-4240-89a8-7af23c60b6fe\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 14100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"7e54667a-3be5-409f-882e-6384fd82524a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"7e54667a-3be5-409f-882e-6384fd82524a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 14200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"ff92e2d8-21c0-43f0-8ded-264e69a46fbd\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"ff92e2d8-21c0-43f0-8ded-264e69a46fbd\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 14300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"31699bec-8c5a-4161-a94a-433003d18a5e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"31699bec-8c5a-4161-a94a-433003d18a5e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 14400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"a09f51dd-cc94-4c24-b830-8261dc008c72\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"a09f51dd-cc94-4c24-b830-8261dc008c72\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 14500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"8bae43a0-9707-4ed0-b9a4-c59a18a45020\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"8bae43a0-9707-4ed0-b9a4-c59a18a45020\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 14600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"5b1d24b2-8c40-4e90-8094-fd8d8aa2e504\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"5b1d24b2-8c40-4e90-8094-fd8d8aa2e504\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 14700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"a159faac-2176-4807-800f-fcea3ec60c49\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"a159faac-2176-4807-800f-fcea3ec60c49\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 14800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"762f01cb-e9c4-4fff-a496-82ef1426ccc6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"762f01cb-e9c4-4fff-a496-82ef1426ccc6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 14900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"316edf00-cbf0-4ecf-b0e5-1cd129b7519a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"316edf00-cbf0-4ecf-b0e5-1cd129b7519a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 15000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"2c184e1c-fbf5-4089-88f6-f258016ccbbd\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"2c184e1c-fbf5-4089-88f6-f258016ccbbd\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 15100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"0371f6b3-498d-484b-bd38-4ac0aa82195b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"0371f6b3-498d-484b-bd38-4ac0aa82195b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 15200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"019fdb12-666d-4c73-a578-22dccd583fcc\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"019fdb12-666d-4c73-a578-22dccd583fcc\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 15300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"ef40088c-28f5-4d94-bebb-b684d431660c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"ef40088c-28f5-4d94-bebb-b684d431660c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 15400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"28125654-b1b6-4c0e-890c-18a1f3ed41d3\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"28125654-b1b6-4c0e-890c-18a1f3ed41d3\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 15500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"b171d99c-6f94-488e-9d56-7fb27a436d5f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"b171d99c-6f94-488e-9d56-7fb27a436d5f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 15600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"fe47cb9d-3b2b-4746-95de-f68924ed475e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"fe47cb9d-3b2b-4746-95de-f68924ed475e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 15700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"dbba0bf0-6ac7-41b7-8260-62db64738d78\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"dbba0bf0-6ac7-41b7-8260-62db64738d78\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 15800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"6e0c027b-a8b5-4e8b-9ad4-c9599b76fcc2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"6e0c027b-a8b5-4e8b-9ad4-c9599b76fcc2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 15900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"e2d81761-2030-485d-b9c3-a2c7e4a2ad9e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"e2d81761-2030-485d-b9c3-a2c7e4a2ad9e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 16000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"5d076dd7-a127-43b5-9ddd-fc27c9258b61\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"5d076dd7-a127-43b5-9ddd-fc27c9258b61\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 16100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"e4c0d879-302a-4660-8f1b-ab32afeb2452\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"e4c0d879-302a-4660-8f1b-ab32afeb2452\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 16200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"0dec5532-030d-4c5d-bd58-370671ff490e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"0dec5532-030d-4c5d-bd58-370671ff490e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 16300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"f65ded3f-1e08-4d20-a09a-f0685b79de6d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"f65ded3f-1e08-4d20-a09a-f0685b79de6d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 16400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"52314b0f-9974-4cea-a4f3-434cd865ef37\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"52314b0f-9974-4cea-a4f3-434cd865ef37\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 16500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"da22b630-961b-4099-a854-53547c184fee\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"da22b630-961b-4099-a854-53547c184fee\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 16600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"bf3cdb64-dd56-453b-8714-6e13aa500352\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"bf3cdb64-dd56-453b-8714-6e13aa500352\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 16700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"a4f83b0a-b640-42ad-bb0b-708ad5cd2dd4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"a4f83b0a-b640-42ad-bb0b-708ad5cd2dd4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 16800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"841d56c9-0c5e-4c34-89e5-b666793eb729\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"841d56c9-0c5e-4c34-89e5-b666793eb729\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 16900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"ee851b07-3ec6-463a-970c-7061dc107b34\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"ee851b07-3ec6-463a-970c-7061dc107b34\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 17000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"10086b71-aa0d-4e73-835d-53a09b70f777\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"10086b71-aa0d-4e73-835d-53a09b70f777\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 17100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"1dfa3782-a9b4-4bce-97b3-b137e6f09417\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"1dfa3782-a9b4-4bce-97b3-b137e6f09417\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 17200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"bc5dae92-1695-4d30-b4cc-d2d472549e9a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"bc5dae92-1695-4d30-b4cc-d2d472549e9a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 17300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"6d8019b0-bf2a-4057-9724-75f3de7c312c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"6d8019b0-bf2a-4057-9724-75f3de7c312c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 17400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"0b7bb9dc-ec29-4416-901b-94ecbce0b729\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"0b7bb9dc-ec29-4416-901b-94ecbce0b729\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 17500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"76801f43-4701-4a1d-9011-fc98e421d17d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"76801f43-4701-4a1d-9011-fc98e421d17d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 17600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"2b4b00af-ee56-440b-ab69-613ff454e6ee\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"2b4b00af-ee56-440b-ab69-613ff454e6ee\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 17700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"6e04ff71-7015-4159-9b98-5e5e1de897cc\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"6e04ff71-7015-4159-9b98-5e5e1de897cc\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 17800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"489d4e80-be44-4b72-b3f2-ddba5f4d6290\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"489d4e80-be44-4b72-b3f2-ddba5f4d6290\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 17900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"8ff364f1-3b69-4781-b79a-6d0b5c0ac195\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"8ff364f1-3b69-4781-b79a-6d0b5c0ac195\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 18000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"ecc5a26b-1204-4874-9cb1-4b48cecbb89b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"ecc5a26b-1204-4874-9cb1-4b48cecbb89b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 18100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"6607e911-f0b1-483d-b17c-91baf300d3ac\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"6607e911-f0b1-483d-b17c-91baf300d3ac\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 18200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"0fcff2be-05e6-4f58-8d00-ca344c9289cd\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"0fcff2be-05e6-4f58-8d00-ca344c9289cd\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 18300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"99f13cde-2e31-4ea1-b180-4b4b3cde3184\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"99f13cde-2e31-4ea1-b180-4b4b3cde3184\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 18400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"bb9c96b7-34d6-4c6f-b78b-615969efe907\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"bb9c96b7-34d6-4c6f-b78b-615969efe907\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 18500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"45573b57-0b66-48cd-ab46-a57ed03aeb23\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"45573b57-0b66-48cd-ab46-a57ed03aeb23\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 18600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"a3f13634-e1a1-43c0-85c2-6aef8271758f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"a3f13634-e1a1-43c0-85c2-6aef8271758f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 18700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"86b8867b-faa0-46a8-98c4-9fe024812669\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"86b8867b-faa0-46a8-98c4-9fe024812669\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 18800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"0421ca4e-1714-4c5e-956d-b4149f7817a6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"0421ca4e-1714-4c5e-956d-b4149f7817a6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 18900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"1b32f6ae-1c1a-42b8-8aa7-86c4009dd9d5\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"1b32f6ae-1c1a-42b8-8aa7-86c4009dd9d5\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 19000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"4f4fa649-50de-4c4b-9c8b-844b2a1b975b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"4f4fa649-50de-4c4b-9c8b-844b2a1b975b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 19100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"02ae1bb2-ee3e-46b0-ac34-120221e36c18\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"02ae1bb2-ee3e-46b0-ac34-120221e36c18\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 19200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"d3ea6ea7-94d7-49c6-a96e-fc8fe1210678\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"d3ea6ea7-94d7-49c6-a96e-fc8fe1210678\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 19300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"4bdda14b-6414-414f-88c4-66ad8ff92c4a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"4bdda14b-6414-414f-88c4-66ad8ff92c4a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 19400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"677fddd5-64cf-4543-bb23-18eb747ab9c1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"677fddd5-64cf-4543-bb23-18eb747ab9c1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 19500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"6f1054c5-c609-4e72-ba86-c5391528c064\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"6f1054c5-c609-4e72-ba86-c5391528c064\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 19600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"d08ad6ce-77e2-4d0e-b0ca-171c02d0266c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"d08ad6ce-77e2-4d0e-b0ca-171c02d0266c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 19700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"37481d42-c9b4-4ef8-8792-ab237c9c6940\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"37481d42-c9b4-4ef8-8792-ab237c9c6940\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 19800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"d2ddfa1b-9c62-4901-9a13-304a7dd80219\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"d2ddfa1b-9c62-4901-9a13-304a7dd80219\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 19900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"f3e2aaf4-51f5-4b2e-bb18-56312d83c7f0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"cannot access local variable 'traderData' where it is not associated with a value\", \"errorType\": \"UnboundLocalError\", \"requestId\": \"f3e2aaf4-51f5-4b2e-bb18-56312d83c7f0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 85, in run\\n    if len(traderData) < 15:\\n\"]}",
+  "timestamp": 20000
+}
+
+
+
+Activities log:
+day;timestamp;product;bid_price_1;bid_volume_1;bid_price_2;bid_volume_2;bid_price_3;bid_volume_3;ask_price_1;ask_volume_1;ask_price_2;ask_volume_2;ask_price_3;ask_volume_3;mid_price;profit_and_loss
+
+
+
+
+Trade History:
+null
