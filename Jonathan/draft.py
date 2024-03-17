@@ -32,12 +32,12 @@ class Trader:
                     if not self.has_active_positions(orders, "BUY"):
                         # No active buy positions, initiate buy
                         print("Initiating buy position")
-                        orders.append(BuyOrder(product, 10))  # Initial buy of 10 units
+                        orders.append(Order(product,xxxxxxxxxx ,10))  # Initial buy of 10 units
                         
                     elif len(orders) < 20 and traderData != "" and float(traderData_list[-1]) < float(traderData_list[-2]):
                         # Buy 2 units whenever RSI is lower than previous period
                         print("Buying 2 units")
-                        orders.append(BuyOrder(product, 2))
+                        orders.append(Order(product,xxxxxxxxxx ,2))
                     
                     if RSI >= 60:
                         # Exit all buy positions
@@ -49,12 +49,12 @@ class Trader:
                     if not self.has_active_positions(orders, "SELL"):
                         # No active sell positions, initiate sell
                         print("Initiating sell position")
-                        orders.append(SellOrder(product, 10))  # Initial sell of 10 units
+                        orders.append(Order(product,xxxxxxxxxx ,-10))  # Initial sell of 10 units
                         
                     elif len(orders) < 20 and traderData != "" and float(traderData_list[-1]) > float(traderData_list[-2]):
                         # Sell 2 units whenever RSI is higher than previous period
                         print("Selling 2 units")
-                        orders.append(SellOrder(product, 2))
+                        orders.append(Order(product,xxxxxxxxxx ,-2))
                     
                     if RSI <= 40:
                         # Exit all sell positions
