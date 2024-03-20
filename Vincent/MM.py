@@ -13,9 +13,10 @@ Idea:
 - NO: market make both BID and ASK orders 
 
 
-SOMETHING TO ADD NOW:
-- only close out of a position if you made a profit or net zero. 
-- Will need to pass data to traderData. 
+
+- (!) If we are long, to close out we need to short, to quote a bid price (instead of lifting the ask)
+- (!) Update the quote prices to reflect market moving up or down
+- (!) Only market make if it is worth the spread (for now, hard code the spread) 
 """
 
 from datamodel import OrderDepth, UserId, TradingState, Order
