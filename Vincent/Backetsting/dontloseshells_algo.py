@@ -74,48 +74,98 @@ class Logger:
 
 # This is provisionary, if no other algorithm works.
 # Better to loose nothing, then dreaming of a gain.
+
 class Trader:
-
-    logger = Logger(local=True)
-
+    
     def run(self, state: TradingState):
-        print("traderData: " + state.traderData)
-        print("Observations: " + str(state.observations))
+        """
+        1. Check outstanding positions 
+            1.1 No outstanding positions --> Market make 
+            1.2 Outstanding positions --> Send order to close position
+        """
+        #print("traderData: " + state.traderData)
+        #print("Observations: " + str(state.observations))
 
-				# Orders to be placed on exchange matching engine
+        #Set position limits 
+        product_limits = {'AMETHYSTS': 15, 'STARFRUIT': 15}
+
+        # Orders to be placed on exchange matching engine
         result = {}
+
         for product in state.order_depths:
             order_depth: OrderDepth = state.order_depths[product]
             orders: List[Order] = []
+            print(f"|| Buy Orders {product}: " + str(order_depth.buy_orders) + f", Sell Orders {product}: " + str(order_depth.sell_orders) + "||")
+
+            #Find the position limit
+            position_limit = self.find_position_limits(product, product_limits)
+
+            #Print current position
+            if len(state.position) != 0:
+                print(f"My position {product}: {state.position}")
+            else:
+                print(f"No open positions {product}")
+
+            #(!!!) There are no open positions --> Send orders to attempt to MM
+            if state.position.get(product, 0) == 0:
+                #Get the maximum amount of orders to send. There should be no outstanding positions so max is position limit set. 
+                qty_to_mm = abs(position_limit)
+               
+                #Get mid price to ensure that our quoted bid and ask price are correct (bid < mid price, ask > mid price)
+                mid_price = ((list(order_depth.buy_orders.items())[0][0]) + (list(order_depth.sell_orders.items())[0][0]))/2
+
+                #Quote a better bid price (BUY order) and a better ask price (SELL order)
+                my_bid = list(order_depth.buy_orders.items())[0][0] + 1
+                my_ask = list(order_depth.sell_orders.items())[0][0] - 1 
+
+                #Check if the order is valid - if not do nothing. 
+                if my_bid < mid_price and my_ask > mid_price and my_bid < my_ask: 
+                    print("(MM) Quoting BUY", str(qty_to_mm) + "x", product, my_bid)
+                    orders.append(Order(product, my_bid, qty_to_mm))
+
+                    print("(MM) Quoting SELL", str(qty_to_mm) + "x", product, my_ask)
+                    orders.append(Order(product, my_ask, -qty_to_mm))
+
+                    result[product] = orders
 
 
+            #(!!!) There are open positions --> Quote orders to close positions
+            else:
+                qty_to_close = state.position.get(product) #Only continue if the asset has a current open position. 
+                #Now add logic to determine if we should quote at best bid and ask or better
+                best_bid = list(order_depth.buy_orders.items())[0][0]
+                best_ask = list(order_depth.sell_orders.items())[0][0]
+                
+                
+                #Change this to determine if we should match the best bid/ask, or beat them (rn we are not doing anything)
+                my_bid = best_bid
+                my_ask = best_ask
+                
+                if qty_to_close is not None: 
+                    if state.position[product] > 0: #Quote a ASK at best price                   
+                        print("(CLOSE) Quoting Ask", str(qty_to_close) + "x", product, my_ask)
+                        orders.append(Order(product, my_ask, -abs(qty_to_close)))
+                        
+                    else: #Quote a BID at best price 
+                        print("(CLOSE) Quote Bid", str(qty_to_close) + "x", product, my_bid)
+                        orders.append(Order(product, my_bid, abs(qty_to_close)))
 
-            acceptable_price = 10  # Participant should calculate this value
-            print("Acceptable price : " + str(acceptable_price))
-            print("Buy Order depth : " + str(len(order_depth.buy_orders)) + ", Sell order depth : " + str(len(order_depth.sell_orders)))
+                    result[product] = orders 
 
-            
-    
-            if len(order_depth.sell_orders) != 0:
-                best_ask, best_ask_amount = list(order_depth.sell_orders.items())[0]
-                if int(best_ask) < acceptable_price:
-                    print("BUY", str(-best_ask_amount) + "x", best_ask)
-                    orders.append(Order(product, best_ask, -best_ask_amount))
-    
-            if len(order_depth.buy_orders) != 0:
-                best_bid, best_bid_amount = list(order_depth.buy_orders.items())[0]
-                if int(best_bid) > acceptable_price:
-                    print("SELL", str(best_bid_amount) + "x", best_bid)
-                    orders.append(Order(product, best_bid, -best_bid_amount))
-            
 
-            
-            result[product] = orders
-    
-		    # String value holding Trader state data required. 
-				# It will be delivered as TradingState.traderData on next execution.
-        traderData = "SAMPLE" 
+        traderData = "No data needed" 
         
-				# Sample conversion request. Check more details below. 
+        # Sample conversion request. Check more details below. 
         conversions = 1
         return result, traderData
+    
+    
+    def find_position_limits(self, product, product_limits: dict) -> int:
+        """
+        For each product, find the position limited set (hard coded).
+        """
+        if product in product_limits:
+            return product_limits[product]
+        else: 
+            return 20 #Set default position limit to 20
+    
