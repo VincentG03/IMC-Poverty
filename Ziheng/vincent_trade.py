@@ -1,6 +1,6 @@
 
 
-from datamodel import OrderDepth, UserId, TradingState, Order
+from datamodel import OrderDepth, UserId, TradingState, Order, ProsperityEncoder
 from typing import List
 import jsonpickle
 
@@ -32,7 +32,7 @@ class Trader:
             print(f"NORMAL")
             traderData = None
         else:
-            traderData=jsonpickle.decode(traderData)
+            traderData = eval(traderData)
 
         for product in state.order_depths:
 
