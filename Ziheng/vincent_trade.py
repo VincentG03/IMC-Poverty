@@ -1,36 +1,3 @@
-"""
-Strategy: Market Making 
-
-Considerations: 
-- Send small order? So they don't just trade with 50% of the qty and have to close out 
-- Consider FOK orders to avoid issue above 
-- When quoting bid and ask price, it is important that you dont cross over the mid price.
-
-
-Idea: 
-- Check if outstanding positions:
-- YES: give the best order to the market to try to close out of that position
-- NO: market make both BID and ASK orders 
-
-
-
-- (!) If we are long, to close out we need to short, to quote a bid price (instead of lifting the ask)
-- (!) Update the quote prices to reflect market moving up or down
-- (!) Only market make if it is worth the spread (for now, hard code the spread) 
-
-
-PROBLEM: what if there are no bid or asks? how do determine what to quote at???
-
-133700, we were quoting a SELL to close out of MM position. But we send SELL order at BELOW mid price.
-
-
-
-"""
-
-from datamodel import OrderDepth, UserId, TradingState, Order
-from typing import List
-
-
 class Trader:
     # Hardcode different sprteads for different products 
     # Figure out the trend of the market, trade in larger quantities when its favourable ( we were long, then market dropped, then we had to close out at a loss)
@@ -48,7 +15,10 @@ class Trader:
         # Orders to be placed on exchange matching engine
         state.toJSON()
         result = {}
-        traderData = state.traderData #I think this is correct 
+        # traderData = json.loads(state.traderData or "null") #I think this is correct 
+        traderData = state.traderData
+        if traderData == "":
+            traderData = None
 
         for product in state.order_depths:
 
@@ -67,7 +37,8 @@ class Trader:
                 print(f"My position: {state.position}")
             else:
                 print(f"No open positions")
-                
+            
+
             #Determine mid price to quote around
             mid_price = ((list(order_depth.buy_orders.items())[0][0]) + (list(order_depth.sell_orders.items())[0][0]))/2
             
@@ -185,13 +156,17 @@ class Trader:
         
 
     def last_x_spread(self, traderData: dict, symbol, curr_spread, spread_hist = 20):
-
-        if len(traderData[symbol]) < spread_hist:
-            traderData[symbol].append(curr_spread)
+        if traderData is None:
+            return {symbol: [curr_spread]}
+        if symbol in traderData:
+            if len(traderData[symbol]) < spread_hist:
+                traderData[symbol].append(curr_spread)
+            else:
+                traderData[symbol].pop(0)
+                traderData[symbol].append(curr_spread)
         else:
-            traderData[symbol].pop(0)
-            traderData[symbol].append(curr_spread)
-
+            traderData[symbol] = [curr_spread]
+            return traderData
         return traderData
 
     # example of what the dict will look like
