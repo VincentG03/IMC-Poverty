@@ -24,10 +24,7 @@ PROBLEM: what if there are no bid or asks? how do determine what to quote at???
 
 from datamodel import OrderDepth, UserId, TradingState, Order
 from typing import List
-import pandas as pd
-import numpy as np
-import math 
-import string
+
 
 class Trader:
     # Hardcode different sprteads for differnt procts 
