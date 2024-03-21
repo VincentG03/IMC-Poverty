@@ -47,6 +47,7 @@ class Trader:
 
         # Orders to be placed on exchange matching engine
         result = {}
+        traderData = state.traderData #I think this is correct 
 
         for product in state.order_depths:
             order_depth: OrderDepth = state.order_depths[product]
