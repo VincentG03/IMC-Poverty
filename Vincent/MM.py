@@ -20,6 +20,11 @@ Idea:
 
 
 PROBLEM: what if there are no bid or asks? how do determine what to quote at???
+
+133700, we were quoting a SELL to close out of MM position. But we send SELL order at BELOW mid price.
+
+
+
 """
 
 from datamodel import OrderDepth, UserId, TradingState, Order
@@ -28,6 +33,8 @@ from typing import List
 
 class Trader:
     # Hardcode different sprteads for different products 
+    # Figure out the trend of the market, trade in larger quantities when its favourable ( we were long, then market dropped, then we had to close out at a loss)
+    # Instead of rejecting if the trade is bad, can increase my spread then send order again (unlikely to be executed but if they do we get big profit)
     
     def run(self, state: TradingState):
         """
@@ -38,9 +45,6 @@ class Trader:
         #print("traderData: " + state.traderData)
         #print("Observations: " + str(state.observations))
 
-        #Set position limits 
-        product_limits = {'AMETHYSTS': 20, 'STARFRUIT': 20}
-
         # Orders to be placed on exchange matching engine
         result = {}
 
@@ -50,17 +54,16 @@ class Trader:
             print(f"|| Buy Orders {product}: " + str(order_depth.buy_orders) + f", Sell Orders {product}: " + str(order_depth.sell_orders) + "||")
 
             #Determine the position limit (set by IMC)
-            position_limit = self.find_position_limits(product, product_limits)
+            position_limit = self.find_position_limits(product)
 
             #(!!!!!!!!) Determine the spread we will trade for this product 
-            required_spread = 6 #Hard coded number, only market make if spreads favourable 
-
+            required_spread = self.find_required_spread(product, traderData) 
 
             #Print current position
             if len(state.position) != 0:
-                print(f"My position {product}: {state.position}")
+                print(f"My position: {state.position}")
             else:
-                print(f"No open positions {product}")
+                print(f"No open positions")
                 
             #Determine mid price to quote around
             mid_price = ((list(order_depth.buy_orders.items())[0][0]) + (list(order_depth.sell_orders.items())[0][0]))/2
@@ -68,15 +71,13 @@ class Trader:
             #Determine the market's best bid and best ask
             best_bid = list(order_depth.buy_orders.items())[0][0]
             best_ask = list(order_depth.sell_orders.items())[0][0]
+            print(f"bid {best_bid}, ask {best_ask}")
 
             #Determine the spread 
             spread = best_ask - best_bid 
 
             #Determine my bids and ask that I will send 
-            my_bid = best_bid + 1
-            my_ask = best_ask - 1 
-            # my_bid = best_bid 
-            # my_ask = best_ask 
+            my_bid, my_ask = self.find_my_bid_ask(best_bid, best_ask)
 
             #(!!!) There are no open positions --> quote orders to MM (max position limit)
             if state.position.get(product, 0) == 0: #If product position = 0 or None (which means we haven't traded it yet)
@@ -110,12 +111,16 @@ class Trader:
                 
                 #Market make the remaining position limit. Check if the order is valid (bid < mid, ask > mid, spread is big enough)
                 if my_bid < mid_price and my_ask > mid_price and spread >= required_spread: 
-                    print("(MM) Quoting BUY", str(qty_remaining) + "x", product, my_bid)
+                    #print("(MM) Quoting BUY", str(qty_remaining) + "x", product, my_bid)
                     orders.append(Order(product, my_bid, qty_remaining))
 
-                    print("(MM) Quoting SELL", str(qty_remaining) + "x", product, my_ask)
+                    #print("(MM) Quoting SELL", str(qty_remaining) + "x", product, my_ask)
                     orders.append(Order(product, my_ask, -qty_remaining))
                 
+                    print(f"(MM) Quoting {product}: bid {qty_remaining}x {my_bid}, ask {qty_remaining}x {my_ask}")
+                else: 
+                    #If the below executes, it means that we are potentially 
+                    print(f"Could place {my_bid} and {my_ask}")
                 
                 
                 
@@ -142,10 +147,13 @@ class Trader:
     
 
 
-    def find_position_limits(self, product, product_limits: dict) -> int:
+    def find_position_limits(self, product) -> int:
         """
         For each product, find the position limited set (hard coded).
         """
+        #Set position limits 
+        product_limits = {'AMETHYSTS': 20, 'STARFRUIT': 20}
+        
         if product in product_limits:
             return product_limits[product]
         else: 
@@ -156,4 +164,17 @@ class Trader:
         """
         For a particular product, find the spread we require before we market make.
         """
-        pass
+        product_required_spread = {'AMETHYSTS': 6, 'STARFRUIT': 6}
+        
+        if product in product_required_spread:
+            return product_required_spread[product]
+        else: 
+            return 6 #Default spread set to 6 (NOT RELIABLE)
+        
+        
+    def find_my_bid_ask(best_bid, best_ask):
+        """
+        Return the bid and ask prices we will quote.
+        """
+        return best_bid + 1, best_ask - 1
+        
