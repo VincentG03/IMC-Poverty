@@ -1,3 +1,13 @@
+
+
+from datamodel import OrderDepth, UserId, TradingState, Order
+from typing import List
+
+
+
+
+
+
 class Trader:
     # Hardcode different sprteads for different products 
     # Figure out the trend of the market, trade in larger quantities when its favourable ( we were long, then market dropped, then we had to close out at a loss)
@@ -17,7 +27,9 @@ class Trader:
         result = {}
         # traderData = json.loads(state.traderData or "null") #I think this is correct 
         traderData = state.traderData
+        print(f"traderData0: {traderData}")
         if traderData == "":
+            print(f"NORMAL")
             traderData = None
 
         for product in state.order_depths:
@@ -49,8 +61,9 @@ class Trader:
 
             #Determine the spread 
             spread = best_ask - best_bid 
-
+            print(f"traderData1: {traderData}")
             traderData = self.last_x_spread(traderData, product, spread, spread_hist = 20)
+            print(f"traderData2: {traderData}")
 
             #Determine my bids and ask that I will send 
             my_bid, my_ask = self.find_my_bid_ask(best_bid, best_ask)
@@ -119,7 +132,7 @@ class Trader:
         
         # Sample conversion request. Check more details below. 
         conversions = 1
-        return result, conversions, traderData
+        return result, conversions, str(traderData)
     
 
 
@@ -155,18 +168,23 @@ class Trader:
         return best_bid + 1, best_ask - 1
         
 
-    def last_x_spread(self, traderData: dict, symbol, curr_spread, spread_hist = 20):
+    def last_x_spread(self, traderData, symbol, curr_spread, spread_hist):
         if traderData is None:
+            print("HI")
             return {symbol: [curr_spread]}
         if symbol in traderData:
             if len(traderData[symbol]) < spread_hist:
                 traderData[symbol].append(curr_spread)
+                print(f"traderData4: {traderData}")
             else:
                 traderData[symbol].pop(0)
                 traderData[symbol].append(curr_spread)
+                print(f"traderData5: {traderData}")
         else:
             traderData[symbol] = [curr_spread]
+            print(f"traderData6: {traderData}")
             return traderData
+        print(f"traderData7: {traderData}")
         return traderData
 
     # example of what the dict will look like
