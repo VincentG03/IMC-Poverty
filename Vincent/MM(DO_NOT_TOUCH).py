@@ -79,8 +79,6 @@ class Trader:
             #Determine the spread 
             spread = best_ask - best_bid 
 
-            traderData = self.last_x_spread(traderData, product, spread, spread_hist = 20)
-
             #Determine my bids and ask that I will send 
             my_bid, my_ask = self.find_my_bid_ask(best_bid, best_ask)
 
@@ -182,17 +180,3 @@ class Trader:
         Return the bid and ask prices we will quote.
         """
         return best_bid + 1, best_ask - 1
-        
-
-    def last_x_spread(self, traderData: dict, symbol, curr_spread, spread_hist = 20):
-
-        if len(traderData[symbol]) < spread_hist:
-            traderData[symbol].append(curr_spread)
-        else:
-            traderData[symbol].pop(0)
-            traderData[symbol].append(curr_spread)
-
-        return traderData
-
-    # example of what the dict will look like
-    # {AMETHYST: [4, 5, 3, 4, 5, 5, 4], STARFRUIT: [1, 3, 4, 3, 2, 3]}
