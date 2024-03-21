@@ -27,7 +27,7 @@ from typing import List
 
 
 class Trader:
-    # Hardcode different sprteads for differnt procts 
+    # Hardcode different sprteads for different products 
     
     def run(self, state: TradingState):
         """
@@ -49,7 +49,7 @@ class Trader:
             orders: List[Order] = []
             print(f"|| Buy Orders {product}: " + str(order_depth.buy_orders) + f", Sell Orders {product}: " + str(order_depth.sell_orders) + "||")
 
-            #Determine the position limit (by IMC)
+            #Determine the position limit (set by IMC)
             position_limit = self.find_position_limits(product, product_limits)
 
             #(!!!!!!!!) Determine the spread we will trade for this product 
@@ -73,10 +73,10 @@ class Trader:
             spread = best_ask - best_bid 
 
             #Determine my bids and ask that I will send 
-            # my_bid = best_bid + 1
-            # my_ask = best_ask - 1 
-            my_bid = best_bid 
-            my_ask = best_ask 
+            my_bid = best_bid + 1
+            my_ask = best_ask - 1 
+            # my_bid = best_bid 
+            # my_ask = best_ask 
 
             #(!!!) There are no open positions --> quote orders to MM (max position limit)
             if state.position.get(product, 0) == 0: #If product position = 0 or None (which means we haven't traded it yet)
@@ -150,3 +150,10 @@ class Trader:
             return product_limits[product]
         else: 
             return 20 #Set default position limit to 20
+        
+        
+    def find_required_spread(self, product, traderData):
+        """
+        For a particular product, find the spread we require before we market make.
+        """
+        pass
