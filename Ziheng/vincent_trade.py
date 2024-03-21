@@ -2,7 +2,7 @@
 
 from datamodel import OrderDepth, UserId, TradingState, Order
 from typing import List
-
+import jsonpickle
 
 
 
@@ -31,6 +31,8 @@ class Trader:
         if traderData == "":
             print(f"NORMAL")
             traderData = None
+        else:
+            traderData=jsonpickle.decode(traderData)
 
         for product in state.order_depths:
 
@@ -169,6 +171,7 @@ class Trader:
         
 
     def last_x_spread(self, traderData, symbol, curr_spread, spread_hist):
+        symbol = f'"{symbol}"'
         if traderData is None:
             print("HI")
             return {symbol: [curr_spread]}
