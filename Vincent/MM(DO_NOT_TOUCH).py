@@ -272,7 +272,7 @@ class Trader:
         For a particular product, update traderData to contain the last x values of the best bid and best ask.
         Used to calculate a fair value if a mid price is not given. 
         """
-        data_hist = 40 
+        data_hist = 4
         
         if traderData == "": #No products. Initialise ALL required for traderData (not just spread, inc ema and everything)
             traderData = {"spread_dict": {}, "history_prices_dict": {product: [[best_buy_order[0], best_ask_order[0]]] }, "other_dict": {}}
