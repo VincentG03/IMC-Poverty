@@ -33,10 +33,10 @@ import jsonpickle
 
 
 class Trader:
-    # Hardcode different sprteads for different products 
     # Figure out the trend of the market, trade in larger quantities when its favourable ( we were long, then market dropped, then we had to close out at a loss)
     # Instead of rejecting if the trade is bad, can increase my spread then send order again (unlikely to be executed but if they do we get big profit)
-    #need to add in something when there is no orders on one side. 
+    # need to add in something when there is no orders on one side. 
+    # If best bid/ask is low volume, instead of beating them by 1, just match them.
     
     def run(self, state: TradingState):
         """
@@ -70,12 +70,12 @@ class Trader:
             #Calculate the market's best bid and best ask
             best_bid = list(order_depth.buy_orders.items())[0][0]
             best_ask = list(order_depth.sell_orders.items())[0][0]
-            print(f"Market bid {best_bid}, Market ask {best_ask}")
+            #print(f"Market bid {best_bid}, Market ask {best_ask}")
 
             #Calculate the spread + add to traderData (to calculate avg spread)
             current_spread = best_ask - best_bid 
             traderData = self.append_last_x_spread(traderData, product, current_spread)
-            print(f"Current traderData: {traderData}")
+            #print(f"Current traderData: {traderData}")
             
             #(!!!!!!!!) Determine the spread we will trade for this product
             required_spread = self.find_required_spread(product, traderData) #Right now, set to find the average (only trading when above average)
@@ -85,7 +85,7 @@ class Trader:
             mid_price = ((list(order_depth.buy_orders.items())[0][0]) + (list(order_depth.sell_orders.items())[0][0]))/2
             
             #Determine my bids and ask that I will send 
-            my_bid, my_ask = self.find_my_bid_my_ask(best_bid, best_ask)
+            my_bid, my_ask = self.find_my_bid_my_ask(best_bid, best_ask, order_depth)
             
             #Print current oustanding position
             if len(state.position) != 0:
@@ -174,7 +174,7 @@ class Trader:
         if product in product_limits:
             return product_limits[product]
         else: 
-            return 20 #Set default position limit to 20
+            return 20 #Set default position limit to 20 (mostly for backtester purposes -> IMC should always be hard codeded in)
         
         
     def find_required_spread(self, product, traderData):
@@ -182,6 +182,7 @@ class Trader:
         For a particular product, find the spread we require before we market make.
         """
         test_algo = True 
+        scale_factor = 0.8 #This means if average spread is 10, we will trade for 8 spread and above.
         spread_list = traderData["spread_dict"][product]
         
         if test_algo:
@@ -189,7 +190,7 @@ class Trader:
                 print("uh oh big boo boo")
                 return   # Return 0 if the list is empty
             else:
-                return format(float(sum(spread_list) / len(spread_list)), '.2f') # 2 decimal places
+                return round(float(sum(spread_list) / len(spread_list)), 2)*scale_factor # 2 decimal places
         
         else: #Hard coding spreads 
             product_required_spread = {'AMETHYSTS': 6, 'STARFRUIT': 6}
@@ -200,7 +201,7 @@ class Trader:
                 return 6 #Default spread set to 6 (NOT RELIABLE)
         
         
-    def find_my_bid_my_ask(self, best_bid, best_ask):
+    def find_my_bid_my_ask(self, best_bid, best_ask, order_depth):
         """
         Return the bid and ask prices we will quote.
         """
