@@ -59,7 +59,13 @@ class Trader:
             #Determine the position limit (set by IMC)
             position_limit = self.find_position_limits(product)
 
-            #(!!!!!!!!) Determine the spread we will trade for this product 
+
+            #Determine the spread + add to traderData
+            spread = best_ask - best_bid 
+            traderData = self.last_x_spread(traderData, product, spread)
+            
+
+            #(!!!!!!!!) Determine the spread we will trade for this product            
             required_spread = self.find_required_spread(product, traderData) 
 
             #Print current position
@@ -76,8 +82,7 @@ class Trader:
             best_ask = list(order_depth.sell_orders.items())[0][0]
             print(f"bid {best_bid}, ask {best_ask}")
 
-            #Determine the spread 
-            spread = best_ask - best_bid 
+            
 
             #Determine my bids and ask that I will send 
             my_bid, my_ask = self.find_my_bid_ask(best_bid, best_ask)
@@ -180,3 +185,9 @@ class Trader:
         Return the bid and ask prices we will quote.
         """
         return best_bid + 1, best_ask - 1
+    
+    
+    def last_x_spread(self, traderData, product, spread):
+        spread_hist = 20
+        
+        
