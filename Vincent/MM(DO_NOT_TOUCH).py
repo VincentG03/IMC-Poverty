@@ -36,7 +36,13 @@ class Trader:
     # Figure out the trend of the market, trade in larger quantities when its favourable ( we were long, then market dropped, then we had to close out at a loss)
     # Instead of rejecting if the trade is bad, can increase my spread then send order again (unlikely to be executed but if they do we get big profit)
     # need to add in something when there is no orders on one side. 
+    
     # If best bid/ask is low volume, instead of beating them by 1, just match them.
+    
+     # Market make by default 
+    # If the spread is not good enough 
+    # Check order book volume 
+    # If it is low enough, then match orders.
     
     def run(self, state: TradingState):
         """
@@ -85,7 +91,7 @@ class Trader:
             mid_price = ((list(order_depth.buy_orders.items())[0][0]) + (list(order_depth.sell_orders.items())[0][0]))/2
             
             #Determine my bids and ask that I will send 
-            my_bid, my_ask = self.find_my_bid_my_ask(best_bid, best_ask, order_depth)
+            my_bid, my_ask = self.find_my_bid_my_ask(best_bid, best_ask, list(order_depth.buy_orders.items())[0], list(order_depth.sell_orders.items())[0])
             
             #Print current oustanding position
             if len(state.position) != 0:
@@ -195,11 +201,36 @@ class Trader:
             return 6 
         
         
-    def find_my_bid_my_ask(self, best_bid, best_ask, order_depth):
+    def find_my_bid_my_ask(self, best_bid, best_ask, best_buy_order, best_sell_order):
         """
         Return the bid and ask prices we will quote.
         """
-        return best_bid + 1, best_ask - 1
+        best_bid_vol = best_buy_order[1]
+        best_ask_vol = best_sell_order[1]
+        allowed_volume = {0, 1}
+        
+        #If the best bid and ask volume is low, we can match the price with higher volume to make more profit.
+        if best_bid_vol in allowed_volume and abs(best_ask_vol) in allowed_volume: #Both low volume 
+            print("(!!!) Both volume low(!!!) ")
+            my_bid = best_bid 
+            my_ask = best_ask 
+        elif best_bid_vol in allowed_volume and abs(best_ask_vol) not in allowed_volume: #Only Bid low volume
+            print("(!!!) Only bid volume low(!!!) ")
+            my_bid = best_bid
+            my_ask = best_ask - 1
+        elif best_bid_vol not in allowed_volume and abs(best_ask_vol) in allowed_volume: #Only Ask bolume low 
+            print("(!!!) Only ask volume low(!!!) ")
+            my_bid = best_bid + 1
+            my_ask = best_ask 
+        else: #Both high volume 
+            print("(!!!) Both volume high(!!!) ")
+            my_bid = best_bid + 1
+            my_ask = best_ask - 1
+        
+        return my_bid, my_ask
+            
+            
+
     
     
     def append_last_x_spread(self, traderData, product, current_spread):

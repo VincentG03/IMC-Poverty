@@ -38,6 +38,14 @@ class Trader:
     # need to add in something when there is no orders on one side. 
     # If best bid/ask is low volume, instead of beating them by 1, just match them.
     
+    
+    # Market make by default 
+    # If the spread is not good enough 
+    # Check order book volume 
+    # If it is low enough, then match orders.
+    
+    
+    
     def run(self, state: TradingState):
         """
         1. Check outstanding positions 
@@ -150,7 +158,7 @@ class Trader:
                 if state.position[product] > 0: #Quote a ASK at best price                   
                     print("(CLOSE) Quoting SELL", str(qty_to_close) + "x", product, my_ask)
                     orders.append(Order(product, my_ask, -abs(qty_to_close)))
-                    
+                
                 else: #Quote a BID at best price 
                     print("(CLOSE) Quote BUY", str(qty_to_close) + "x", product, my_bid)
                     orders.append(Order(product, my_bid, abs(qty_to_close)))
@@ -169,7 +177,7 @@ class Trader:
         For each product, find the position limited set (hard coded).
         """
         #Set position limits 
-        product_limits = {'AMETHYSTS': 10, 'STARFRUIT': 10} #(!!!!) I changed this from 20 to 10, Just want to see how it affects profit 
+        product_limits = {'AMETHYSTS': 20, 'STARFRUIT': 20}  
          
         if product in product_limits:
             return product_limits[product]
