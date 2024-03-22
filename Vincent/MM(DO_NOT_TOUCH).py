@@ -181,24 +181,18 @@ class Trader:
         """
         For a particular product, find the spread we require before we market make.
         """
-        test_algo = True 
-        scale_factor = 0.8 #This means if average spread is 10, we will trade for 8 spread and above.
+        scale_factor = 0.8 #0.8 = This means if average spread is 10, we will trade for 8 spread and above.
         spread_list = traderData["spread_dict"][product]
         
-        if test_algo:
+        if product in traderData["spread_dict"]:
             if len(spread_list) == 0:
                 print("uh oh big boo boo")
                 return   # Return 0 if the list is empty
             else:
                 return round(float(sum(spread_list) / len(spread_list)), 2)*scale_factor # 2 decimal places
         
-        else: #Hard coding spreads 
-            product_required_spread = {'AMETHYSTS': 6, 'STARFRUIT': 6}
-            
-            if product in product_required_spread:
-                return product_required_spread[product]
-            else: 
-                return 6 #Default spread set to 6 (NOT RELIABLE)
+        else: #Hard coding spreads (mostly for backtester)
+            return 6 
         
         
     def find_my_bid_my_ask(self, best_bid, best_ask, order_depth):
@@ -219,7 +213,7 @@ class Trader:
         
         Change "spread_hist" to the simple moving average required.
         """
-        spread_hist = 20
+        spread_hist = 40
         
         if traderData == "": #No products. Initialise ALL required for traderData (not just spread, inc ema and everything)
             traderData = {"spread_dict": {product: [current_spread]}, "ema_dict": [], "other_dict": []} 
@@ -235,16 +229,6 @@ class Trader:
         
         return traderData
             
-            
-    # def find_average_spread(self, spread_list):
-    #     # Check if the list is not empty to avoid division by zero
-    #     if len(spread_list) == 0:
-    #         print("uh oh big boo boo")
-    #         return   # Return 0 if the list is empty
-    #     else:
-    #         return format(float(sum(spread_list) / len(spread_list)), '.2f') # 2 decimal places
-        
-        
-        
+
         
         
