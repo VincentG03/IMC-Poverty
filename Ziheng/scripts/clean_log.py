@@ -9,7 +9,7 @@ def clean_log(file_name):
     lst = stuff.split("Activities log:")
 
 
-    with open("look_better", "w") as f:
+    with open("look_better.log", "w") as f:
         f.write(lst[0].replace('\\n', '\n'))
 
 
