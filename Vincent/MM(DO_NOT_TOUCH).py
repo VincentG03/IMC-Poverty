@@ -34,15 +34,12 @@ import jsonpickle
 
 class Trader:
     # Figure out the trend of the market, trade in larger quantities when its favourable ( we were long, then market dropped, then we had to close out at a loss)
+    
     # Instead of rejecting if the trade is bad, can increase my spread then send order again (unlikely to be executed but if they do we get big profit)
+    
     # need to add in something when there is no orders on one side. 
     
-    # If best bid/ask is low volume, instead of beating them by 1, just match them.
     
-     # Market make by default 
-    # If the spread is not good enough 
-    # Check order book volume 
-    # If it is low enough, then match orders.
     
     def run(self, state: TradingState):
         """
@@ -68,14 +65,26 @@ class Trader:
             """
             order_depth: OrderDepth = state.order_depths[product]
             orders: List[Order] = []
-            print(f"|| Buy Orders {product}: " + str(order_depth.buy_orders) + f", Sell Orders {product}: " + str(order_depth.sell_orders) + "||")
+            print(f"|| {product}: BUY orders {str(order_depth.buy_orders)}, SELL orders {str(order_depth.sell_orders)} ||")
 
             #Determine the position limit (set by IMC)
             position_limit = self.find_position_limits(product)
 
+            #(!!!) Check that bid and ask orders exist (order book is not empty) + add bid/ask prices to traderData
+            market_buy_orders = list(order_depth.buy_orders.items())
+            market_sell_orders = list(order_depth.sell_orders.items())
+            traderData = self.append_last_x_prices(traderData, product, market_buy_orders[0], market_sell_orders[0])
+            print(f"TRADER DATA IS: {traderData}")
+
+            
+            if len(market_buy_orders) == 0: 
+                pass
+            if len(market_sell_orders) == 0:
+                pass
+
             #Calculate the market's best bid and best ask
-            best_bid = list(order_depth.buy_orders.items())[0][0]
-            best_ask = list(order_depth.sell_orders.items())[0][0]
+            best_bid = market_buy_orders[0][0]
+            best_ask = market_sell_orders[0][0]
             #print(f"Market bid {best_bid}, Market ask {best_ask}")
 
             #Calculate the spread + add to traderData (to calculate avg spread)
@@ -83,15 +92,15 @@ class Trader:
             traderData = self.append_last_x_spread(traderData, product, current_spread)
             #print(f"Current traderData: {traderData}")
             
-            #(!!!!!!!!) Determine the spread we will trade for this product
+            #Determine the spread we will trade for this product
             required_spread = self.find_required_spread(product, traderData) #Right now, set to find the average (only trading when above average)
             print(f"Required spread for {product}: {required_spread}")
             
             #Calculate mid price to quote around (THIS MAY BE NOT USED IN THE FUTURE)
-            mid_price = ((list(order_depth.buy_orders.items())[0][0]) + (list(order_depth.sell_orders.items())[0][0]))/2
+            mid_price = (best_bid + best_ask)/2
             
             #Determine my bids and ask that I will send 
-            my_bid, my_ask = self.find_my_bid_my_ask(best_bid, best_ask, list(order_depth.buy_orders.items())[0], list(order_depth.sell_orders.items())[0])
+            my_bid, my_ask = self.find_my_bid_my_ask(best_bid, best_ask, market_buy_orders[0], market_sell_orders[0])
             
             #Print current oustanding position
             if len(state.position) != 0:
@@ -230,12 +239,9 @@ class Trader:
         return my_bid, my_ask
             
             
-
-    
-    
     def append_last_x_spread(self, traderData, product, current_spread):
         """
-        For a particular product, update traderData to contain the last 20 values of it's spread.
+        For a particular product, update traderData to contain the last x values of it's spread.
         Used to calculate the spread at which we will trade at.
         
         "spread_dict": dictionary with the last x spreads of each product 
@@ -247,7 +253,7 @@ class Trader:
         spread_hist = 40
         
         if traderData == "": #No products. Initialise ALL required for traderData (not just spread, inc ema and everything)
-            traderData = {"spread_dict": {product: [current_spread]}, "ema_dict": [], "other_dict": []} 
+            traderData = {"spread_dict": {product: [current_spread]}, "history_prices_dict": {}, "other_dict": {}} 
         
         elif product in traderData["spread_dict"]: #Product already exists
             if len(traderData["spread_dict"][product]) < spread_hist:
@@ -261,5 +267,28 @@ class Trader:
         return traderData
             
 
+    def append_last_x_prices(self, traderData, product, best_buy_order, best_ask_order):
+        """
+        For a particular product, update traderData to contain the last x values of the best bid and best ask.
+        Used to calculate a fair value if a mid price is not given. 
+        """
+        data_hist = 40 
+        
+        if traderData == "": #No products. Initialise ALL required for traderData (not just spread, inc ema and everything)
+            traderData = {"spread_dict": {}, "history_prices_dict": {product: [[best_buy_order[0], best_ask_order[0]]] }, "other_dict": {}}
+        
+        elif product in traderData["history_prices_dict"]:
+            if len(traderData["history_prices_dict"][product]) < data_hist:
+                traderData["history_prices_dict"][product].append([best_buy_order[0], best_ask_order[0]])
+            else: 
+                traderData["history_prices_dict"][product].pop(0)
+                traderData["history_prices_dict"][product].append([best_buy_order[0], best_ask_order[0]])
+        else: #New product 
+            traderData["history_prices_dict"][product] = [best_buy_order[0], best_ask_order[0]]
+        
+        return traderData
+        
+        
+        
         
         
