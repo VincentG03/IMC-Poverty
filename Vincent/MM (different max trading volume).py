@@ -169,8 +169,8 @@ class Trader:
         For each product, find the position limited set (hard coded).
         """
         #Set position limits 
-        product_limits = {'AMETHYSTS': 20, 'STARFRUIT': 20} #I tried restrciting it to 10, it is less profit.
-        
+        product_limits = {'AMETHYSTS': 10, 'STARFRUIT': 10} #(!!!!) I changed this from 20 to 10, Just want to see how it affects profit 
+         
         if product in product_limits:
             return product_limits[product]
         else: 
