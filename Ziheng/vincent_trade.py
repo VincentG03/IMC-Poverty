@@ -286,28 +286,15 @@ class Trader:
         total = 0
         quantity1 = 0
 
-        # if len(orders.buy_orders.items()) != 0:
         for price, quantity in orders.buy_orders.items():
             total += price * abs(quantity)
             quantity1 += abs(quantity)
-        # if len(orders.sell_orders.items()) != 0:
+
         for price, quantity in orders.sell_orders.items():
             total += price * abs(quantity)
             quantity1 += abs(quantity)
 
-        # if len(orders.buy_orders.items()) != 0:
-        # for price, quantity in orders.buy_orders.items():
-        #     quantity += abs(quantity)
-        # if len(orders.sell_orders.items()) != 0:
-        # for price, quantity in orders.sell_orders.items():
-        #     quantity += abs(quantity)
 
-        # if total == 0 or quantity == 0:
-        #     print("SOMETHING WRONG")
-        #     print(orders.buy_orders.items())
-        #     print(orders.sell_orders.items())
-        #     return 0
-        # else:
         total = total / quantity1
 
         return total
