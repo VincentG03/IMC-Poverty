@@ -62,6 +62,9 @@ class Trader:
         if traderData != "":
             traderData = jsonpickle.decode(traderData)
 
+        # Set the padding for lin reg for each product
+        product_limits = {'AMETHYSTS': 3, 'STARFRUIT': 3}  
+
         #Repeat trading logic for each product
         for product in state.order_depths:
             """
@@ -82,9 +85,19 @@ class Trader:
             #print(f"Market bid {best_bid}, Market ask {best_ask}")
 
             #Calculate the spread + add to traderData (to calculate avg spread)
+            # Find the average of the order book and chuck this into traderData
+            average = self.avg(order_depth)
             current_spread = best_ask - best_bid 
-            traderData = self.append_last_x_spread(traderData, product, current_spread)
+            traderData = self.append_last_x_spread(traderData, product, current_spread, average)
             #print(f"Current traderData: {traderData}")
+
+            #Calculate if we finally have enough points to calculate lin reg - currently 15 vals
+            x = [i for i in range(15)]
+            y = traderData["avg"][product]
+            c, gradient = self.lin_reg(x, y)
+            # Predicting next time step
+            next_avg_price = gradient * 16 + c
+            print(f"Next average price: {next_avg_price}")
             
             #(!!!!!!!!) Determine the spread we will trade for this product
             required_spread = self.find_required_spread(product, traderData) #Right now, set to find the average (only trading when above average)
@@ -223,6 +236,7 @@ class Trader:
         Change "spread_hist" to the simple moving average required.
         """
         spread_hist = 40
+        avg_hist = 15
         
         if traderData == "": #No products. Initialise ALL required for traderData (not just spread, inc ema and everything)
             traderData = {"spread_dict": {product: [current_spread]}, "ema_dict": [],
@@ -231,13 +245,16 @@ class Trader:
         elif product in traderData["spread_dict"]: #Product already exists
             if len(traderData["spread_dict"][product]) < spread_hist:
                 traderData["spread_dict"][product].append(current_spread)
-                traderData["avg"][product].append(avg_price)
             else: 
                 traderData["spread_dict"][product].pop(0)
                 traderData["spread_dict"][product].append(current_spread)
 
+            if len(traderData["avg"][product]) < avg_hist:
+                traderData["avg"][product].append(avg_price)
+            else:
                 traderData["avg"][product].pop(0)
                 traderData["avg"][product].append(avg_price)
+
         else: #New product
             traderData["spread_dict"][product] = [current_spread]
             traderData["avg"][product] = [avg_price]
@@ -245,7 +262,7 @@ class Trader:
         return traderData
             
 
-    def lin_reg(x, y):
+    def lin_reg(self, x, y):
         # number of observations/points
         n = np.size(x)
         
@@ -263,3 +280,15 @@ class Trader:
         
         return (float(b_0), float(b_1))
     
+
+    def avg(self, orders):
+        total = 0
+
+        for price, quantity in orders.buy_orders.items():
+            total += price * abs(quantity)
+        for price, quantity in orders.sell_orders.items():
+            total += price * abs(quantity)
+        total = total / sum(sum([abs(quantity) for quantity in orders.sell_orders.values()]), 
+                                sum([abs(quantity) for quantity in orders.buy_orders.values()]))
+
+        return total
