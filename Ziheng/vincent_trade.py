@@ -92,12 +92,13 @@ class Trader:
             #print(f"Current traderData: {traderData}")
 
             #Calculate if we finally have enough points to calculate lin reg - currently 15 vals
-            x = [i for i in range(15)]
-            y = traderData["avg"][product]
-            c, gradient = self.lin_reg(x, y)
-            # Predicting next time step
-            next_avg_price = gradient * 16 + c
-            print(f"Next average price: {next_avg_price}")
+            if len(traderData["avg"][product]) > 14:
+                x = [i for i in range(15)]
+                y = traderData["avg"][product]
+                c, gradient = self.lin_reg(np.array(x), np.array(y))
+                # Predicting next time step
+                next_avg_price = gradient * 16 + c
+                print(f"Next average price: {next_avg_price}")
             
             #(!!!!!!!!) Determine the spread we will trade for this product
             required_spread = self.find_required_spread(product, traderData) #Right now, set to find the average (only trading when above average)
@@ -283,12 +284,30 @@ class Trader:
 
     def avg(self, orders):
         total = 0
+        quantity1 = 0
 
+        # if len(orders.buy_orders.items()) != 0:
         for price, quantity in orders.buy_orders.items():
             total += price * abs(quantity)
+            quantity1 += abs(quantity)
+        # if len(orders.sell_orders.items()) != 0:
         for price, quantity in orders.sell_orders.items():
             total += price * abs(quantity)
-        total = total / sum(sum([abs(quantity) for quantity in orders.sell_orders.values()]), 
-                                sum([abs(quantity) for quantity in orders.buy_orders.values()]))
+            quantity1 += abs(quantity)
+
+        # if len(orders.buy_orders.items()) != 0:
+        # for price, quantity in orders.buy_orders.items():
+        #     quantity += abs(quantity)
+        # if len(orders.sell_orders.items()) != 0:
+        # for price, quantity in orders.sell_orders.items():
+        #     quantity += abs(quantity)
+
+        # if total == 0 or quantity == 0:
+        #     print("SOMETHING WRONG")
+        #     print(orders.buy_orders.items())
+        #     print(orders.sell_orders.items())
+        #     return 0
+        # else:
+        total = total / quantity1
 
         return total
