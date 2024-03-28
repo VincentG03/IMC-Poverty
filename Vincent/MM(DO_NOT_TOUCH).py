@@ -152,15 +152,15 @@ class Trader:
 
                     result[product] = orders
                 else:
-                    # #We can't quote the BEST prices AND meet our required spread. Thus market make and meet our required SPREAD but not the best prices (bots could still trade against it - less likely)
-                    # my_bid, my_ask = self.find_required_bid_ask(market_buy_orders, market_sell_orders, my_bid, my_ask)
+                    #We can't quote the BEST prices AND meet our required spread. Thus market make and meet our required SPREAD but not the best prices (bots could still trade against it - less likely)
+                    my_bid, my_ask = self.find_required_bid_ask(market_buy_orders, market_sell_orders, my_bid, my_ask, required_spread)
 
-                    # #Modify our bids and ask (widen them) to meet the spread requirement. Less likely to be filled now.
-                    # orders.append(Order(product, my_bid, qty_to_mm))
-                    # orders.append(Order(product, my_ask, -qty_to_mm))
+                    #Modify our bids and ask (widen them) to meet the spread requirement. Less likely to be filled now.
+                    orders.append(Order(product, my_bid, qty_to_mm))
+                    orders.append(Order(product, my_ask, -qty_to_mm))
 
-                    # print(f"(O.R.S) Quoting {product}: bid {qty_to_mm}x {my_bid}, ask {qty_to_mm}x {my_ask}")
-                    print("Do nothing outside of spread")
+                    print(f"(O.R.S) Quoting {product}: bid {qty_to_mm}x {my_bid}, ask {qty_to_mm}x {my_ask}")
+                    # print("Do nothing outside of spread")
  
 
             #(!!!) There are open positions --> quote orders to MM (max position - oustanding position) + quote orders to close positions 
@@ -182,15 +182,15 @@ class Trader:
                 
                     print(f"(MM) Quoting {product}: bid {qty_remaining}x {my_bid}, ask {qty_remaining}x {my_ask}")
                 else:
-                    # #We can't quote the BEST prices AND meet our required spread. Thus market make and meet our required SPREAD but not the best prices (bots could still trade against it - less likely)
-                    # my_bid, my_ask = self.find_required_bid_ask(market_buy_orders, market_sell_orders, my_bid, my_ask)
+                    #We can't quote the BEST prices AND meet our required spread. Thus market make and meet our required SPREAD but not the best prices (bots could still trade against it - less likely)
+                    my_bid, my_ask = self.find_required_bid_ask(market_buy_orders, market_sell_orders, my_bid, my_ask, required_spread)
 
-                    # #Modify our bids and ask (widen them) to meet the spread requirement. Less likely to be filled now.
-                    # orders.append(Order(product, my_bid, qty_remaining))
-                    # orders.append(Order(product, my_ask, -qty_remaining))
+                    #Modify our bids and ask (widen them) to meet the spread requirement. Less likely to be filled now.
+                    orders.append(Order(product, my_bid, qty_remaining))
+                    orders.append(Order(product, my_ask, -qty_remaining))
 
-                    # print(f"(O.R.S) Quoting {product}: bid {qty_remaining}x {my_bid}, ask {qty_remaining}x {my_ask}")
-                    print("Do nothing outside of spread")
+                    print(f"(O.R.S) Quoting {product}: bid {qty_remaining}x {my_bid}, ask {qty_remaining}x {my_ask}")
+                    #print("Do nothing outside of spread")
                 
                 
                 #Get the position to close out of. 
@@ -206,6 +206,8 @@ class Trader:
                     orders.append(Order(product, my_bid, abs(qty_to_close)))
 
                 result[product] = orders 
+                
+                print(f" ------------------------------{product}----------------------------------")
 
 
         print(f"TraderData AFTER: {traderData}")
@@ -282,27 +284,33 @@ class Trader:
         
         return my_bid, my_ask
             
-    def find_required_bid_ask(self, market_buy_orders, market_sell_orders, my_bid, my_ask):
+    def find_required_bid_ask(self, market_buy_orders, market_sell_orders, my_bid, my_ask, required_spread):
         """
         This function is called when the spread of the calculated my_bid and my_ask is too small (compared to ) 
         """
+        print("(O.R.S) --> calculating new prices")
         #This function should only be called when my bids/ask at lower spread than required spread, so spread_difference should always be < 0. 
-        best_bid = market_buy_orders[0][0]
-        best_ask = market_sell_orders[0][0]
         best_bid_vol = market_buy_orders[0][1]
         best_ask_vol = market_sell_orders[0][1]
-        spread_difference = (best_ask - best_bid) - (my_ask - my_bid)
+        spread_difference = required_spread - (my_ask - my_bid)
+        print(f"required spread: {required_spread}, my quoted spread: {(my_ask - my_bid)}, difference of: {spread_difference}")
 
         if spread_difference % 2 == 0: #Even --> split evently between bid and ask
-            my_bid = best_bid - spread_difference//2
-            my_ask = best_ask + spread_difference//2
+            print(f"Old prices are {my_bid} {my_ask}")
+            my_bid = my_bid - spread_difference//2
+            my_ask = my_ask + spread_difference//2
+            print(f"Even spread - new prices are: {my_bid} {my_ask}")
         else: #Odd --> choose to quote better price for bid or ask.
             if best_bid_vol > best_ask_vol: #Less volume for ask, more likely to be filled if try to match.
-                my_ask = best_ask + math.floor(spread_difference//2)
-                my_bid = best_bid - math.ceil(spread_difference//2)
+                print(f"Old prices are {my_bid} {my_ask}")
+                my_bid = my_bid - int(math.ceil(spread_difference/2))
+                my_ask = my_ask + int(math.floor(spread_difference/2))
+                print(f"Odd spread - new prices are: {my_bid} {my_ask}")
             else: #Less volume for bid, more likely to be filled if we try to match.
-                my_bid = best_bid - math.floor(spread_difference//2)
-                my_ask = best_ask + math.ceil(spread_difference//2)            
+                print(f"Old prices are {my_bid} {my_ask}")
+                my_bid = my_bid - int(math.floor(spread_difference/2))
+                my_ask = my_ask + int(math.ceil(spread_difference/2))
+                print(f"Odd spread - new prices are: {my_bid} {my_ask}")          
 
         return my_bid, my_ask
 
