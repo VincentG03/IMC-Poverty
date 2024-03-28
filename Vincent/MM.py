@@ -32,6 +32,7 @@ from typing import List
 import jsonpickle
 import math
 import pandas as pd
+import numpy as np
 
 class Trader:
     # Figure out the trend of the market, trade in larger quantities when its favourable ( we were long, then market dropped, then we had to close out at a loss)
@@ -99,7 +100,7 @@ class Trader:
                     market_sell_orders = [last_ask + 1, 1]
 
             #Add best bid/ask prices to traderData
-            traderData = self.append_last_x__bid_ask_prices(traderData, product, market_buy_orders[0], market_sell_orders[0])
+            traderData = self.append_last_x_bid_ask_prices(traderData, product, market_buy_orders[0], market_sell_orders[0])
 
 
 
@@ -129,7 +130,20 @@ class Trader:
             
             #Calculate the EMA for this time period
             ema = self.find_ema(traderData, product)
+            print(f"Mid price is {mid_price}")
             print(f"Ema for this time period is: {ema}")
+            
+            #Find standard deviation
+            std_dev =self.find_standard_deviation(traderData, product)
+            print(f"Std dev for this time period is: {std_dev}")
+            print(f"Midprice dict is: {traderData['midprice_dict'][product]}")
+            upper_bound = ema + 1.5*std_dev
+            lower_bound = ema - 1.5*std_dev
+            print(f"lower: {lower_bound}")
+            print(f"upper: {upper_bound}")
+            
+            if mid_price > upper_bound or mid_price < lower_bound:
+                print("OUTLIER")
             
             #Determine my bids and ask that I will send 
             my_bid, my_ask = self.find_my_bid_my_ask(best_bid, best_ask, market_buy_orders[0], market_sell_orders[0])
@@ -352,7 +366,7 @@ class Trader:
         return traderData
             
 
-    def append_last_x__bid_ask_prices(self, traderData, product, best_buy_order, best_ask_order):
+    def append_last_x_bid_ask_prices(self, traderData, product, best_buy_order, best_ask_order):
         """
         For a particular product, update traderData to contain the last x values of the best bid and best ask.
         Used to calculate a fair value if a mid price is not given. 
@@ -383,7 +397,7 @@ class Trader:
         
         Change "midprice_hist" to the number of datapoints you want to capture.
         """
-        midprice_hist = 20 
+        midprice_hist = 20
         best_bid_price = market_buy_orders[0][0]
         best_ask_price = market_sell_orders[0][0]
         best_bid_vol = market_buy_orders[0][1]
@@ -411,7 +425,7 @@ class Trader:
         
         Change span to the number of datapoints to include in EMA.
         """
-        span = 12
+        span = 20
         weighted_midprice_list = traderData["midprice_dict"][product]
         
         series =  pd.Series(weighted_midprice_list)
@@ -419,3 +433,16 @@ class Trader:
         
         return emwa.iloc[-1]
 
+
+    def find_standard_deviation(self, traderData, product):
+        """
+        
+        """
+        
+        if len(traderData["midprice_dict"][product]) != 0 and len(traderData["midprice_dict"][product]) != 1: 
+            std_dev = np.std(traderData["midprice_dict"][product]) 
+        else: 
+            std_dev = float("inf") #Can't calculate std_dev with no or 1 data value.
+        
+        return std_dev
+        
