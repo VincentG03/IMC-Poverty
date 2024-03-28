@@ -31,7 +31,7 @@ from datamodel import OrderDepth, UserId, TradingState, Order
 from typing import List
 import jsonpickle
 import math
-
+import pandas as pd
 
 class Trader:
     # Figure out the trend of the market, trade in larger quantities when its favourable ( we were long, then market dropped, then we had to close out at a loss)
@@ -84,21 +84,22 @@ class Trader:
                 last_bid = traderData['history_prices_dict'][product][-1][0]
                 last_ask = traderData['history_prices_dict'][product][-1][1]
 
+                #1 is an arbitrary number. We could find the average best bid/ask volume for a better estimate. Number should be small however to represent low interest.
                 if len(market_buy_orders) == 0 and len(market_sell_orders) != 0: #Bid orders empty
                     #Bid orders are empty. Use last and current ask price to estimate bid price
-                    market_buy_orders = [last_bid - 1]
+                    market_buy_orders = [last_bid - 1, 1]
             
                 elif len(market_buy_orders) == 0 and len(market_sell_orders) != 0: #Ask orders empty
                     #Ask orders empty. Use last and current bit price to estimate ask price
-                    market_sell_orders = [last_ask + 1]
+                    market_sell_orders = [last_ask + 1, 1]
                     
                 elif len(market_buy_orders) == 0 and len(market_sell_orders) == 0: #Both bids and asks empty
                     #Both orders empty.
-                    market_buy_orders = [last_bid - 1]
-                    market_sell_orders = [last_ask + 1]
+                    market_buy_orders = [last_bid - 1, 1]
+                    market_sell_orders = [last_ask + 1, 1]
 
             #Add best bid/ask prices to traderData
-            traderData = self.append_last_x_prices(traderData, product, market_buy_orders[0], market_sell_orders[0])
+            traderData = self.append_last_x__bid_ask_prices(traderData, product, market_buy_orders[0], market_sell_orders[0])
 
 
 
@@ -120,8 +121,15 @@ class Trader:
 
 
 
-            #Calculate mid price to quote around (THIS MAY BE NOT USED IN THE FUTURE)
-            mid_price = (best_bid + best_ask)/2
+            #Calculate mid price to quote around 
+            mid_price = (best_bid + best_ask)/2            
+            
+            #Append the weighted mid price to traderData to use to calculate EMA later.
+            traderData = self.append_last_x_midprice(traderData, product, market_buy_orders, market_sell_orders)
+            
+            #Calculate the EMA for this time period
+            ema = self.find_ema(traderData, product)
+            print(f"Ema for this time period is: {ema}")
             
             #Determine my bids and ask that I will send 
             my_bid, my_ask = self.find_my_bid_my_ask(best_bid, best_ask, market_buy_orders[0], market_sell_orders[0])
@@ -211,8 +219,8 @@ class Trader:
                 
             
 
-
-        print(f"TraderData AFTER: {traderData}")
+        #REMOVE COMMENT IF U WANT TO VIEW DATA
+        #print(f"TraderData AFTER: {traderData}")
         
         # Sample conversion request. Check more details below. 
         conversions = 1
@@ -330,7 +338,7 @@ class Trader:
         spread_hist = 40
         
         if traderData == "": #No products. Initialise ALL required for traderData (not just spread, inc ema and everything)
-            traderData = {"spread_dict": {product: [current_spread]}, "history_prices_dict": {}, "other_dict": {}} 
+            traderData = {"spread_dict": {product: [current_spread]}, "history_prices_dict": {}, "midprice_dict": {}, "atr_dict": {}} 
         
         elif product in traderData["spread_dict"]: #Product already exists
             if len(traderData["spread_dict"][product]) < spread_hist:
@@ -344,17 +352,17 @@ class Trader:
         return traderData
             
 
-    def append_last_x_prices(self, traderData, product, best_buy_order, best_ask_order):
+    def append_last_x__bid_ask_prices(self, traderData, product, best_buy_order, best_ask_order):
         """
         For a particular product, update traderData to contain the last x values of the best bid and best ask.
         Used to calculate a fair value if a mid price is not given. 
 
         Change "data_hist" to the number of data periods you want to retain.
         """
-        data_hist = 4
+        data_hist = 2
         
         if traderData == "": #No products. Initialise ALL required for traderData (not just spread, inc ema and everything)
-            traderData = {"spread_dict": {}, "history_prices_dict": {product: [[best_buy_order[0], best_ask_order[0]]] }, "other_dict": {}}
+            traderData = {"spread_dict": {}, "history_prices_dict": {product: [[best_buy_order[0], best_ask_order[0]]] }, "midprice_dict": {}, "atr_dict": {}}
         
         elif product in traderData["history_prices_dict"]:
             if len(traderData["history_prices_dict"][product]) < data_hist:
@@ -368,4 +376,46 @@ class Trader:
         return traderData
         
         
+    def append_last_x_midprice(self, traderData, product, market_buy_orders, market_sell_orders):
+        """
+        For a particular product, update traderData to contain the weighted midprice of that product. 
+        This data will then be used to calculate an ema in another function. 
         
+        Change "midprice_hist" to the number of datapoints you want to capture.
+        """
+        midprice_hist = 20 
+        best_bid_price = market_buy_orders[0][0]
+        best_ask_price = market_sell_orders[0][0]
+        best_bid_vol = market_buy_orders[0][1]
+        best_ask_vol = abs(market_sell_orders[0][1])
+        weighted_midprice = (best_bid_price*best_bid_vol + best_ask_price*best_ask_vol) / (best_bid_vol+best_ask_vol)
+        
+        if traderData == "":
+            traderData = {"spread_dict": {}, "history_prices_dict": {}, "midprice_dict": {product: [weighted_midprice]}, "atr_dict": {}}
+            
+        elif product in traderData["midprice_dict"]:
+            if len(traderData["midprice_dict"][product]) < midprice_hist:
+                traderData["midprice_dict"][product].append(weighted_midprice)
+            else:
+                traderData["midprice_dict"][product].pop(0)
+                traderData["midprice_dict"][product].append(weighted_midprice)
+        else: #New product 
+            traderData["midprice_dict"][product] = [weighted_midprice]
+        
+        return traderData
+    
+    
+    def find_ema(self, traderData, product):
+        """
+        Determine the current EMA for this product.
+        
+        Change span to the number of datapoints to include in EMA.
+        """
+        span = 12
+        weighted_midprice_list = traderData["midprice_dict"][product]
+        
+        series =  pd.Series(weighted_midprice_list)
+        emwa = series.ewm(adjust = True, span = span).mean()
+        
+        return emwa.iloc[-1]
+
