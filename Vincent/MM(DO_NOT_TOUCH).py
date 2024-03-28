@@ -207,7 +207,7 @@ class Trader:
 
                 result[product] = orders 
                 
-                print(f" ------------------------------{product}----------------------------------")
+            print(f" ------------------------------{product}----------------------------------")
 
 
         print(f"TraderData AFTER: {traderData}")
