@@ -64,6 +64,8 @@ class Trader:
                                 Setting up parameters and required variables
             ===================================================================================
             """
+            print(f" ------------------------------{product}----------------------------------")
+            
             order_depth: OrderDepth = state.order_depths[product]
             orders: List[Order] = []
             print("")
@@ -207,7 +209,7 @@ class Trader:
 
                 result[product] = orders 
                 
-            print(f" ------------------------------{product}----------------------------------")
+            
 
 
         print(f"TraderData AFTER: {traderData}")
@@ -266,19 +268,19 @@ class Trader:
         
         #If the best bid and ask volume is low, we can match the price with higher volume to make more profit.
         if best_bid_vol in allowed_volume and abs(best_ask_vol) in allowed_volume: #Both low volume 
-            print("(!!!) Both volume low(!!!) ")
+            print("(!!!) Both volume low (!!!) ")
             my_bid = best_bid 
             my_ask = best_ask 
         elif best_bid_vol in allowed_volume and abs(best_ask_vol) not in allowed_volume: #Only Bid low volume
-            print("(!!!) Only bid volume low(!!!) ")
+            print("(!!!) Only bid volume low (!!!) ")
             my_bid = best_bid
             my_ask = best_ask - 1
         elif best_bid_vol not in allowed_volume and abs(best_ask_vol) in allowed_volume: #Only Ask bolume low 
-            print("(!!!) Only ask volume low(!!!) ")
+            print("(!!!) Only ask volume low (!!!) ")
             my_bid = best_bid + 1
             my_ask = best_ask 
         else: #Both high volume 
-            print("(!!!) Both volume high(!!!) ")
+            print("(!!!) Both volume high (!!!) ")
             my_bid = best_bid + 1
             my_ask = best_ask - 1
         
