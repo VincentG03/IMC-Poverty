@@ -76,11 +76,13 @@ class Trader:
             position_limit = self.find_position_limits(product)
 
 
-
+            """
+            Determine best market bid/ask + account for empty bid/asks.
+            """
             #Check that bids/asks are NOT empty and calculate the market's best bid and best ask. (Right now, be conservative and just quote lower bid and higher ask. To improve, we could calculate using last prices + average spread)
             market_buy_orders = list(order_depth.buy_orders.items())
             market_sell_orders = list(order_depth.sell_orders.items())
-            
+
             if state.timestamp != 0:
                 last_bid = traderData['history_prices_dict'][product][-1][0]
                 last_ask = traderData['history_prices_dict'][product][-1][1]
@@ -102,201 +104,154 @@ class Trader:
             #Add best bid/ask prices to traderData
             traderData = self.append_last_x_bid_ask_prices(traderData, product, market_buy_orders[0], market_sell_orders[0])
 
-
-
             #Determine market's best bid and ask
             best_bid = market_buy_orders[0][0]
             best_ask = market_sell_orders[0][0]
-            
 
 
+            """
+            Calculate the required_spread for this product and this time period.
+            """
             #Calculate the spread + add to traderData (to calculate avg spread)
             current_spread = best_ask - best_bid 
             traderData = self.append_last_x_spread(traderData, product, current_spread)
-            #print(f"Current traderData: {traderData}")
             
             #Determine the spread we will trade for this product
             required_spread = math.ceil(self.find_required_spread(product, traderData)) #Right now, set to find the average (only trading when above average)
             print(f"Required spread for {product}: {required_spread}")
-            
 
 
-
+            """
+            Calculate the mid_price for valid quote comparison.
+            """
             #Calculate mid price to quote around 
             mid_price = (best_bid + best_ask)/2            
             
             #Append the weighted mid price to traderData to use to calculate EMA later.
             traderData = self.append_last_x_midprice(traderData, product, market_buy_orders, market_sell_orders)
             
+            
+            """
+            Calculate the EMA and Standard Deviation and determine the upper and lower bounds for this product and time period.
+            """
             #Calculate the EMA for this time period
             ema = self.find_ema(traderData, product)
-            print(f"Mid price is {mid_price}")
-            print(f"Ema for this time period is: {ema}")
+            print(f"Mid price: {mid_price}")
+            print(f"Ema: {ema}")
             
             #Find standard deviation
             std_dev =self.find_standard_deviation(traderData, product)
-            print(f"Std dev for this time period is: {std_dev}")
-            print(f"Midprice dict is: {traderData['midprice_dict'][product]}")
             upper_bound = ema + 1.5*std_dev
             lower_bound = ema - 1.5*std_dev
             print(f"lower: {lower_bound}")
             print(f"upper: {upper_bound}")
-            
-            #If it is an outlier, we will only quote bid or ask side.
-            outlier = False
-            if mid_price > upper_bound or mid_price < lower_bound:
-                print("OUTLIER")
-                outlier = True
-                
                 
             
+            """
+            Determine bid and ask prices that I will quote around (considering best bid/ask volume)
+            """
             #Determine my bids and ask that I will send 
             my_bid, my_ask = self.find_my_bid_my_ask(best_bid, best_ask, market_buy_orders[0], market_sell_orders[0])
             
+            
+            """
+            Determine the quantity that I am able to market make (position limit = 20, current position = 12 --> then qty_to_mm = position limit - current position = 20 - 12 = 8)
+            """
             #Print current oustanding position
             if len(state.position) != 0:
                 print(f"My position: {state.position}")
             else:
                 print(f"No open positions")
                 
+            #Find quantity to market make
+            if state.position.get(product, 0) == 0:
+                qty_to_mm = abs(position_limit)
+            else:
+                if state.position.get(product) > 0: #We are long
+                    qty_to_mm = abs(position_limit) - state.position.get(product)
+                else: 
+                    qty_to_mm = abs(position_limit) + state.position.get(product)
+                
             """
             ===================================================================================
                                                 Trading Logic
             ===================================================================================
-            (!!!) IF (!!!): outlier - midprice less than lower bound, expect price to increase, only quote bids
+            (!!) IF (!!): outlier - midprice less than lower bound, expect price to increase
+                Only quote bids.
             
-
+            (!!) ELIF (!!): outlier - midprice more than upper bound, expect price to decrease
+                Only quote asks.
             
-            
-            (!!!) ELIF (!!!): outlier - midprice more than upper bound, expect price to decrease, only quote asks
-            
-            
-            
-            
-            (!!!) ELSE (!!!): if the mid price is not an outlier, market make as normal.
+            (!!) ELSE (!!): if the mid price is not an outlier, market make as normal.
                 
-                (!!) IF (!!): there are no open positions. Market make with max position limits. 
+                (!) IF (!): the current spread is large enough, market make best prices.
+                (!) ELSE (!): the current spread is not large enough, market make with larger spread and hence worse prices.
                 
-                    qty = max(product limit)
-                    (!) IF (!): the current spread is large enough, market make best prices.
-                    (!) ELSE (!): the current spread is not large enough, market make with larger spread and hence worse prices.
-                    
-                (!!) ELSE (!!): there are open positions. Market make with remaining positions limits + send orders to close open positions. 
-                
-                    qty = remaining position
-                    (!) IF (!): the current spread is large enough, market make best prices.
-                    (!) ELSE (!): the current spread is not large enough, market make with larger spread and hence worse prices.
-                    
-                    Close out open positions.
-                    (!) IF (!): we are long, send ask orders to close.
-                    (!) ELSE (!): we are short, send bid orders to close.
-            
-            
+                Close out open positions.
+                (!) IF (!): we are long, send ask orders to close.
+                (!) ELIF (!): we are short, send bid orders to close.
             """
+            
+            
             if mid_price < lower_bound:
-                if state.position.get(product, 0) == 0:
-                    qty_to_mm = abs(position_limit)
-                else:
-                    if state.position.get(product) > 0: #We are long
-                        qty_to_mm = abs(position_limit) - state.position.get(product)
-                    else: 
-                        qty_to_mm = abs(position_limit) + state.position.get(product)
-                
+                """
+                Outlier - Only send bid quotes.
+                """
                 if my_bid < mid_price:
                     orders.append(Order(product, my_bid, qty_to_mm))
                     print(f"(OUTLIER) Quoting {product}: bid {qty_to_mm}x {my_bid}")
-                
-            elif mid_price > upper_bound:  
-                if state.position.get(product, 0) == 0:
-                    qty_to_mm = abs(position_limit)
-                else:
-                    if state.position.get(product) > 0: #We are long
-                        qty_to_mm = abs(position_limit) - state.position.get(product)
-                    else: 
-                        qty_to_mm = abs(position_limit) + state.position.get(product)
-                
+            
+            
+            elif mid_price > upper_bound: 
+                """
+                Outlier - Only send ask quotes.
+                """
                 if my_ask > mid_price:
                     orders.append(Order(product, my_ask, -qty_to_mm))
                     print(f"(OUTLIER) Quoting {product}: ask {qty_to_mm}x {my_ask}")
-                
+            
+            
             else:
-    
-                #(!!!) There are no open positions --> quote orders to MM (max position limit)
-                if state.position.get(product, 0) == 0: #If product position = 0 or None (which means we haven't traded it yet)
+                """
+                Market make as normal.
+                """
+                #If calculated prices' spread is large enough, market make (with best prices).
+                if my_bid < mid_price and my_ask > mid_price and current_spread >= required_spread: 
+                    orders.append(Order(product, my_bid, qty_to_mm))
+                    orders.append(Order(product, my_ask, -qty_to_mm))
+                
+                    print(f"(MM) Quoting {product}: bid {qty_to_mm}x {my_bid}, ask {qty_to_mm}x {my_ask}")
+                
+                #If calculated prices' spread is not large enough, recalculate bids and asks to meet the required spread (but send worse prices - less likely to be filled)
+                else:
+                    my_bid, my_ask = self.find_required_bid_ask(market_buy_orders, market_sell_orders, my_bid, my_ask, required_spread)
 
-                    #Get the maximum amount of orders to send. There should be no outstanding positions so max is position limit set. 
-                    qty_to_mm = abs(position_limit)
-
-                    #Check if the order is valid (bid < mid, ask > mid, spread is big enough)
-                    if my_bid < mid_price and my_ask > mid_price and current_spread >= required_spread: 
+                    if my_bid < mid_price and my_ask > mid_price:
+                        #Modify our bids and ask (widen them) to meet the spread requirement. 
                         orders.append(Order(product, my_bid, qty_to_mm))
                         orders.append(Order(product, my_ask, -qty_to_mm))
 
-                        print(f"(MM) Quoting {product}: bid {qty_to_mm}x {my_bid}, ask {qty_to_mm}x {my_ask}")
-
-                        result[product] = orders
+                        print(f"(O.R.S) Quoting {product}: bid {qty_to_mm}x {my_bid}, ask {qty_to_mm}x {my_ask}")
                     else:
-                        #We can't quote the BEST prices AND meet our required spread. Thus market make and meet our required SPREAD but not the best prices (bots could still trade against it - less likely)
-                        my_bid, my_ask = self.find_required_bid_ask(market_buy_orders, market_sell_orders, my_bid, my_ask, required_spread)
-
-                        if my_bid < mid_price and my_ask > mid_price:
-                            #Modify our bids and ask (widen them) to meet the spread requirement. Less likely to be filled now.
-                            orders.append(Order(product, my_bid, qty_to_mm))
-                            orders.append(Order(product, my_ask, -qty_to_mm))
-
-                            print(f"(O.R.S) Quoting {product}: bid {qty_to_mm}x {my_bid}, ask {qty_to_mm}x {my_ask}")
-                            # print("Do nothing outside of spread")
-                        else: 
-                            print(f"(O.R.S) Modified prices not valid (B,A): {my_bid} {my_ask}")
-    
-
-                #(!!!) There are open positions --> quote orders to MM (max position - oustanding position) + quote orders to close positions 
-                else:
-
-                    #Determine max quantity to market max     
-                    if state.position.get(product) > 0: #We are long
-                        qty_remaining = abs(position_limit) - state.position.get(product)
-                    else: 
-                        qty_remaining = abs(position_limit) + state.position.get(product)
+                        print(f"(O.R.S) Modified prices not valid (B,A): {my_bid} {my_ask}") #From checking logs, this only relevant for FIRST iteration. 
+                
+                """
+                Close out of open positions
+                """
+                qty_to_close = state.position.get(product, 0) #Only continue if the asset has a current open position.
+                
+                #Send orders to try to close out of position
+                if qty_to_close > 0: #Quote a ASK at best price                   
+                    print("(CLOSE) Quoting SELL", str(qty_to_close) + "x", product, my_ask)
+                    orders.append(Order(product, my_ask, -abs(qty_to_close)))
                     
-                    #Market make the remaining position limit. Check if the order is valid (bid < mid, ask > mid, spread is big enough)
-                    if my_bid < mid_price and my_ask > mid_price and current_spread >= required_spread: 
-                        orders.append(Order(product, my_bid, qty_remaining))
-                        orders.append(Order(product, my_ask, -qty_remaining))
-                    
-                        print(f"(MM) Quoting {product}: bid {qty_remaining}x {my_bid}, ask {qty_remaining}x {my_ask}")
-                    else:
-                        #We can't quote the BEST prices AND meet our required spread. Thus market make and meet our required SPREAD but not the best prices (bots could still trade against it - less likely)
-                        my_bid, my_ask = self.find_required_bid_ask(market_buy_orders, market_sell_orders, my_bid, my_ask, required_spread)
-
-                        if my_bid < mid_price and my_ask > mid_price:
-                            #Modify our bids and ask (widen them) to meet the spread requirement. Less likely to be filled now.
-                            orders.append(Order(product, my_bid, qty_remaining))
-                            orders.append(Order(product, my_ask, -qty_remaining))
-
-                            print(f"(O.R.S) Quoting {product}: bid {qty_remaining}x {my_bid}, ask {qty_remaining}x {my_ask}")
-                            #print("Do nothing outside of spread")
-                        else:
-                            print(f"(O.R.S) Modified prices not valid (B,A): {my_bid} {my_ask}")
-                    
-                    
-                    #Get the position to close out of. 
-                    qty_to_close = state.position.get(product) #Only continue if the asset has a current open position.
-                    
-                    #Send orders to try to close out of position
-                    if state.position[product] > 0: #Quote a ASK at best price                   
-                        print("(CLOSE) Quoting SELL", str(qty_to_close) + "x", product, my_ask)
-                        orders.append(Order(product, my_ask, -abs(qty_to_close)))
-                        
-                    else: #Quote a BID at best price 
-                        print("(CLOSE) Quote BUY", str(qty_to_close) + "x", product, my_bid)
-                        orders.append(Order(product, my_bid, abs(qty_to_close)))
+                elif qty_to_close < 0: #Quote a BID at best price 
+                    print("(CLOSE) Quote BUY", str(qty_to_close) + "x", product, my_bid)
+                    orders.append(Order(product, my_bid, abs(qty_to_close)))
 
             result[product] = orders 
                 
-            
-
-        #REMOVE COMMENT IF U WANT TO VIEW DATA
+    
         #print(f"TraderData AFTER: {traderData}")
         
         # Sample conversion request. Check more details below. 
@@ -304,13 +259,12 @@ class Trader:
         return result, conversions, jsonpickle.encode(traderData)
     
 
-
     def find_position_limits(self, product) -> int:
         """
         For each product, find the position limited set (hard coded).
         """
         #Set position limits 
-        product_limits = {'AMETHYSTS': 20, 'STARFRUIT': 20} #I tried restrciting it to 10, it is less profit.
+        product_limits = {'AMETHYSTS': 20, 'STARFRUIT': 20} 
         
         if product in product_limits:
             return product_limits[product]
@@ -334,8 +288,8 @@ class Trader:
         
         if product in traderData["spread_dict"]:
             if len(spread_list) == 0:
-                print("uh oh big boo boo")
-                return   # Return 0 if the list is empty
+                print(f"(ERROR) {product} not found in 'spread_dict'")
+                return 0 # Return 0 if the list is empty
             else:
                 return round(float(sum(spread_list) / len(spread_list)), 2)*scale_factor # 2 decimal places
         
@@ -375,29 +329,25 @@ class Trader:
         """
         This function is called when the spread of the calculated my_bid and my_ask is too small (compared to the required spread) 
         """
-        print("(O.R.S) --> calculating new prices")
         #This function should only be called when my bids/ask at lower spread than required spread, so spread_difference should always be < 0. 
         best_bid_vol = market_buy_orders[0][1]
         best_ask_vol = market_sell_orders[0][1]
         spread_difference = required_spread - (my_ask - my_bid)
-        print(f"required spread: {required_spread}, my quoted spread: {(my_ask - my_bid)}, difference of: {spread_difference}")
-
+        print(f"Required spread: {required_spread}, my quoted spread: {(my_ask - my_bid)}, difference of: {spread_difference}")
+        print(f"Old prices are {my_bid} {my_ask}")
+        
         if spread_difference % 2 == 0: #Even --> split evently between bid and ask
-            print(f"Old prices are {my_bid} {my_ask}")
             my_bid = my_bid - spread_difference//2
             my_ask = my_ask + spread_difference//2
             print(f"Even spread - new prices are: {my_bid} {my_ask}")
         else: #Odd --> choose to quote better price for bid or ask.
             if best_bid_vol > best_ask_vol: #Less volume for ask, more likely to be filled if try to match.
-                print(f"Old prices are {my_bid} {my_ask}")
                 my_bid = my_bid - int(math.ceil(spread_difference/2))
                 my_ask = my_ask + int(math.floor(spread_difference/2))
-                print(f"Odd spread - new prices are: {my_bid} {my_ask}")
             else: #Less volume for bid, more likely to be filled if we try to match.
-                print(f"Old prices are {my_bid} {my_ask}")
                 my_bid = my_bid - int(math.floor(spread_difference/2))
-                my_ask = my_ask + int(math.ceil(spread_difference/2))
-                print(f"Odd spread - new prices are: {my_bid} {my_ask}")          
+                my_ask = my_ask + int(math.ceil(spread_difference/2))         
+            print(f"Odd spread - new prices are: {my_bid} {my_ask}") 
 
         return my_bid, my_ask
 
@@ -408,14 +358,14 @@ class Trader:
         
         "spread_dict": dictionary with the last x spreads of each product, {product: [spread_1, spread_2, ...], ...}
         "history_prices_dict": dictionary with the last x best bid and best ask, {product: [[best_bid1, best_ask1], [best_bid2, best_ask2], ...], ...} 
-        "other_dict": NOT IMPLEMENTED (spare) 
+        "mid_price_dict": a dictionary with the last x mid prices, {product: [mid_price1, mid_price2, mid_price3, ...], ...}
         
         Change "spread_hist" to the simple moving average required.
         """
         spread_hist = 40
         
         if traderData == "": #No products. Initialise ALL required for traderData (not just spread, inc ema and everything)
-            traderData = {"spread_dict": {product: [current_spread]}, "history_prices_dict": {}, "midprice_dict": {}, "atr_dict": {}} 
+            traderData = {"spread_dict": {product: [current_spread]}, "history_prices_dict": {}, "midprice_dict": {}} 
         
         elif product in traderData["spread_dict"]: #Product already exists
             if len(traderData["spread_dict"][product]) < spread_hist:
@@ -439,7 +389,7 @@ class Trader:
         data_hist = 2
         
         if traderData == "": #No products. Initialise ALL required for traderData (not just spread, inc ema and everything)
-            traderData = {"spread_dict": {}, "history_prices_dict": {product: [[best_buy_order[0], best_ask_order[0]]] }, "midprice_dict": {}, "atr_dict": {}}
+            traderData = {"spread_dict": {}, "history_prices_dict": {product: [[best_buy_order[0], best_ask_order[0]]] }, "midprice_dict": {}}
         
         elif product in traderData["history_prices_dict"]:
             if len(traderData["history_prices_dict"][product]) < data_hist:
@@ -468,7 +418,7 @@ class Trader:
         weighted_midprice = (best_bid_price*best_bid_vol + best_ask_price*best_ask_vol) / (best_bid_vol+best_ask_vol)
         
         if traderData == "":
-            traderData = {"spread_dict": {}, "history_prices_dict": {}, "midprice_dict": {product: [weighted_midprice]}, "atr_dict": {}}
+            traderData = {"spread_dict": {}, "history_prices_dict": {}, "midprice_dict": {product: [weighted_midprice]}}
             
         elif product in traderData["midprice_dict"]:
             if len(traderData["midprice_dict"][product]) < midprice_hist:
@@ -499,9 +449,8 @@ class Trader:
 
     def find_standard_deviation(self, traderData, product):
         """
-        
+        Find the standard deviation to determine upper and lower bounds for mid_price.
         """
-        
         if len(traderData["midprice_dict"][product]) != 0 and len(traderData["midprice_dict"][product]) != 1: 
             std_dev = np.std(traderData["midprice_dict"][product]) 
         else: 
