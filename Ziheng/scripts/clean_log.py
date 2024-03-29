@@ -9,8 +9,8 @@ def clean_log(file_name):
     lst = stuff.split("Activities log:")
 
 
-    with open("look_better.log", "w") as f:
+    with open("vincent_trade_CLEAN.log", "w") as f:
         f.write(lst[0].replace('\\n', '\n'))
 
 
-print(clean_log("Ziheng/scripts/testMM.log"))
+print(clean_log("Ziheng/archive/vincent_trade2.log"))
