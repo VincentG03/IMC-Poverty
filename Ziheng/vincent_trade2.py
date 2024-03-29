@@ -220,15 +220,18 @@ class Trader:
                 if mid_price < next_avg_price - 1.5* sd and qty_to_mm != 0:
                     """
                     Outlier - Only send bid quotes.
-                    """
-                    if my_bid < mid_price:
-                        orders.append(Order(product, my_bid, qty_to_mm))
-                        print(f"(OUTLIER) Quoting {product}: bid {qty_to_mm}x {my_bid}")
-                        
+                    """                 
+                    market_quantity = min(abs(market_sell_orders[0][1]), qty_to_mm)
+
                     if market_sell_orders[0][0] < next_avg_price:
-                        orders.append(Order(product, market_sell_orders[0][0], qty_to_mm))
-                        print(f"OUTLIER-BOUGHT: Market_price: {market_sell_orders[0][0]}, QTY: {qty_to_mm}")
-                    
+                        
+                        orders.append(Order(product, market_sell_orders[0][0], market_quantity))
+                        print(f"OUTLIER-BOUGHT: Market_price: {market_sell_orders[0][0]}, QTY: {market_quantity}")
+
+                    if my_bid < mid_price:           
+                        orders.append(Order(product, my_bid, qty_to_mm- market_quantity))
+                        print(f"(OUTLIER) Quoting {product}: bid {qty_to_mm - market_quantity}x {my_bid}")
+                        
                     """
                     Close out of open positions
                     """
@@ -247,14 +250,16 @@ class Trader:
                     """
                     Outlier - Only send ask quotes.
                     """
-                    if my_ask > mid_price:
-                        orders.append(Order(product, my_ask, -qty_to_mm))
-                        print(f"(OUTLIER) Quoting {product}: ask {qty_to_mm}x {my_ask}")
+                    market_quantity = min(abs(market_buy_orders[0][1]), qty_to_mm)
 
                     if market_buy_orders[0][0] > next_avg_price:        
 
-                        orders.append(Order(product, market_buy_orders[0][0], qty_to_mm))
-                        print(f"OUTLIER-BOUGHT: Market_price: {market_buy_orders[0][0]}, QTY: {qty_to_mm}")
+                        orders.append(Order(product, market_buy_orders[0][0], -market_quantity))
+                        print(f"OUTLIER-SOLD: Market_price: {market_buy_orders[0][0]}, QTY: {-market_quantity}")
+
+                    if my_ask > mid_price:
+                        orders.append(Order(product, my_ask, -qty_to_mm + market_quantity))
+                        print(f"(OUTLIER) Quoting {product}: ask {-qty_to_mm + market_quantity}x {my_ask}")
                     
                     """
                     Close out of open positions
