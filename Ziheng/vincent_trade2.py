@@ -227,10 +227,12 @@ class Trader:
                         
                         orders.append(Order(product, market_sell_orders[0][0], market_quantity))
                         print(f"OUTLIER-BOUGHT: Market_price: {market_sell_orders[0][0]}, QTY: {market_quantity}")
+                        orders.append(Order(product, mid_price, qty_to_mm- market_quantity))
+                        print(f"(OUTLIER) Quoting {product}: bid {qty_to_mm - market_quantity}x {mid_price}")
 
-                    if my_bid < mid_price:           
-                        orders.append(Order(product, my_bid, qty_to_mm- market_quantity))
-                        print(f"(OUTLIER) Quoting {product}: bid {qty_to_mm - market_quantity}x {my_bid}")
+                    # if my_bid < mid_price:           
+                    #     orders.append(Order(product, my_bid, qty_to_mm- market_quantity))
+                    #     print(f"(OUTLIER) Quoting {product}: bid {qty_to_mm - market_quantity}x {my_bid}")
                         
                     """
                     Close out of open positions
@@ -256,10 +258,12 @@ class Trader:
 
                         orders.append(Order(product, market_buy_orders[0][0], -market_quantity))
                         print(f"OUTLIER-SOLD: Market_price: {market_buy_orders[0][0]}, QTY: {-market_quantity}")
+                        orders.append(Order(product, mid_price, -qty_to_mm + market_quantity))
+                        print(f"(OUTLIER) Quoting {product}: bid {-qty_to_mm + market_quantity}x {mid_price}")
 
-                    if my_ask > mid_price:
-                        orders.append(Order(product, my_ask, -qty_to_mm + market_quantity))
-                        print(f"(OUTLIER) Quoting {product}: ask {-qty_to_mm + market_quantity}x {my_ask}")
+                    # if my_ask > mid_price:
+                    #     orders.append(Order(product, my_ask, -qty_to_mm + market_quantity))
+                    #     print(f"(OUTLIER) Quoting {product}: ask {-qty_to_mm + market_quantity}x {my_ask}")
                     
                     """
                     Close out of open positions
