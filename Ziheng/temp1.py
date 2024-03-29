@@ -22,3 +22,4 @@ yy = lin_alg(x)
 plt.plot(x, yy)
 plt.ylim(3983, 3994)
 plt.show()
+OUTLIER
