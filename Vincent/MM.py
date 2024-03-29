@@ -142,8 +142,13 @@ class Trader:
             print(f"lower: {lower_bound}")
             print(f"upper: {upper_bound}")
             
+            #If it is an outlier, we will only quote bid or ask side.
+            outlier = False
             if mid_price > upper_bound or mid_price < lower_bound:
                 print("OUTLIER")
+                outlier = True
+                
+                
             
             #Determine my bids and ask that I will send 
             my_bid, my_ask = self.find_my_bid_my_ask(best_bid, best_ask, market_buy_orders[0], market_sell_orders[0])
@@ -158,78 +163,136 @@ class Trader:
             ===================================================================================
                                                 Trading Logic
             ===================================================================================
-            """
-            #(!!!) There are no open positions --> quote orders to MM (max position limit)
-            if state.position.get(product, 0) == 0: #If product position = 0 or None (which means we haven't traded it yet)
-                """
-                1. Market make with the max position limit
-                """
-                #Get the maximum amount of orders to send. There should be no outstanding positions so max is position limit set. 
-                qty_to_mm = abs(position_limit)
+            (!!!) IF (!!!): outlier - midprice less than lower bound, expect price to increase, only quote bids
+            
 
-                #Check if the order is valid (bid < mid, ask > mid, spread is big enough)
-                if my_bid < mid_price and my_ask > mid_price and current_spread >= required_spread: 
-                    orders.append(Order(product, my_bid, qty_to_mm))
-                    orders.append(Order(product, my_ask, -qty_to_mm))
-
-                    print(f"(MM) Quoting {product}: bid {qty_to_mm}x {my_bid}, ask {qty_to_mm}x {my_ask}")
-
-                    result[product] = orders
-                else:
-                    #We can't quote the BEST prices AND meet our required spread. Thus market make and meet our required SPREAD but not the best prices (bots could still trade against it - less likely)
-                    my_bid, my_ask = self.find_required_bid_ask(market_buy_orders, market_sell_orders, my_bid, my_ask, required_spread)
-
-                    #Modify our bids and ask (widen them) to meet the spread requirement. Less likely to be filled now.
-                    orders.append(Order(product, my_bid, qty_to_mm))
-                    orders.append(Order(product, my_ask, -qty_to_mm))
-
-                    print(f"(O.R.S) Quoting {product}: bid {qty_to_mm}x {my_bid}, ask {qty_to_mm}x {my_ask}")
-                    # print("Do nothing outside of spread")
- 
-
-            #(!!!) There are open positions --> quote orders to MM (max position - oustanding position) + quote orders to close positions 
-            else:
-                """
-                1. Market make with remaining position (max position - current position) 
-                2. Quote orders to try to close current positions 
-                """
-                #Determine max quantity to market max     
-                if state.position.get(product) > 0: #We are long
-                    qty_remaining = abs(position_limit) - state.position.get(product)
-                else: 
-                    qty_remaining = abs(position_limit) + state.position.get(product)
+            
+            
+            (!!!) ELIF (!!!): outlier - midprice more than upper bound, expect price to decrease, only quote asks
+            
+            
+            
+            
+            (!!!) ELSE (!!!): if the mid price is not an outlier, market make as normal.
                 
-                #Market make the remaining position limit. Check if the order is valid (bid < mid, ask > mid, spread is big enough)
-                if my_bid < mid_price and my_ask > mid_price and current_spread >= required_spread: 
-                    orders.append(Order(product, my_bid, qty_remaining))
-                    orders.append(Order(product, my_ask, -qty_remaining))
+                (!!) IF (!!): there are no open positions. Market make with max position limits. 
                 
-                    print(f"(MM) Quoting {product}: bid {qty_remaining}x {my_bid}, ask {qty_remaining}x {my_ask}")
-                else:
-                    #We can't quote the BEST prices AND meet our required spread. Thus market make and meet our required SPREAD but not the best prices (bots could still trade against it - less likely)
-                    my_bid, my_ask = self.find_required_bid_ask(market_buy_orders, market_sell_orders, my_bid, my_ask, required_spread)
-
-                    #Modify our bids and ask (widen them) to meet the spread requirement. Less likely to be filled now.
-                    orders.append(Order(product, my_bid, qty_remaining))
-                    orders.append(Order(product, my_ask, -qty_remaining))
-
-                    print(f"(O.R.S) Quoting {product}: bid {qty_remaining}x {my_bid}, ask {qty_remaining}x {my_ask}")
-                    #print("Do nothing outside of spread")
-                
-                
-                #Get the position to close out of. 
-                qty_to_close = state.position.get(product) #Only continue if the asset has a current open position.
-                
-                #Send orders to try to close out of position
-                if state.position[product] > 0: #Quote a ASK at best price                   
-                    print("(CLOSE) Quoting SELL", str(qty_to_close) + "x", product, my_ask)
-                    orders.append(Order(product, my_ask, -abs(qty_to_close)))
+                    qty = max(product limit)
+                    (!) IF (!): the current spread is large enough, market make best prices.
+                    (!) ELSE (!): the current spread is not large enough, market make with larger spread and hence worse prices.
                     
-                else: #Quote a BID at best price 
-                    print("(CLOSE) Quote BUY", str(qty_to_close) + "x", product, my_bid)
-                    orders.append(Order(product, my_bid, abs(qty_to_close)))
+                (!!) ELSE (!!): there are open positions. Market make with remaining positions limits + send orders to close open positions. 
+                
+                    qty = remaining position
+                    (!) IF (!): the current spread is large enough, market make best prices.
+                    (!) ELSE (!): the current spread is not large enough, market make with larger spread and hence worse prices.
+                    
+                    Close out open positions.
+                    (!) IF (!): we are long, send ask orders to close.
+                    (!) ELSE (!): we are short, send bid orders to close.
+            
+            
+            """
+            if mid_price < lower_bound:
+                if state.position.get(product, 0) == 0:
+                    qty_to_mm = abs(position_limit)
+                else:
+                    if state.position.get(product) > 0: #We are long
+                        qty_to_mm = abs(position_limit) - state.position.get(product)
+                    else: 
+                        qty_to_mm = abs(position_limit) + state.position.get(product)
+                
+                if my_bid < mid_price:
+                    orders.append(Order(product, my_bid, qty_to_mm))
+                    print(f"(OUTLIER) Quoting {product}: bid {qty_to_mm}x {my_bid}")
+                
+            elif mid_price > upper_bound:  
+                if state.position.get(product, 0) == 0:
+                    qty_to_mm = abs(position_limit)
+                else:
+                    if state.position.get(product) > 0: #We are long
+                        qty_to_mm = abs(position_limit) - state.position.get(product)
+                    else: 
+                        qty_to_mm = abs(position_limit) + state.position.get(product)
+                
+                if my_ask > mid_price:
+                    orders.append(Order(product, my_ask, -qty_to_mm))
+                    print(f"(OUTLIER) Quoting {product}: ask {qty_to_mm}x {my_ask}")
+                
+            else:
+    
+                #(!!!) There are no open positions --> quote orders to MM (max position limit)
+                if state.position.get(product, 0) == 0: #If product position = 0 or None (which means we haven't traded it yet)
 
-                result[product] = orders 
+                    #Get the maximum amount of orders to send. There should be no outstanding positions so max is position limit set. 
+                    qty_to_mm = abs(position_limit)
+
+                    #Check if the order is valid (bid < mid, ask > mid, spread is big enough)
+                    if my_bid < mid_price and my_ask > mid_price and current_spread >= required_spread: 
+                        orders.append(Order(product, my_bid, qty_to_mm))
+                        orders.append(Order(product, my_ask, -qty_to_mm))
+
+                        print(f"(MM) Quoting {product}: bid {qty_to_mm}x {my_bid}, ask {qty_to_mm}x {my_ask}")
+
+                        result[product] = orders
+                    else:
+                        #We can't quote the BEST prices AND meet our required spread. Thus market make and meet our required SPREAD but not the best prices (bots could still trade against it - less likely)
+                        my_bid, my_ask = self.find_required_bid_ask(market_buy_orders, market_sell_orders, my_bid, my_ask, required_spread)
+
+                        if my_bid < mid_price and my_ask > mid_price:
+                            #Modify our bids and ask (widen them) to meet the spread requirement. Less likely to be filled now.
+                            orders.append(Order(product, my_bid, qty_to_mm))
+                            orders.append(Order(product, my_ask, -qty_to_mm))
+
+                            print(f"(O.R.S) Quoting {product}: bid {qty_to_mm}x {my_bid}, ask {qty_to_mm}x {my_ask}")
+                            # print("Do nothing outside of spread")
+                        else: 
+                            print(f"(O.R.S) Modified prices not valid (B,A): {my_bid} {my_ask}")
+    
+
+                #(!!!) There are open positions --> quote orders to MM (max position - oustanding position) + quote orders to close positions 
+                else:
+
+                    #Determine max quantity to market max     
+                    if state.position.get(product) > 0: #We are long
+                        qty_remaining = abs(position_limit) - state.position.get(product)
+                    else: 
+                        qty_remaining = abs(position_limit) + state.position.get(product)
+                    
+                    #Market make the remaining position limit. Check if the order is valid (bid < mid, ask > mid, spread is big enough)
+                    if my_bid < mid_price and my_ask > mid_price and current_spread >= required_spread: 
+                        orders.append(Order(product, my_bid, qty_remaining))
+                        orders.append(Order(product, my_ask, -qty_remaining))
+                    
+                        print(f"(MM) Quoting {product}: bid {qty_remaining}x {my_bid}, ask {qty_remaining}x {my_ask}")
+                    else:
+                        #We can't quote the BEST prices AND meet our required spread. Thus market make and meet our required SPREAD but not the best prices (bots could still trade against it - less likely)
+                        my_bid, my_ask = self.find_required_bid_ask(market_buy_orders, market_sell_orders, my_bid, my_ask, required_spread)
+
+                        if my_bid < mid_price and my_ask > mid_price:
+                            #Modify our bids and ask (widen them) to meet the spread requirement. Less likely to be filled now.
+                            orders.append(Order(product, my_bid, qty_remaining))
+                            orders.append(Order(product, my_ask, -qty_remaining))
+
+                            print(f"(O.R.S) Quoting {product}: bid {qty_remaining}x {my_bid}, ask {qty_remaining}x {my_ask}")
+                            #print("Do nothing outside of spread")
+                        else:
+                            print(f"(O.R.S) Modified prices not valid (B,A): {my_bid} {my_ask}")
+                    
+                    
+                    #Get the position to close out of. 
+                    qty_to_close = state.position.get(product) #Only continue if the asset has a current open position.
+                    
+                    #Send orders to try to close out of position
+                    if state.position[product] > 0: #Quote a ASK at best price                   
+                        print("(CLOSE) Quoting SELL", str(qty_to_close) + "x", product, my_ask)
+                        orders.append(Order(product, my_ask, -abs(qty_to_close)))
+                        
+                    else: #Quote a BID at best price 
+                        print("(CLOSE) Quote BUY", str(qty_to_close) + "x", product, my_bid)
+                        orders.append(Order(product, my_bid, abs(qty_to_close)))
+
+            result[product] = orders 
                 
             
 
@@ -310,7 +373,7 @@ class Trader:
             
     def find_required_bid_ask(self, market_buy_orders, market_sell_orders, my_bid, my_ask, required_spread):
         """
-        This function is called when the spread of the calculated my_bid and my_ask is too small (compared to ) 
+        This function is called when the spread of the calculated my_bid and my_ask is too small (compared to the required spread) 
         """
         print("(O.R.S) --> calculating new prices")
         #This function should only be called when my bids/ask at lower spread than required spread, so spread_difference should always be < 0. 
