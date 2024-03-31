@@ -202,8 +202,7 @@ class Trader:
                     qty_to_mm = abs(position_limit) + state.position.get(product)
 
             #Define multipliers
-            sd_multiplier = 0.9
-
+            sd_multiplier = 1
                 
             """
             ===================================================================================
@@ -236,8 +235,7 @@ class Trader:
                         
                         orders.append(Order(product, market_sell_orders[0][0], market_quantity))
                         print(f"OUTLIER-BOUGHT: Market_price: {market_sell_orders[0][0]}, QTY: {market_quantity}")
-                        # orders.append(Order(product, math.ceil(mid_price), qty_to_mm- market_quantity))
-                        orders.append(Order(product, market_buy_orders[0][0] + 1, qty_to_mm- market_quantity))
+                        orders.append(Order(product, math.ceil(mid_price), qty_to_mm- market_quantity))
                         print(f"(OUTLIER) Quoting {product}: bid {qty_to_mm - market_quantity}x {mid_price}")
                         mm = False
 
@@ -251,8 +249,7 @@ class Trader:
 
                         orders.append(Order(product, market_buy_orders[0][0], -market_quantity))
                         print(f"OUTLIER-SOLD: Market_price: {market_buy_orders[0][0]}, QTY: {-market_quantity}")
-                        # orders.append(Order(product, math.floor(mid_price), -qty_to_mm + market_quantity))
-                        orders.append(Order(product, market_sell_orders[0][0] - 1, -qty_to_mm + market_quantity))
+                        orders.append(Order(product, math.floor(mid_price), -qty_to_mm + market_quantity))
                         print(f"(OUTLIER) Quoting {product}: bid {-qty_to_mm + market_quantity}x {mid_price}")
                         mm = False
 

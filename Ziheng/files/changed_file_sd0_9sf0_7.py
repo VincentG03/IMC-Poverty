@@ -203,7 +203,6 @@ class Trader:
 
             #Define multipliers
             sd_multiplier = 0.9
-
                 
             """
             ===================================================================================
@@ -324,7 +323,7 @@ class Trader:
 
         Change "scale_factor_dict_ to include all items you want to change the scale factor of.
         """
-        scale_factor_dict = {'AMETHYSTS': 0.8, 'STARFRUIT': 0.8}
+        scale_factor_dict = {'AMETHYSTS': 0.7, 'STARFRUIT': 0.7} 
         spread_list = traderData["spread_dict"][product]
         
         if product in scale_factor_dict:
