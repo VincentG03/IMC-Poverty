@@ -148,19 +148,24 @@ class Trader:
                 
 
             """
-            Calculate the average, for the trend
+            Calculate the average, for trend prediction
+            Currently uses 15 data points
             """
             average = self.avg(order_depth)
-            traderData = self.append_last_x_avg(traderData, product, average)
-            #Calculate if we finally have enough points to calculate lin reg - currently 15 vals
+            traderData = self.append_last_x_avg(traderData, product, average)   # update traderData to include this timestep's average
+            """
+            Use linear regression to calculate trend
+            """
+            # currently 15 vals
             avg_hist = 15
-            if len(traderData["avg"][product]) >= avg_hist:
+            if len(traderData["avg"][product]) >= avg_hist: # must check there is at least 15 data points
                 x = [i for i in range(avg_hist)]
                 y = traderData["avg"][product]
-                gradient, c = np.polyfit(np.array(x), np.array(y), 1)
+                gradient, c = np.polyfit(np.array(x), np.array(y), 1)   # finding lin reg equation
                 # Predicting next time step
                 next_avg_price = gradient * (avg_hist + 1) + c
                 diff_lst = []
+                # calculating SD from our lin reg - needed to approximate our margin or error
                 for i in range(len(traderData["avg"][product])):
                     curr_avg = traderData["midprice_dict"][product][-i -1]
                     c_lin_reg = gradient * (avg_hist - i) + c
@@ -200,10 +205,10 @@ class Trader:
             ===================================================================================
                                                 Trading Logic
             ===================================================================================
-            (!!) IF (!!): outlier - midprice less than lower bound, expect price to increase
+            (!!) IF (!!): outlier - midprice less than lower bound of our trend, expect price to increase
                 Only quote bids.
             
-            (!!) ELIF (!!): outlier - midprice more than upper bound, expect price to decrease
+            (!!) ELIF (!!): outlier - midprice more than upper bound of our trend, expect price to decrease
                 Only quote asks.
             
             (!!) ELSE (!!): if the mid price is not an outlier, market make as normal.
@@ -215,7 +220,7 @@ class Trader:
                 (!) IF (!): we are long, send ask orders to close.
                 (!) ELIF (!): we are short, send bid orders to close.
             """
-            
+            mm = True   # market make = true
             if len(traderData["avg"][product]) >= avg_hist:
                 if mid_price < next_avg_price - 0.9* sd and qty_to_mm != 0:
                     """
@@ -227,26 +232,9 @@ class Trader:
                         
                         orders.append(Order(product, market_sell_orders[0][0], market_quantity))
                         print(f"OUTLIER-BOUGHT: Market_price: {market_sell_orders[0][0]}, QTY: {market_quantity}")
-                        # orders.append(Order(product, mid_price, qty_to_mm- market_quantity))
-                        # print(f"(OUTLIER) Quoting {product}: bid {qty_to_mm - market_quantity}x {mid_price}")
-
-                    if my_bid < mid_price:           
-                        orders.append(Order(product, my_bid, qty_to_mm- market_quantity))
-                        print(f"(OUTLIER) Quoting {product}: bid {qty_to_mm - market_quantity}x {my_bid}")
-                        
-                    """
-                    Close out of open positions
-                    """
-                    qty_to_close = state.position.get(product, 0) #Only continue if the asset has a current open position.
-                    
-                    #Send orders to try to close out of position
-                    if qty_to_close > 0: #Quote a ASK at best price                   
-                        print("(CLOSE) Quoting SELL", str(qty_to_close) + "x", product, my_ask)
-                        orders.append(Order(product, my_ask, -abs(qty_to_close)))
-                        
-                    elif qty_to_close < 0: #Quote a BID at best price 
-                        print("(CLOSE) Quote BUY", str(-qty_to_close) + "x", product, my_bid)
-                        orders.append(Order(product, my_bid, abs(qty_to_close)))
+                        orders.append(Order(product, math.ceil(mid_price), qty_to_mm- market_quantity))
+                        print(f"(OUTLIER) Quoting {product}: bid {qty_to_mm - market_quantity}x {mid_price}")
+                        mm = False
 
                 elif mid_price > next_avg_price + 0.9* sd and qty_to_mm != 0: 
                     """
@@ -258,67 +246,12 @@ class Trader:
 
                         orders.append(Order(product, market_buy_orders[0][0], -market_quantity))
                         print(f"OUTLIER-SOLD: Market_price: {market_buy_orders[0][0]}, QTY: {-market_quantity}")
-                        # orders.append(Order(product, mid_price, -qty_to_mm + market_quantity))
-                        # print(f"(OUTLIER) Quoting {product}: bid {-qty_to_mm + market_quantity}x {mid_price}")
+                        orders.append(Order(product, math.floor(mid_price), -qty_to_mm + market_quantity))
+                        print(f"(OUTLIER) Quoting {product}: bid {-qty_to_mm + market_quantity}x {mid_price}")
+                        mm = False
 
-                    if my_ask > mid_price:
-                        orders.append(Order(product, my_ask, -qty_to_mm + market_quantity))
-                        print(f"(OUTLIER) Quoting {product}: ask {-qty_to_mm + market_quantity}x {my_ask}")
-                    
-                    """
-                    Close out of open positions
-                    """
-                    qty_to_close = state.position.get(product, 0) #Only continue if the asset has a current open position.
-                    
-                    #Send orders to try to close out of position
-                    if qty_to_close > 0: #Quote a ASK at best price                   
-                        print("(CLOSE) Quoting SELL", str(qty_to_close) + "x", product, my_ask)
-                        orders.append(Order(product, my_ask, -abs(qty_to_close)))
-                        
-                    elif qty_to_close < 0: #Quote a BID at best price 
-                        print("(CLOSE) Quote BUY", str(-qty_to_close) + "x", product, my_bid)
-                        orders.append(Order(product, my_bid, abs(qty_to_close)))
-                else:
-                    """
-                    Market make as normal.
-                    """
-                    #If calculated prices' spread is large enough, market make (with best prices).
-                    if my_bid < mid_price and my_ask > mid_price and current_spread >= required_spread: 
-                        orders.append(Order(product, my_bid, qty_to_mm))
-                        orders.append(Order(product, my_ask, -qty_to_mm))
-                    
-                        print(f"(MM) Quoting {product}: bid {qty_to_mm}x {my_bid}, ask {qty_to_mm}x {my_ask}")
-                    
-                    #If calculated prices' spread is not large enough, recalculate bids and asks to meet the required spread (but send worse prices - less likely to be filled)
-                    else:
-                        my_bid, my_ask = self.find_required_bid_ask(market_buy_orders, market_sell_orders, my_bid, my_ask, required_spread)
 
-                        if my_bid < mid_price and my_ask > mid_price:
-                            #Modify our bids and ask (widen them) to meet the spread requirement. 
-                            orders.append(Order(product, my_bid, qty_to_mm))
-                            orders.append(Order(product, my_ask, -qty_to_mm))
-
-                            print(f"(O.R.S) Quoting {product}: bid {qty_to_mm}x {my_bid}, ask {qty_to_mm}x {my_ask}")
-                        else:
-                            print(f"(O.R.S) Modified prices not valid (B,A): {my_bid} {my_ask}") #From checking logs, this only relevant for FIRST iteration. 
-                    
-                    """
-                    Close out of open positions
-                    """
-                    qty_to_close = state.position.get(product, 0) #Only continue if the asset has a current open position.
-                    
-                    #Send orders to try to close out of position
-                    if qty_to_close > 0: #Quote a ASK at best price                   
-                        print("(CLOSE) Quoting SELL", str(qty_to_close) + "x", product, my_ask)
-                        orders.append(Order(product, my_ask, -abs(qty_to_close)))
-                        
-                    elif qty_to_close < 0: #Quote a BID at best price 
-                        print("(CLOSE) Quote BUY", str(qty_to_close) + "x", product, my_bid)
-                        orders.append(Order(product, my_bid, abs(qty_to_close)))
-
-                result[product] = orders 
-
-            else:
+            if mm:
                 """
                 Market make as normal.
                 """
@@ -357,7 +290,7 @@ class Trader:
                     orders.append(Order(product, my_bid, abs(qty_to_close)))
 
             result[product] = orders 
-                
+                    
     
         #print(f"TraderData AFTER: {traderData}")
         
@@ -569,6 +502,9 @@ class Trader:
         
 
     def avg(self, orders):
+        """
+        Find the weighted average of the orderbook
+        """
         total = 0
         quantity1 = 0
 

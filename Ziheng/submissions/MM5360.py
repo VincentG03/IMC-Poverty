@@ -148,19 +148,21 @@ class Trader:
                 
 
             """
-            Calculate the average, for the trend
+            Calculate the average, for trend prediction
+            Currently uses 15 data points
             """
             average = self.avg(order_depth)
-            traderData = self.append_last_x_avg(traderData, product, average)
+            traderData = self.append_last_x_avg(traderData, product, average)   # update traderData to include this timestep's average
             #Calculate if we finally have enough points to calculate lin reg - currently 15 vals
             avg_hist = 15
-            if len(traderData["avg"][product]) >= avg_hist:
+            if len(traderData["avg"][product]) >= avg_hist: # must check there is at least 15 data points
                 x = [i for i in range(avg_hist)]
                 y = traderData["avg"][product]
-                gradient, c = np.polyfit(np.array(x), np.array(y), 1)
+                gradient, c = np.polyfit(np.array(x), np.array(y), 1)   # finding lin reg equation
                 # Predicting next time step
                 next_avg_price = gradient * (avg_hist + 1) + c
                 diff_lst = []
+                # calculating SD from our lin reg - needed to approximate our margin or error
                 for i in range(len(traderData["avg"][product])):
                     curr_avg = traderData["midprice_dict"][product][-i -1]
                     c_lin_reg = gradient * (avg_hist - i) + c
