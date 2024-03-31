@@ -217,7 +217,7 @@ class Trader:
             """
             
             if len(traderData["avg"][product]) >= avg_hist:
-                if mid_price < next_avg_price - 1.5* sd and qty_to_mm != 0:
+                if mid_price < next_avg_price - 0.9* sd and qty_to_mm != 0:
                     """
                     Outlier - Only send bid quotes.
                     """                 
@@ -227,7 +227,7 @@ class Trader:
                         
                         orders.append(Order(product, market_sell_orders[0][0], market_quantity))
                         print(f"OUTLIER-BOUGHT: Market_price: {market_sell_orders[0][0]}, QTY: {market_quantity}")
-                        orders.append(Order(product, mid_price, qty_to_mm- market_quantity))
+                        orders.append(Order(product, math.ceil(mid_price), qty_to_mm- market_quantity))
                         print(f"(OUTLIER) Quoting {product}: bid {qty_to_mm - market_quantity}x {mid_price}")
 
                     # if my_bid < mid_price:           
@@ -245,10 +245,10 @@ class Trader:
                         orders.append(Order(product, my_ask, -abs(qty_to_close)))
                         
                     elif qty_to_close < 0: #Quote a BID at best price 
-                        print("(CLOSE) Quote BUY", str(qty_to_close) + "x", product, my_bid)
+                        print("(CLOSE) Quote BUY", str(-qty_to_close) + "x", product, my_bid)
                         orders.append(Order(product, my_bid, abs(qty_to_close)))
 
-                elif mid_price > next_avg_price + 1.5* sd and qty_to_mm != 0: 
+                elif mid_price > next_avg_price + 0.9* sd and qty_to_mm != 0: 
                     """
                     Outlier - Only send ask quotes.
                     """
@@ -258,7 +258,7 @@ class Trader:
 
                         orders.append(Order(product, market_buy_orders[0][0], -market_quantity))
                         print(f"OUTLIER-SOLD: Market_price: {market_buy_orders[0][0]}, QTY: {-market_quantity}")
-                        orders.append(Order(product, mid_price, -qty_to_mm + market_quantity))
+                        orders.append(Order(product, math.floor(mid_price), -qty_to_mm + market_quantity))
                         print(f"(OUTLIER) Quoting {product}: bid {-qty_to_mm + market_quantity}x {mid_price}")
 
                     # if my_ask > mid_price:
@@ -276,7 +276,7 @@ class Trader:
                         orders.append(Order(product, my_ask, -abs(qty_to_close)))
                         
                     elif qty_to_close < 0: #Quote a BID at best price 
-                        print("(CLOSE) Quote BUY", str(qty_to_close) + "x", product, my_bid)
+                        print("(CLOSE) Quote BUY", str(-qty_to_close) + "x", product, my_bid)
                         orders.append(Order(product, my_bid, abs(qty_to_close)))
                 else:
                     """
