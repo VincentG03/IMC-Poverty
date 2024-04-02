@@ -1,7 +1,7 @@
 
 def edit(file_name):
     # new file name
-    changed = "Ziheng/files/changed_file"
+    changed = "Ziheng/files/"
     # var names:
     sd_multiplier = "sd_multiplier ="
     
@@ -30,13 +30,13 @@ def edit(file_name):
         for scale_factor in range(6, 12, 1):
             scale_factor = scale_factor / 10    
 
-            for product_limit in range(20, 20, 2):
+            for avg_hist_1 in range(10, 25, 1):
 
                 with open(file_name, "r") as f:
                     
                     # writing the file name
                     file_changed = changed + "sd" + str(sd_new_val) + "sf" +\
-                          str(scale_factor) + "pl" + str(product_limit)
+                          str(scale_factor) + "avg_hist" + str(avg_hist_1)
                     
 
                     file_changed = file_changed.replace(".", "_")
@@ -58,10 +58,19 @@ def edit(file_name):
                                 c.write(f"        {scale_factor_dict} {{'AMETHYSTS': {scale_factor}, 'STARFRUIT': {scale_factor}}} \n")
                             continue
 
-                        if product_limits in line:
+                        if avg_hist in line:
                             with open(file_changed, "a") as c:
-                                c.write(f"        {product_limits} {{'AMETHYSTS': {product_limit}, 'STARFRUIT': {product_limit}}} \n")
+                                c.write(f"            {avg_hist} {avg_hist_1}\n")
                             continue
+                        
+                        if midprice_hist in line:   # so mid price matches up with avg hist nums
+                            with open(file_changed, "a") as c:
+                                c.write(f"        {midprice_hist} {avg_hist_1}\n")
+                            continue
+                        # if product_limits in line:
+                        #     with open(file_changed, "a") as c:
+                        #         c.write(f"        {product_limits} {{'AMETHYSTS': {product_limit}, 'STARFRUIT': {product_limit}}} \n")
+                        #     continue
 
                         with open(file_changed, "a") as c:
                             c.write(line)

@@ -58,6 +58,7 @@ class Trader:
         if traderData != "":
             traderData = jsonpickle.decode(traderData)
 
+        
         #Repeat trading logic for each product
         for product in state.order_depths:
             """
@@ -66,7 +67,10 @@ class Trader:
             ===================================================================================
             """
             print(f" ------------------------------{product}----------------------------------")
-            
+            if product in state.own_trades:
+                for i in range(len(state.own_trades[product])):
+                    print(f"Own trade {product}: {state.own_trades[product]}")
+
             order_depth: OrderDepth = state.order_depths[product]
             orders: List[Order] = []
             print("")
@@ -151,13 +155,14 @@ class Trader:
             Calculate the average, for trend prediction
             Currently uses 15 data points
             """
+            avg_hist = 15
             average = self.avg(order_depth)
-            traderData = self.append_last_x_avg(traderData, product, average)   # update traderData to include this timestep's average
+            traderData = self.append_last_x_avg(traderData, product, average, avg_hist)   # update traderData to include this timestep's average
             """
             Use linear regression to calculate trend
             """
             # currently 15 vals
-            avg_hist = 15
+            
             if len(traderData["avg"][product]) >= avg_hist: # must check there is at least 15 data points
                 x = [i for i in range(avg_hist)]
                 y = traderData["avg"][product]
@@ -201,8 +206,10 @@ class Trader:
                 else: 
                     qty_to_mm = abs(position_limit) + state.position.get(product)
 
+            curr_pos = state.position.get(product, 0)
             #Define multipliers
-            sd_multiplier = 1.1
+            sd_multiplier = 0.9
+
                 
             """
             ===================================================================================
@@ -225,6 +232,7 @@ class Trader:
             """
             mm = True   # market make = true
             if len(traderData["avg"][product]) >= avg_hist:
+
                 if mid_price < next_avg_price - sd_multiplier* sd and qty_to_mm != 0:
                     """
                     Outlier - Only send bid quotes.
@@ -254,7 +262,6 @@ class Trader:
                         orders.append(Order(product, market_sell_orders[0][0] - 1, -qty_to_mm + market_quantity))
                         print(f"(OUTLIER) Quoting {product}: bid {-qty_to_mm + market_quantity}x {mid_price}")
                         mm = False
-
 
             if mm:
                 """
@@ -323,7 +330,7 @@ class Trader:
 
         Change "scale_factor_dict_ to include all items you want to change the scale factor of.
         """
-        scale_factor_dict = {'AMETHYSTS': 0.7, 'STARFRUIT': 0.7} 
+        scale_factor_dict = {'AMETHYSTS': 0.8, 'STARFRUIT': 0.8}
         spread_list = traderData["spread_dict"][product]
         
         if product in scale_factor_dict:
@@ -526,11 +533,11 @@ class Trader:
 
         return total
     
-    def append_last_x_avg(self, traderData, product, avg_price):
+    def append_last_x_avg(self, traderData, product, avg_price, avg_hist):
         """
         Find the average of last x values
         """
-        avg_hist = 15
+
         
         if traderData == "":
             traderData = {"spread_dict": {}, "history_prices_dict": {}, "midprice_dict": {},
@@ -548,4 +555,30 @@ class Trader:
         return traderData
     
 
+    def handle_profit(self, traderData, product, curr_pos, avg_val):
+
+        if traderData == "" and product not in traderData:    # in theory this if statement should never execute
+            traderData = {"spread_dict": {}, "history_prices_dict": {}, "midprice_dict": {},
+                           "avg": {}, 
+                           "profit": {product: {"profit": 0, "last_pos": 0}}}
             
+        elif product in traderData["profit"]:
+            # compare curr avg price with old avg price 
+            if curr_pos > 0:
+                last_avg_val = traderData["avg"][-1]
+                diff = avg_val - last_avg_val 
+                if avg_val > last_avg_val:             
+                    traderData["profit"] += diff * curr_pos
+                else: 
+                    traderData["profit"] -= diff * curr_pos
+
+
+            if curr_pos < 0:
+                last_avg_val = traderData["avg"][-1]
+                diff = avg_val - last_avg_val 
+                if avg_val < last_avg_val:             
+                    traderData["profit"] += diff * curr_pos
+                else: 
+                    traderData["profit"] -= diff * curr_pos
+
+    # def handle_last_pos(self, )
