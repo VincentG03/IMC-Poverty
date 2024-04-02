@@ -193,7 +193,7 @@ class Trader:
             """
             
             
-            if mid_price < lower_bound:
+            if mid_price < lower_bound and qty_to_mm != 0:
                 """
                 Outlier - Only send bid quotes.
                 """
@@ -202,7 +202,7 @@ class Trader:
                     print(f"(OUTLIER) Quoting {product}: bid {qty_to_mm}x {my_bid}")
             
             
-            elif mid_price > upper_bound: 
+            elif mid_price > upper_bound and qty_to_mm != 0: 
                 """
                 Outlier - Only send ask quotes.
                 """
@@ -246,7 +246,7 @@ class Trader:
                     orders.append(Order(product, my_ask, -abs(qty_to_close)))
                     
                 elif qty_to_close < 0: #Quote a BID at best price 
-                    print("(CLOSE) Quote BUY", str(qty_to_close) + "x", product, my_bid)
+                    print("(CLOSE) Quote BUY", str(abs(qty_to_close)) + "x", product, my_bid)
                     orders.append(Order(product, my_bid, abs(qty_to_close)))
 
             result[product] = orders 
