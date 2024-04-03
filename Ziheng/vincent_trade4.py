@@ -155,6 +155,8 @@ class Trader:
             avg_hist = 15
             average = self.avg(order_depth)
             traderData = self.append_last_x_avg(traderData, product, average, avg_hist)   # update traderData to include this timestep's average
+            
+            
             """
             Use linear regression to calculate trend
             """
@@ -567,8 +569,6 @@ class Trader:
         """
         Find the average of last x values
         """
-
-        
         if traderData == "":
             traderData = {"spread_dict": {}, "history_prices_dict": {}, "midprice_dict": {},
                            "avg": {product: [avg_price]}, "avg_pos": {}}
@@ -624,6 +624,8 @@ class Trader:
                     # calculate the new value 
                     traderData["avg_pos"][product]["avg_val"] = (prev_pos * traderData["avg_pos"][product]["avg_val"] + sum(avg_price)) / curr_pos
                     traderData["avg_pos"][product]["pos"] = curr_pos
+                
+                #traderData["avg_pos"][product]["pos"] = curr_pos
 
                 # there should be no else statement because if i have 100 TSLA and get rid of 5 of them, my avg value is still the same, just the quant is diff
             # going from a negative to positive position or a positive to negative position
