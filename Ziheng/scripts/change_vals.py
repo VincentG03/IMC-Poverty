@@ -79,4 +79,4 @@ def edit(file_name):
 
 
 if __name__ == "__main__":
-    edit("Ziheng/vincent_trade3.py")
+    edit("Ziheng/vincent_trade4.py")
