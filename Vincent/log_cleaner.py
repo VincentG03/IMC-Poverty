@@ -13,4 +13,4 @@ def clean_log(file_name):
         f.write(lst[0].replace('\\n', '\n'))
 
 
-print(clean_log("Vincent/Outputs/data.log"))
+print(clean_log("Vincent/Outputs/data2.log"))
