@@ -210,11 +210,11 @@ class Trader:
             # update traderData if we have any trades from previous iteration
             if product in state.own_trades:
                 # update our avg_val traderData
-                self.handle_avg_pos_val(traderData, product, curr_pos, state.own_trades[product])
+                traderData = self.handle_avg_pos_val(traderData, product, curr_pos, state.own_trades[product])
                 print(f"Own trade {product}: {state.own_trades[product]}")
 
             else:
-                self.handle_avg_pos_val(traderData, product, curr_pos, None)
+                traderData = self.handle_avg_pos_val(traderData, product, curr_pos, None)
                 print(f"Own trade {product}: None")
 
             #Define multipliers
@@ -251,16 +251,16 @@ class Trader:
                     """                 
                     market_quantity = min(abs(market_sell_orders[0][1]), qty_to_mm)
 
-                    # """
-                    # Close out of our current position if necessary when we are in a short position
-                    # """
-                    # if curr_pos < 0:    # if we are short
-                    #     # find what our average value is and compare it with the market order
-                    #     # we want to trade with the bots ONLY if we can guaranee a profit of 4 seashells per position
-                    #     myavg_pos = traderData["avg_pos"][product]["avg_val"]   # this should not generate an error since we this will only run however many iterations our avg_hist is
-                    #     if myavg_pos - market_sell_orders[0][0] > sd * market_close_multiplier:    # 4 is our benchmark of a profit we want
-                    #         orders.append(Order(product, market_sell_orders[0][0], -curr_pos))
-                    #         print(f"Closing out position when short. Quoting {product}: bid:{market_sell_orders[0][0]}, qty:{-curr_pos}")
+                    """
+                    Close out of our current position if necessary when we are in a short position
+                    """
+                    if curr_pos < 0:    # if we are short
+                        # find what our average value is and compare it with the market order
+                        # we want to trade with the bots ONLY if we can guaranee a profit of 4 seashells per position
+                        myavg_pos = traderData["avg_pos"][product]["avg_val"]   # this should not generate an error since we this will only run however many iterations our avg_hist is
+                        if myavg_pos - market_sell_orders[0][0] > 3 * market_close_multiplier:    # 4 is our benchmark of a profit we want
+                            orders.append(Order(product, market_sell_orders[0][0], -curr_pos))
+                            print(f"Closing out position when short. Quoting {product}: bid:{market_sell_orders[0][0]}, qty:{-curr_pos}")
 
                     if market_sell_orders[0][0] < next_avg_price:
                         
@@ -271,16 +271,16 @@ class Trader:
                         print(f"(OUTLIER) Quoting {product}: bid {qty_to_mm - market_quantity}x {mid_price}")
                         mm = False
 
-                    """
-                    Close out of our current position if necessary when we are in a short position
-                    """
-                    if curr_pos < 0:
-                        # find what our average value is and compare it with the market order
-                        # we want to trade with the bots ONLY if we can guaranee a profit of 4 seashells per position
-                        myavg_pos = traderData["avg_pos"][product]["avg_val"]   # this should not generate an error since we this will only run however many iterations our avg_hist is
-                        if myavg_pos - market_sell_orders[0][0] > 3 * market_close_multiplier:    # 4 is our benchmark of a profit we want
-                            orders.append(Order(product, market_sell_orders[0][0], -curr_pos))
-                            print(f"Closing out position when short. Quoting {product}: bid:{market_sell_orders[0][0]}, qty:{-curr_pos}")
+                    # """
+                    # Close out of our current position if necessary when we are in a short position
+                    # """
+                    # if curr_pos < 0:
+                    #     # find what our average value is and compare it with the market order
+                    #     # we want to trade with the bots ONLY if we can guaranee a profit of 4 seashells per position
+                    #     myavg_pos = traderData["avg_pos"][product]["avg_val"]   # this should not generate an error since we this will only run however many iterations our avg_hist is
+                    #     if myavg_pos - market_sell_orders[0][0] > 3 * market_close_multiplier:    # 4 is our benchmark of a profit we want
+                    #         orders.append(Order(product, market_sell_orders[0][0], -curr_pos))
+                    #         print(f"Closing out position when short. Quoting {product}: bid:{market_sell_orders[0][0]}, qty:{-curr_pos}")
 
                 elif mid_price > next_avg_price + sd_multiplier* sd and qty_to_mm != 0: 
                     """
@@ -289,16 +289,16 @@ class Trader:
                     market_quantity = min(abs(market_buy_orders[0][1]), qty_to_mm)
 
                     
-                    # """
-                    # Close out of our current position if necessary when we are in a long position
-                    # """
-                    # if curr_pos > 0:
-                    #     # find what our average value is and compare it with the market order
-                    #     # we want to trade with the bots ONLY if we can guaranee a profit of 4 seashells per position
-                    #     myavg_pos = traderData["avg_pos"][product]["avg_val"]   # this should not generate an error since we this will only run however many iterations our avg_hist is
-                    #     if market_buy_orders[0][0] - myavg_pos > sd * market_close_multiplier:    # 4 is our benchmark of a profit we want
-                    #         orders.append(Order(product, market_buy_orders [0][0], -curr_pos))
-                    #         print(f"Closing out position when long. Quoting{product}: ask:{market_buy_orders[0][0]}, qty:{-curr_pos}")
+                    """
+                    Close out of our current position if necessary when we are in a long position
+                    """
+                    if curr_pos > 0:
+                        # find what our average value is and compare it with the market order
+                        # we want to trade with the bots ONLY if we can guaranee a profit of 4 seashells per position
+                        myavg_pos = traderData["avg_pos"][product]["avg_val"]   # this should not generate an error since we this will only run however many iterations our avg_hist is
+                        if market_buy_orders[0][0] - myavg_pos > 3 * market_close_multiplier:    # 4 is our benchmark of a profit we want
+                            orders.append(Order(product, market_buy_orders [0][0], -curr_pos))
+                            print(f"Closing out position when long. Quoting{product}: ask:{market_buy_orders[0][0]}, qty:{-curr_pos}")
 
 
                     if market_buy_orders[0][0] > next_avg_price:        
@@ -310,16 +310,16 @@ class Trader:
                         print(f"(OUTLIER) Quoting {product}: bid {-qty_to_mm + market_quantity}x {mid_price}")
                         mm = False
 
-                    """
-                    Close out of our current position if necessary when we are in a long position
-                    """
-                    if curr_pos > 0:
-                        # find what our average value is and compare it with the market order
-                        # we want to trade with the bots ONLY if we can guaranee a profit of 4 seashells per position
-                        myavg_pos = traderData["avg_pos"][product]["avg_val"]   # this should not generate an error since we this will only run however many iterations our avg_hist is
-                        if market_buy_orders[0][0] - myavg_pos > 3 * market_close_multiplier:    # 4 is our benchmark of a profit we want
-                            orders.append(Order(product, market_buy_orders [0][0], -curr_pos))
-                            print(f"Closing out position when long. Quoting{product}: ask:{market_buy_orders[0][0]}, qty:{-curr_pos}")
+                    # """
+                    # Close out of our current position if necessary when we are in a long position
+                    # """
+                    # if curr_pos > 0:
+                    #     # find what our average value is and compare it with the market order
+                    #     # we want to trade with the bots ONLY if we can guaranee a profit of 4 seashells per position
+                    #     myavg_pos = traderData["avg_pos"][product]["avg_val"]   # this should not generate an error since we this will only run however many iterations our avg_hist is
+                    #     if market_buy_orders[0][0] - myavg_pos > 3 * market_close_multiplier:    # 4 is our benchmark of a profit we want
+                    #         orders.append(Order(product, market_buy_orders [0][0], -curr_pos))
+                    #         print(f"Closing out position when long. Quoting{product}: ask:{market_buy_orders[0][0]}, qty:{-curr_pos}")
 
             if mm:
                 """

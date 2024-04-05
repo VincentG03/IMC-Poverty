@@ -318,13 +318,13 @@ class Trader:
             curr_pos = state.position.get(product, 0)
 
             # update traderData if we have any trades from previous iteration
-            if product in state.own_trades:
+            if product in state.own_trades and state.own_trades[product] != []:
                 # update our avg_val traderData
-                self.handle_avg_pos_val(traderData, product, curr_pos, state.own_trades[product])
+                traderData = self.handle_avg_pos_val(traderData, product, curr_pos, state.own_trades[product])
                 print(f"Own trade {product}: {state.own_trades[product]}")
 
             else:
-                self.handle_avg_pos_val(traderData, product, curr_pos, None)
+                traderData = self.handle_avg_pos_val(traderData, product, curr_pos, None)
                 print(f"Own trade {product}: None")
 
             #Define multipliers
@@ -485,8 +485,8 @@ class Trader:
         For each product, find the position limited set (hard coded).
         """
         #Set position limits 
-        product_limits = {'AMETHYSTS': 20, 'STARFRUIT': 20} 
-        
+        # product_limits = {'AMETHYSTS': 20, 'STARFRUIT': 20} 
+        product_limits = {'BANANAS': 20, 'PEARLS': 20} 
         if product in product_limits:
             return product_limits[product]
         else: 
@@ -499,7 +499,8 @@ class Trader:
 
         Change "scale_factor_dict_ to include all items you want to change the scale factor of.
         """
-        scale_factor_dict = {'AMETHYSTS': 0.8, 'STARFRUIT': 0.8}
+        # scale_factor_dict = {'AMETHYSTS': 0.8, 'STARFRUIT': 0.8}
+        scale_factor_dict = {'BANANAS': 0.8, 'PEARLS': 0.8}
         spread_list = traderData["spread_dict"][product]
         
         if product in scale_factor_dict:
@@ -804,7 +805,10 @@ class Trader:
                     amount = trade.quantity
                     avg_val.append(price*amount)
                     total_amount.append(amount)
-                avg_val = sum(avg_val) / sum(total_amount)
+                if len(total_amount) != 0:
+                    avg_val = sum(avg_val) / sum(total_amount)
+                else:
+                    avg_val = sum(avg_val)  # this should always = 0
             print("HERE")
 
             if sum(total_amount) != curr_pos:       # this means the matho dont add up
