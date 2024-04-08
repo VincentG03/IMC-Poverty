@@ -218,7 +218,7 @@ class Trader:
                 print(f"Own trade {product}: None")
 
             #Define multipliers
-            sd_multiplier = 0.9
+            sd_multiplier = 0.4
             market_close_multiplier = 1
 
                 
@@ -334,16 +334,16 @@ class Trader:
                 
                 #If calculated prices' spread is not large enough, recalculate bids and asks to meet the required spread (but send worse prices - less likely to be filled)
                 else:
-                    my_bid, my_ask = self.find_required_bid_ask(market_buy_orders, market_sell_orders, my_bid, my_ask, required_spread)
+                    new_my_bid, new_my_ask = self.find_required_bid_ask(market_buy_orders, market_sell_orders, my_bid, my_ask, required_spread)
 
                     if my_bid < mid_price and my_ask > mid_price:
                         #Modify our bids and ask (widen them) to meet the spread requirement. 
-                        orders.append(Order(product, my_bid, qty_to_mm))
-                        orders.append(Order(product, my_ask, -qty_to_mm))
+                        orders.append(Order(product, new_my_bid, qty_to_mm))
+                        orders.append(Order(product, new_my_ask, -qty_to_mm))
 
-                        print(f"(O.R.S) Quoting {product}: bid {qty_to_mm}x {my_bid}, ask {qty_to_mm}x {my_ask}")
+                        print(f"(O.R.S) Quoting {product}: bid {qty_to_mm}x {new_my_bid}, ask {qty_to_mm}x {new_my_ask}")
                     else:
-                        print(f"(O.R.S) Modified prices not valid (B,A): {my_bid} {my_ask}") #From checking logs, this only relevant for FIRST iteration. 
+                        print(f"(O.R.S) Modified prices not valid (B,A): {new_my_bid} {new_my_ask}") #From checking logs, this only relevant for FIRST iteration. 
                 
                 """
                 Close out of open positions

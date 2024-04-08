@@ -150,7 +150,7 @@ class Trader:
     # Instead of rejecting if the trade is bad, can increase my spread then send order again (unlikely to be executed but if they do we get big profit)
     
     # need to add in something when there is no orders on one side. 
-    
+    logger = Logger(local=True)
     
     
     def run(self, state: TradingState):
@@ -375,7 +375,7 @@ class Trader:
                     if market_sell_orders[0][0] < next_avg_price:
                         
                         orders.append(Order(product, market_sell_orders[0][0], market_quantity))
-                        print(f"OUTLIER-BOUGHT: Market_price: {market_sell_orders[0][0]}, QTY: {market_quantity}")
+                        self.logger.print(f"OUTLIER-BOUGHT: Market_price: {market_sell_orders[0][0]}, QTY: {market_quantity}")
                         # orders.append(Order(product, math.ceil(mid_price), qty_to_mm- market_quantity))
                         orders.append(Order(product, market_buy_orders[0][0] + 1, qty_to_mm- market_quantity))
                         print(f"(OUTLIER) Quoting {product}: bid {qty_to_mm - market_quantity}x {mid_price}")
@@ -430,7 +430,7 @@ class Trader:
                         if market_buy_orders[0][0] - myavg_pos > 3 * market_close_multiplier:    # 4 is our benchmark of a profit we want
                             orders.append(Order(product, market_buy_orders [0][0], -curr_pos))
                             print(f"Closing out position when long. Quoting{product}: ask:{market_buy_orders[0][0]}, qty:{-curr_pos}")
-
+            
             if mm:
                 """
                 Market make as normal.
@@ -444,16 +444,16 @@ class Trader:
                 
                 #If calculated prices' spread is not large enough, recalculate bids and asks to meet the required spread (but send worse prices - less likely to be filled)
                 else:
-                    my_bid, my_ask = self.find_required_bid_ask(market_buy_orders, market_sell_orders, my_bid, my_ask, required_spread)
+                    new_my_bid, new_my_ask = self.find_required_bid_ask(market_buy_orders, market_sell_orders, my_bid, my_ask, required_spread)
 
-                    if my_bid < mid_price and my_ask > mid_price:
+                    if new_my_bid < mid_price and new_my_ask > mid_price:
                         #Modify our bids and ask (widen them) to meet the spread requirement. 
-                        orders.append(Order(product, my_bid, qty_to_mm))
-                        orders.append(Order(product, my_ask, -qty_to_mm))
+                        orders.append(Order(product, new_my_bid, qty_to_mm))
+                        orders.append(Order(product, new_my_ask, -qty_to_mm))
 
-                        print(f"(O.R.S) Quoting {product}: bid {qty_to_mm}x {my_bid}, ask {qty_to_mm}x {my_ask}")
+                        print(f"(O.R.S) Quoting {product}: bid {qty_to_mm}x {new_my_bid}, ask {qty_to_mm}x {new_my_ask}")
                     else:
-                        print(f"(O.R.S) Modified prices not valid (B,A): {my_bid} {my_ask}") #From checking logs, this only relevant for FIRST iteration. 
+                        print(f"(O.R.S) Modified prices not valid (B,A): {new_my_bid} {new_my_ask}") #From checking logs, this only relevant for FIRST iteration. 
                 
                 """
                 Close out of open positions
@@ -471,7 +471,7 @@ class Trader:
 
             
             result[product] = orders 
-                    
+            self.logger.flush(state, result)    
     
         #print(f"TraderData AFTER: {traderData}")
         

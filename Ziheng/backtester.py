@@ -15,9 +15,11 @@ from datetime import datetime
 TIME_DELTA = 100
 # Please put all! the price and log files into
 # the same directory or adjust the code accordingly
-TRAINING_DATA_PREFIX = "./(Data) Last Year/training"
+# TRAINING_DATA_PREFIX = "./(Data) Last Year/training"
+TRAINING_DATA_PREFIX = "./Ziheng/databottle"
 
 ALL_SYMBOLS = [
+    "AMETHYSTS", "STARFRUIT",
     'PEARLS',
     'BANANAS',
     'COCONUTS',
@@ -31,6 +33,7 @@ ALL_SYMBOLS = [
     'PICNIC_BASKET'
 ]
 POSITIONABLE_SYMBOLS = [
+    "AMETHYSTS", "STARFRUIT",
     'PEARLS',
     'BANANAS',
     'COCONUTS',
@@ -42,7 +45,8 @@ POSITIONABLE_SYMBOLS = [
     'UKULELE',
     'PICNIC_BASKET'
 ]
-first_round = ['PEARLS', 'BANANAS']
+# first_round = ['PEARLS', 'BANANAS']
+first_round = ["AMETHYSTS", "STARFRUIT"]
 snd_round = first_round + ['COCONUTS',  'PINA_COLADAS']
 third_round = snd_round + ['DIVING_GEAR', 'DOLPHIN_SIGHTINGS', 'BERRIES']
 fourth_round = third_round + ['BAGUETTE', 'DIP', 'UKULELE', 'PICNIC_BASKET']
@@ -56,7 +60,8 @@ SYMBOLS_BY_ROUND = {
     5: fifth_round,
 }
 
-first_round_pst = ['PEARLS', 'BANANAS']
+# first_round_pst = ['PEARLS', 'BANANAS']
+first_round_pst = ["AMETHYSTS", "STARFRUIT"]
 snd_round_pst = first_round_pst + ['COCONUTS',  'PINA_COLADAS']
 third_round_pst = snd_round_pst + ['DIVING_GEAR', 'BERRIES']
 fourth_round_pst = third_round_pst + ['BAGUETTE', 'DIP', 'UKULELE', 'PICNIC_BASKET']
@@ -131,17 +136,21 @@ def process_trades(df_trades, states: dict[int, TradingState], time_limit, names
         states[time].market_trades[symbol].append(t)
     return states
        
+# current_limits = {
+#     'PEARLS': 20,
+#     'BANANAS': 20,
+#     'COCONUTS': 600,
+#     'PINA_COLADAS': 300,
+#     'DIVING_GEAR': 50,
+#     'BERRIES': 250,
+#     'BAGUETTE': 150,
+#     'DIP': 300,
+#     'UKULELE': 70,
+#     'PICNIC_BASKET': 70,
+# }
 current_limits = {
-    'PEARLS': 20,
-    'BANANAS': 20,
-    'COCONUTS': 600,
-    'PINA_COLADAS': 300,
-    'DIVING_GEAR': 50,
-    'BERRIES': 250,
-    'BAGUETTE': 150,
-    'DIP': 300,
-    'UKULELE': 70,
-    'PICNIC_BASKET': 70,
+    "STARFRUIT": 20,
+    "AMETHYSTS": 20
 }
 
 def calc_mid(states: dict[int, TradingState], round: int, time: int, max_time: int) -> dict[str, float]:

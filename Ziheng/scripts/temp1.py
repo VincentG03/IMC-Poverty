@@ -24,5 +24,5 @@
 # plt.show()
 
 
-
-print("HI")
+s = "abcdeabsdbakjsdnfa"
+print(s.split("a"))
