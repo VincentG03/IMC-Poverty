@@ -58,6 +58,7 @@ class Trader:
         if traderData != "":
             traderData = jsonpickle.decode(traderData)
 
+        
         #Repeat trading logic for each product
         for product in state.order_depths:
             """
@@ -66,7 +67,7 @@ class Trader:
             ===================================================================================
             """
             print(f" ------------------------------{product}----------------------------------")
-            
+
             order_depth: OrderDepth = state.order_depths[product]
             orders: List[Order] = []
             print("")
@@ -146,7 +147,39 @@ class Trader:
             print(f"lower: {lower_bound}")
             print(f"upper: {upper_bound}")
                 
+
+            """
+            Calculate the average, for trend prediction
+            Currently uses 15 data points
+            """
+            avg_hist = 15
+            average = self.avg(order_depth)
+            traderData = self.append_last_x_avg(traderData, product, average, avg_hist)   # update traderData to include this timestep's average
             
+            
+            """
+            Use linear regression to calculate trend
+            """
+            # currently 15 vals
+            
+            if len(traderData["avg"][product]) >= avg_hist: # must check there is at least 15 data points
+                x = [i for i in range(avg_hist)]
+                y = traderData["avg"][product]
+                gradient, c = np.polyfit(np.array(x), np.array(y), 1)   # finding lin reg equation
+                # Predicting next time step
+                next_avg_price = gradient * (avg_hist + 1) + c
+                diff_lst = []
+                # calculating SD from our lin reg - needed to approximate our margin or error
+                for i in range(len(traderData["avg"][product])):
+                    curr_avg = traderData["midprice_dict"][product][-i -1]
+                    c_lin_reg = gradient * (avg_hist - i) + c
+                    diff = c_lin_reg - curr_avg
+                    diff_lst.append(diff)
+                sd = np.std(diff_lst, 0)
+                print(f"gradient: {gradient}, c: {c}, sd: {sd}")
+                print(f"Next average price: {next_avg_price}")
+
+
             """
             Determine bid and ask prices that I will quote around (considering best bid/ask volume)
             """
@@ -171,15 +204,32 @@ class Trader:
                     qty_to_mm = abs(position_limit) - state.position.get(product)
                 else: 
                     qty_to_mm = abs(position_limit) + state.position.get(product)
+
+            curr_pos = state.position.get(product, 0)
+
+            # update traderData if we have any trades from previous iteration
+            if product in state.own_trades:
+                # update our avg_val traderData
+                traderData = self.handle_avg_pos_val(traderData, product, curr_pos, state.own_trades[product])
+                print(f"Own trade {product}: {state.own_trades[product]}")
+
+            else:
+                traderData = self.handle_avg_pos_val(traderData, product, curr_pos, None)
+                print(f"Own trade {product}: None")
+
+            #Define multipliers
+            sd_multiplier = 0.4
+            market_close_multiplier = 0.3
+
                 
             """
             ===================================================================================
                                                 Trading Logic
             ===================================================================================
-            (!!) IF (!!): outlier - midprice less than lower bound, expect price to increase
+            (!!) IF (!!): outlier - midprice less than lower bound of our trend, expect price to increase
                 Only quote bids.
             
-            (!!) ELIF (!!): outlier - midprice more than upper bound, expect price to decrease
+            (!!) ELIF (!!): outlier - midprice more than upper bound of our trend, expect price to decrease
                 Only quote asks.
             
             (!!) ELSE (!!): if the mid price is not an outlier, market make as normal.
@@ -191,27 +241,87 @@ class Trader:
                 (!) IF (!): we are long, send ask orders to close.
                 (!) ELIF (!): we are short, send bid orders to close.
             """
-            
-            
-            if mid_price < lower_bound and qty_to_mm != 0:
-                """
-                Outlier - Only send bid quotes.
-                """
-                if my_bid < mid_price:
-                    orders.append(Order(product, my_bid, qty_to_mm))
-                    print(f"(OUTLIER) Quoting {product}: bid {qty_to_mm}x {my_bid}")
-            
-            
-            elif mid_price > upper_bound and qty_to_mm != 0: 
-                """
-                Outlier - Only send ask quotes.
-                """
-                if my_ask > mid_price:
-                    orders.append(Order(product, my_ask, -qty_to_mm))
-                    print(f"(OUTLIER) Quoting {product}: ask {qty_to_mm}x {my_ask}")
-            
-            
-            else:
+            mm = True   # market make = true
+            if len(traderData["avg"][product]) >= avg_hist:
+
+
+                if mid_price < next_avg_price - sd_multiplier* sd and qty_to_mm != 0:
+                    """
+                    Outlier - Only send bid quotes.
+                    """                 
+                    market_quantity = min(abs(market_sell_orders[0][1]), qty_to_mm)
+
+                    """
+                    Close out of our current position if necessary when we are in a short position
+                    """
+                    if curr_pos < 0:    # if we are short
+                        # find what our average value is and compare it with the market order
+                        # we want to trade with the bots ONLY if we can guaranee a profit of 4 seashells per position
+                        myavg_pos = traderData["avg_pos"][product]["avg_val"]   # this should not generate an error since we this will only run however many iterations our avg_hist is
+                        if myavg_pos - market_sell_orders[0][0] > 3 * market_close_multiplier:    # 4 is our benchmark of a profit we want
+                            orders.append(Order(product, market_sell_orders[0][0], -curr_pos))
+                            print(f"Closing out position when short. Quoting {product}: bid:{market_sell_orders[0][0]}, qty:{-curr_pos}")
+
+                    if market_sell_orders[0][0] < next_avg_price:
+                        
+                        orders.append(Order(product, market_sell_orders[0][0], market_quantity))
+                        print(f"OUTLIER-BOUGHT: Market_price: {market_sell_orders[0][0]}, QTY: {market_quantity}")
+                        # orders.append(Order(product, math.ceil(mid_price), qty_to_mm- market_quantity))
+                        orders.append(Order(product, market_buy_orders[0][0] + 1, qty_to_mm- market_quantity))
+                        print(f"(OUTLIER) Quoting {product}: bid {qty_to_mm - market_quantity}x {mid_price}")
+                        mm = False
+
+                    # """
+                    # Close out of our current position if necessary when we are in a short position
+                    # """
+                    # if curr_pos < 0:
+                    #     # find what our average value is and compare it with the market order
+                    #     # we want to trade with the bots ONLY if we can guaranee a profit of 4 seashells per position
+                    #     myavg_pos = traderData["avg_pos"][product]["avg_val"]   # this should not generate an error since we this will only run however many iterations our avg_hist is
+                    #     if myavg_pos - market_sell_orders[0][0] > 3 * market_close_multiplier:    # 4 is our benchmark of a profit we want
+                    #         orders.append(Order(product, market_sell_orders[0][0], -curr_pos))
+                    #         print(f"Closing out position when short. Quoting {product}: bid:{market_sell_orders[0][0]}, qty:{-curr_pos}")
+
+                elif mid_price > next_avg_price + sd_multiplier* sd and qty_to_mm != 0: 
+                    """
+                    Outlier - Only send ask quotes.
+                    """
+                    market_quantity = min(abs(market_buy_orders[0][1]), qty_to_mm)
+
+                    
+                    """
+                    Close out of our current position if necessary when we are in a long position
+                    """
+                    if curr_pos > 0:
+                        # find what our average value is and compare it with the market order
+                        # we want to trade with the bots ONLY if we can guaranee a profit of 4 seashells per position
+                        myavg_pos = traderData["avg_pos"][product]["avg_val"]   # this should not generate an error since we this will only run however many iterations our avg_hist is
+                        if market_buy_orders[0][0] - myavg_pos > 3 * market_close_multiplier:    # 4 is our benchmark of a profit we want
+                            orders.append(Order(product, market_buy_orders [0][0], -curr_pos))
+                            print(f"Closing out position when long. Quoting{product}: ask:{market_buy_orders[0][0]}, qty:{-curr_pos}")
+
+
+                    if market_buy_orders[0][0] > next_avg_price:        
+
+                        orders.append(Order(product, market_buy_orders[0][0], -market_quantity))
+                        print(f"OUTLIER-SOLD: Market_price: {market_buy_orders[0][0]}, QTY: {-market_quantity}")
+                        # orders.append(Order(product, math.floor(mid_price), -qty_to_mm + market_quantity))
+                        orders.append(Order(product, market_sell_orders[0][0] - 1, -qty_to_mm + market_quantity))
+                        print(f"(OUTLIER) Quoting {product}: bid {-qty_to_mm + market_quantity}x {mid_price}")
+                        mm = False
+
+                    # """
+                    # Close out of our current position if necessary when we are in a long position
+                    # """
+                    # if curr_pos > 0:
+                    #     # find what our average value is and compare it with the market order
+                    #     # we want to trade with the bots ONLY if we can guaranee a profit of 4 seashells per position
+                    #     myavg_pos = traderData["avg_pos"][product]["avg_val"]   # this should not generate an error since we this will only run however many iterations our avg_hist is
+                    #     if market_buy_orders[0][0] - myavg_pos > 3 * market_close_multiplier:    # 4 is our benchmark of a profit we want
+                    #         orders.append(Order(product, market_buy_orders [0][0], -curr_pos))
+                    #         print(f"Closing out position when long. Quoting{product}: ask:{market_buy_orders[0][0]}, qty:{-curr_pos}")
+
+            if mm:
                 """
                 Market make as normal.
                 """
@@ -224,16 +334,16 @@ class Trader:
                 
                 #If calculated prices' spread is not large enough, recalculate bids and asks to meet the required spread (but send worse prices - less likely to be filled)
                 else:
-                    my_bid, my_ask = self.find_required_bid_ask(market_buy_orders, market_sell_orders, my_bid, my_ask, required_spread)
+                    new_my_bid, new_my_ask = self.find_required_bid_ask(market_buy_orders, market_sell_orders, my_bid, my_ask, required_spread)
 
                     if my_bid < mid_price and my_ask > mid_price:
                         #Modify our bids and ask (widen them) to meet the spread requirement. 
-                        orders.append(Order(product, my_bid, qty_to_mm))
-                        orders.append(Order(product, my_ask, -qty_to_mm))
+                        orders.append(Order(product, new_my_bid, qty_to_mm))
+                        orders.append(Order(product, new_my_ask, -qty_to_mm))
 
-                        print(f"(O.R.S) Quoting {product}: bid {qty_to_mm}x {my_bid}, ask {qty_to_mm}x {my_ask}")
+                        print(f"(O.R.S) Quoting {product}: bid {qty_to_mm}x {new_my_bid}, ask {qty_to_mm}x {new_my_ask}")
                     else:
-                        print(f"(O.R.S) Modified prices not valid (B,A): {my_bid} {my_ask}") #From checking logs, this only relevant for FIRST iteration. 
+                        print(f"(O.R.S) Modified prices not valid (B,A): {new_my_bid} {new_my_ask}") #From checking logs, this only relevant for FIRST iteration. 
                 
                 """
                 Close out of open positions
@@ -246,11 +356,12 @@ class Trader:
                     orders.append(Order(product, my_ask, -abs(qty_to_close)))
                     
                 elif qty_to_close < 0: #Quote a BID at best price 
-                    print("(CLOSE) Quote BUY", str(abs(qty_to_close)) + "x", product, my_bid)
+                    print("(CLOSE) Quote BUY", str(qty_to_close) + "x", product, my_bid)
                     orders.append(Order(product, my_bid, abs(qty_to_close)))
 
+            
             result[product] = orders 
-                
+                    
     
         #print(f"TraderData AFTER: {traderData}")
         
@@ -278,7 +389,7 @@ class Trader:
 
         Change "scale_factor_dict_ to include all items you want to change the scale factor of.
         """
-        scale_factor_dict = {'AMETHYSTS': 0.8, 'STARFRUIT': 0.8}
+        scale_factor_dict = {'AMETHYSTS': 1.1, 'STARFRUIT': 1.1}
         spread_list = traderData["spread_dict"][product]
         
         if product in scale_factor_dict:
@@ -365,7 +476,7 @@ class Trader:
         spread_hist = 40
         
         if traderData == "": #No products. Initialise ALL required for traderData (not just spread, inc ema and everything)
-            traderData = {"spread_dict": {product: [current_spread]}, "history_prices_dict": {}, "midprice_dict": {}} 
+            traderData = {"spread_dict": {product: [current_spread]}, "history_prices_dict": {}, "midprice_dict": {}, "avg": {}, "avg_pos": {}} 
         
         elif product in traderData["spread_dict"]: #Product already exists
             if len(traderData["spread_dict"][product]) < spread_hist:
@@ -389,7 +500,8 @@ class Trader:
         data_hist = 2
         
         if traderData == "": #No products. Initialise ALL required for traderData (not just spread, inc ema and everything)
-            traderData = {"spread_dict": {}, "history_prices_dict": {product: [[best_buy_order[0], best_ask_order[0]]] }, "midprice_dict": {}}
+            traderData = {"spread_dict": {}, "history_prices_dict": {product: [[best_buy_order[0], best_ask_order[0]]] }, "midprice_dict": {},
+                          "avg": {}, "avg_pos": {}}
         
         elif product in traderData["history_prices_dict"]:
             if len(traderData["history_prices_dict"][product]) < data_hist:
@@ -418,7 +530,8 @@ class Trader:
         weighted_midprice = (best_bid_price*best_bid_vol + best_ask_price*best_ask_vol) / (best_bid_vol+best_ask_vol)
         
         if traderData == "":
-            traderData = {"spread_dict": {}, "history_prices_dict": {}, "midprice_dict": {product: [weighted_midprice]}}
+            traderData = {"spread_dict": {}, "history_prices_dict": {}, "midprice_dict": {product: [weighted_midprice]},
+                           "avg": {}, "avg_pos": {}}
             
         elif product in traderData["midprice_dict"]:
             if len(traderData["midprice_dict"][product]) < midprice_hist:
@@ -458,3 +571,200 @@ class Trader:
         
         return std_dev
         
+
+    def avg(self, orders):
+        """
+        Find the weighted average of the orderbook
+        """
+        total = 0
+        quantity1 = 0
+
+        for price, quantity in orders.buy_orders.items():
+            total += price * abs(quantity)
+            quantity1 += abs(quantity)
+
+        for price, quantity in orders.sell_orders.items():
+            total += price * abs(quantity)
+            quantity1 += abs(quantity)
+
+
+        total = total / quantity1
+
+        return total
+    
+    def append_last_x_avg(self, traderData, product, avg_price, avg_hist):
+        """
+        Find the average of last x values
+        """
+        if traderData == "":
+            traderData = {"spread_dict": {}, "history_prices_dict": {}, "midprice_dict": {},
+                           "avg": {product: [avg_price]}, "avg_pos": {}}
+            
+        elif product in traderData["avg"]:
+            if len(traderData["avg"][product]) < avg_hist:
+                traderData["avg"][product].append(avg_price)
+            else:
+                traderData["avg"][product].pop(0)
+                traderData["avg"][product].append(avg_price)
+        else: #New product 
+            traderData["avg"][product] = [avg_price]
+        
+        return traderData
+    
+
+    def handle_avg_pos_val(self, traderData, product, curr_pos, last_trades):
+
+        """
+        inputs:
+            curr_pos = out current positin at this timestamp we're in
+            last_trades = the trade that we made last for this particular product
+        return: Average position (avg_pos) is the average value of our position
+        """
+
+
+        if traderData == "":    # in theory this if statement should never execute
+            traderData = {"spread_dict": {}, "history_prices_dict": {}, "midprice_dict": {},
+                           "avg": {}, 
+                           "avg_pos": {product: {"avg_val": 0, "pos": 0}}}
+            print("NEVER")
+            
+        elif product not in traderData["avg_pos"] and last_trades is None:
+            traderData["avg_pos"][product] = {"avg_val": 0, "pos": 0}
+
+        elif product in traderData["avg_pos"]:
+            prev_pos = traderData["avg_pos"][product]["pos"]
+
+            # if our position remains as either a long or a short 
+            if curr_pos != traderData["avg_pos"][product]["pos"] and ((curr_pos > 0 and prev_pos >= 0) or (curr_pos < 0 and prev_pos <= 0)):
+            # if there is a change in our last submitted trade vs current trade
+                # total_amount = []
+                # total_price = []        
+                if (curr_pos > 0 and curr_pos > prev_pos) or (curr_pos < 0 and curr_pos < prev_pos):
+                    avg_price = []        
+                    for trade in last_trades:
+                        price = trade.price
+                        amount = trade.quantity
+                        # total_price.append(price)
+                        # total_amount.append(amount)
+                        avg_price.append(price*amount)
+
+                    # calculate the new value 
+                    traderData["avg_pos"][product]["avg_val"] = (prev_pos * traderData["avg_pos"][product]["avg_val"] + sum(avg_price)) / curr_pos
+                    traderData["avg_pos"][product]["pos"] = curr_pos
+                
+                #traderData["avg_pos"][product]["pos"] = curr_pos
+
+                # there should be no else statement because if i have 100 TSLA and get rid of 5 of them, my avg value is still the same, just the quant is diff
+            # going from a negative to positive position or a positive to negative position
+            elif curr_pos != traderData["avg_pos"][product]["pos"] and ((curr_pos < 0 and prev_pos > 0) or (curr_pos > 0 and prev_pos < 0)):
+            # if there is a change in our last submitted trade vs current trade
+                total_amount = []
+                # total_price = []     
+                avg_price = []             
+                for trade in last_trades:
+                    price = trade.price
+                    amount = trade.quantity
+                    # total_price.append(price)
+                    total_amount.append(amount)
+                    avg_price.append(price*amount)
+
+                # calculate the new value 
+                traderData["avg_pos"][product]["avg_val"] = sum(avg_price) / sum(total_amount)
+                traderData["avg_pos"][product]["pos"] = curr_pos
+
+            elif curr_pos == traderData["avg_pos"][product]["pos"]:
+                print("NOTHING HAPPENS")
+
+            elif curr_pos == 0:
+                traderData["avg_pos"][product]["avg_val"] = 0
+
+
+            else:       # this means im missing a scenario
+                print("THIS SHOULD NEVER RUN")
+
+
+        else: #New product 
+            total_amount = []
+            avg_val = []  
+            if last_trades is None:
+                avg_val = 0
+            else:
+                for trade in last_trades:
+                    price = trade.price
+                    amount = trade.quantity
+                    avg_val.append(price*amount)
+                    total_amount.append(amount)
+                avg_val = sum(avg_val) / sum(total_amount)
+            print("HERE")
+
+            if sum(total_amount) != curr_pos:       # this means the matho dont add up
+                print("SOMETHING VERY WRONG")
+
+            traderData["avg_pos"][product]["avg_val"] = avg_val
+            traderData["avg_pos"][product]["pos"] = curr_pos
+
+        return traderData
+
+
+
+
+
+
+
+
+
+
+        # # change the avg holding value
+        # elif curr_pos != traderData["profit"][product]["last_pos"]:
+
+
+        # elif product in traderData["profit"]:
+        #     # compare curr avg price with old avg price 
+        #     if curr_pos > 0:
+        #         last_avg_val = traderData["avg"][-1]
+        #         diff = avg_val - last_avg_val 
+        #         if avg_val > last_avg_val:             
+        #             traderData[product]["profit"] += diff * curr_pos
+        #         else: 
+        #             traderData[product]["profit"] -= diff * curr_pos
+
+
+        #     if curr_pos < 0:
+        #         last_avg_val = traderData["avg"][-1]
+        #         diff = avg_val - last_avg_val 
+        #         if avg_val < last_avg_val:             
+        #             traderData[product]["profit"] += diff * curr_pos
+        #         else: 
+        #             traderData[product]["profit"] -= diff * curr_pos
+
+    # def handle_last_pos(self, )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # long @ 10 at 1000  = required spread is 5
+    # market is at 1005 - 1008
+    # 1006 - 1007
+
+    
+
+    # multiplier for required spread that we are happy to secure a product of 4
