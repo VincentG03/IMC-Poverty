@@ -211,15 +211,15 @@ class Trader:
             if product in state.own_trades:
                 # update our avg_val traderData
                 traderData = self.handle_avg_pos_val(traderData, product, curr_pos, state.own_trades[product])
-                print(f"Own trade {product}: {state.own_trades[product]}")
+                # print(f"Own trade {product}: {state.own_trades[product]}")
 
             else:
                 traderData = self.handle_avg_pos_val(traderData, product, curr_pos, None)
-                print(f"Own trade {product}: None")
+                # print(f"Own trade {product}: None")
 
             #Define multipliers
             sd_multiplier = 0.4
-            market_close_multiplier = 1
+            market_close_multiplier = 0.3
 
                 
             """
@@ -389,7 +389,7 @@ class Trader:
 
         Change "scale_factor_dict_ to include all items you want to change the scale factor of.
         """
-        scale_factor_dict = {'AMETHYSTS': 0.8, 'STARFRUIT': 0.8}
+        scale_factor_dict = {'AMETHYSTS': 1.1, 'STARFRUIT': 1.1}
         spread_list = traderData["spread_dict"][product]
         
         if product in scale_factor_dict:
