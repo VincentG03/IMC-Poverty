@@ -163,7 +163,7 @@ class Trader:
             # currently 15 vals
             
             if len(traderData["avg"][product]) >= avg_hist: # must check there is at least 15 data points
-                x = [i for i in range(avg_hist)]
+                x = [i for i in range(len(traderData["avg"][product]))]
                 y = traderData["avg"][product]
                 gradient, c = np.polyfit(np.array(x), np.array(y), 1)   # finding lin reg equation
                 # Predicting next time step
@@ -211,11 +211,11 @@ class Trader:
             if product in state.own_trades:
                 # update our avg_val traderData
                 traderData = self.handle_avg_pos_val(traderData, product, curr_pos, state.own_trades[product])
-                # print(f"Own trade {product}: {state.own_trades[product]}")
+                print(f"Own trade {product}: {state.own_trades[product]}")
 
             else:
                 traderData = self.handle_avg_pos_val(traderData, product, curr_pos, None)
-                # print(f"Own trade {product}: None")
+                print(f"Own trade {product}: None")
 
             #Define multipliers
             sd_multiplier = 0.4
@@ -242,7 +242,49 @@ class Trader:
                 (!) ELIF (!): we are short, send bid orders to close.
             """
             mm = True   # market make = true
-            if len(traderData["avg"][product]) >= avg_hist:
+            if product == "AMETHYSTS" and len(traderData["avg"][product]) >= 15:
+                market_quantity = min(abs(market_sell_orders[0][1]), qty_to_mm)
+                average = np.average(traderData["avg"][product])
+                sd = np.std(traderData["avg"][product])
+                print(f"average AMETHYSTS: {average}")
+                print(f"sd AMETHYSTS: {sd}")
+
+                if market_sell_orders[0][0] < average - 2.2 * sd and qty_to_mm != 0:
+                    # if curr_pos < 0:    # if we are short
+                    #     # find what our average value is and compare it with the market order
+                    #     # we want to trade with the bots ONLY if we can guaranee a profit of 4 seashells per position
+                    #     myavg_pos = traderData["avg_pos"][product]["avg_val"]   # this should not generate an error since we this will only run however many iterations our avg_hist is
+                    #     if myavg_pos - market_sell_orders[0][0] > 3 * market_close_multiplier:    # 4 is our benchmark of a profit we want
+                    #         orders.append(Order(product, market_sell_orders[0][0], -curr_pos))
+                    #         print(f"Closing out position when short. Quoting {product}: bid:{market_sell_orders[0][0]}, qty:{-curr_pos}")
+
+                            
+                    orders.append(Order(product, market_sell_orders[0][0], market_quantity))
+                    print(f"OUTLIER-BOUGHT: Market_price: {market_sell_orders[0][0]}, QTY: {market_quantity}")
+                    # orders.append(Order(product, math.ceil(mid_price), qty_to_mm- market_quantity))
+                    orders.append(Order(product, market_buy_orders[0][0] + 1, qty_to_mm- market_quantity))
+                    print(f"(OUTLIER) Quoting {product}: bid {qty_to_mm - market_quantity}x {mid_price}")
+                    # mm = False
+
+                if market_buy_orders[0][0] > average + 2.2 * sd and qty_to_mm != 0:
+
+                    # if curr_pos > 0:
+                    #     # find what our average value is and compare it with the market order
+                    #     # we want to trade with the bots ONLY if we can guaranee a profit of 4 seashells per position
+                    #     myavg_pos = traderData["avg_pos"][product]["avg_val"]   # this should not generate an error since we this will only run however many iterations our avg_hist is
+                    #     if market_buy_orders[0][0] - myavg_pos > 3 * market_close_multiplier:    # 4 is our benchmark of a profit we want
+                    #         orders.append(Order(product, market_buy_orders [0][0], -curr_pos))
+                    #         print(f"Closing out position when long. Quoting{product}: ask:{market_buy_orders[0][0]}, qty:{-curr_pos}")
+
+
+                    orders.append(Order(product, market_buy_orders[0][0], -market_quantity))
+                    print(f"OUTLIER-SOLD: Market_price: {market_buy_orders[0][0]}, QTY: {-market_quantity}")
+                    # orders.append(Order(product, math.floor(mid_price), -qty_to_mm + market_quantity))
+                    orders.append(Order(product, market_sell_orders[0][0] - 1, -qty_to_mm + market_quantity))
+                    print(f"(OUTLIER) Quoting {product}: bid {-qty_to_mm + market_quantity}x {mid_price}")
+                    # mm = False
+
+            elif len(traderData["avg"][product]) >= avg_hist:
 
 
                 if mid_price < next_avg_price - sd_multiplier* sd and qty_to_mm != 0:

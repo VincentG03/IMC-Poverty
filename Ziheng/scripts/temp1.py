@@ -24,5 +24,11 @@
 # plt.show()
 
 
-s = "abcdeabsdbakjsdnfa"
-print(s.split("a"))
+# s = "abcdeabsdbakjsdnfa"
+# print(s.split("a"))
+
+import numpy as np
+x = np.array([1, 2, 3, 4, 5, 6])
+sd = np.std(np.array(x), 3.5)
+
+print(sd)

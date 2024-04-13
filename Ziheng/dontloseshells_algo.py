@@ -329,7 +329,7 @@ class Trader:
 
             #Define multipliers
             sd_multiplier = 0.9
-            market_close_multiplier = 1
+            market_close_multiplier = 2
 
                 
             """
