@@ -28,7 +28,7 @@
 # print(s.split("a"))
 
 import numpy as np
-x = np.array([1, 2, 3, 4, 5, 6])
-sd = np.std(np.array(x), 3.5)
+x = np.array([10000, 10002, 10003, 10004, 10005, 10006])
+sd = np.std(np.array(x))
 
 print(sd)

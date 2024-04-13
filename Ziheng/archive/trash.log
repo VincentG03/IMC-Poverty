@@ -1,0 +1,522 @@
+Sandbox logs:
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"e0b43066-f1b8-47ec-8300-0a520d985018\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"e0b43066-f1b8-47ec-8300-0a520d985018\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 0
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"eaccd851-9630-49c6-8db3-cdf73620a5af\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"eaccd851-9630-49c6-8db3-cdf73620a5af\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"fd9f081f-6b60-4f3f-83cf-b3b449e23a44\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"fd9f081f-6b60-4f3f-83cf-b3b449e23a44\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"6ecdbd31-5d2d-4eee-9818-c945ae9e4900\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"6ecdbd31-5d2d-4eee-9818-c945ae9e4900\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"2a7d39f6-8112-4d1c-b6a8-bc466cc77e2a\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"2a7d39f6-8112-4d1c-b6a8-bc466cc77e2a\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"98a4f107-3f5e-4a05-930b-e17d8ef78f17\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"98a4f107-3f5e-4a05-930b-e17d8ef78f17\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"7f709787-0292-4400-92aa-e1fda4c3f016\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"7f709787-0292-4400-92aa-e1fda4c3f016\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"a7cac058-2e4b-4b7b-b326-8e40679f9478\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"a7cac058-2e4b-4b7b-b326-8e40679f9478\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"bcc5465c-522e-46c8-9960-36698122e80b\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"bcc5465c-522e-46c8-9960-36698122e80b\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"b77421c8-192b-41c3-a53e-3ea70bec66a7\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"b77421c8-192b-41c3-a53e-3ea70bec66a7\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"852c6ec8-e67b-4d29-99c0-9f6eec215071\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"852c6ec8-e67b-4d29-99c0-9f6eec215071\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 1000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"9a131946-ecaf-4bdd-bdfe-25f3c2415b26\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"9a131946-ecaf-4bdd-bdfe-25f3c2415b26\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 1100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"ddaea7e3-aac7-4544-a6a7-4684314f8abc\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"ddaea7e3-aac7-4544-a6a7-4684314f8abc\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 1200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"ee60b3f5-b0cf-416f-bf1d-0da861a18e32\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"ee60b3f5-b0cf-416f-bf1d-0da861a18e32\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 1300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"3250b72b-aa42-4615-9398-d3c9029a7904\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"3250b72b-aa42-4615-9398-d3c9029a7904\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 1400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"27b7cdf3-6236-48b8-9495-b326fd0ae326\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"27b7cdf3-6236-48b8-9495-b326fd0ae326\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 1500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"ac4bb5a1-6a96-42d3-9db7-334fee6aebb9\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"ac4bb5a1-6a96-42d3-9db7-334fee6aebb9\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 1600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"89f6cd5d-aaca-443c-98d8-535f9d6a2246\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"89f6cd5d-aaca-443c-98d8-535f9d6a2246\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 1700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"b3b2d96d-403f-41c7-a619-77ef32316874\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"b3b2d96d-403f-41c7-a619-77ef32316874\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 1800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"594c7c82-485d-4982-a228-fb2bd67dbe9a\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"594c7c82-485d-4982-a228-fb2bd67dbe9a\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 1900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"f3e8e626-9b49-4559-8c4f-8f09869d624d\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"f3e8e626-9b49-4559-8c4f-8f09869d624d\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 2000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"7c44e3a1-89f1-4300-b95e-863350bc0d41\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"7c44e3a1-89f1-4300-b95e-863350bc0d41\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 2100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"e8ce9cdd-9923-43b7-acf7-47fd95b8f255\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"e8ce9cdd-9923-43b7-acf7-47fd95b8f255\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 2200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"954edf77-ebf0-473b-94dc-53d244966873\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"954edf77-ebf0-473b-94dc-53d244966873\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 2300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"d195d62d-ad3d-4f99-a93b-1266b8664380\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"d195d62d-ad3d-4f99-a93b-1266b8664380\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 2400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"aabf9d3a-de0a-4d30-826e-7f56c4edd240\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"aabf9d3a-de0a-4d30-826e-7f56c4edd240\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 2500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"f0551378-35cc-4c53-a22c-71808f27794b\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"f0551378-35cc-4c53-a22c-71808f27794b\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 2600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"72adc402-b2e4-44ad-9cf3-75c7fce9ebff\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"72adc402-b2e4-44ad-9cf3-75c7fce9ebff\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 2700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"902ba45f-a6e9-4b7a-bd81-3ec2d29891a7\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"902ba45f-a6e9-4b7a-bd81-3ec2d29891a7\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 2800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"6fdd25bc-56c9-4475-8ac4-3791327a17fe\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"6fdd25bc-56c9-4475-8ac4-3791327a17fe\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 2900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"a761fe44-3116-4d7c-8f15-930b5dccb015\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"a761fe44-3116-4d7c-8f15-930b5dccb015\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 3000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"2fb5358c-db95-4ebb-9fa7-9b17baeba51c\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"2fb5358c-db95-4ebb-9fa7-9b17baeba51c\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 3100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"5adfe640-2dd1-4d18-b7ae-07f8d9e812cc\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"5adfe640-2dd1-4d18-b7ae-07f8d9e812cc\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 3200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"c37b2fbf-9057-47e9-8a80-734d65e639b4\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"c37b2fbf-9057-47e9-8a80-734d65e639b4\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 3300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"eaaae8e0-5bbf-4b90-8d90-a39626ff9f13\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"eaaae8e0-5bbf-4b90-8d90-a39626ff9f13\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 3400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"a546fd8e-d4a1-42f2-a981-bad3722ecd43\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"a546fd8e-d4a1-42f2-a981-bad3722ecd43\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 3500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"ba0bf858-48d2-4cce-bb3f-7ecc670d8f20\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"ba0bf858-48d2-4cce-bb3f-7ecc670d8f20\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 3600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"f3ed87b4-6679-4a80-8509-e65d56209add\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"f3ed87b4-6679-4a80-8509-e65d56209add\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 3700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"d555f973-e5f9-4d4b-8beb-0607e8287b4f\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"d555f973-e5f9-4d4b-8beb-0607e8287b4f\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 3800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"61061545-4e85-4489-b23c-f8a833efb5a1\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"61061545-4e85-4489-b23c-f8a833efb5a1\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 3900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"b0bae836-825b-40e1-b227-76a32820baee\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"b0bae836-825b-40e1-b227-76a32820baee\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 4000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"8cfeba1d-da14-47b7-9198-3c06805ec770\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"8cfeba1d-da14-47b7-9198-3c06805ec770\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 4100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"2d0505a6-a1ed-4a92-9671-7ab3c74e45fc\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"2d0505a6-a1ed-4a92-9671-7ab3c74e45fc\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 4200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"f5b38553-0828-49af-b4af-c0c18a7e53e2\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"f5b38553-0828-49af-b4af-c0c18a7e53e2\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 4300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"3e50a3ad-a5b0-4a4a-9a4a-533029c5a630\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"3e50a3ad-a5b0-4a4a-9a4a-533029c5a630\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 4400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"69d1820b-1769-431f-9a94-8a48ad698b3c\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"69d1820b-1769-431f-9a94-8a48ad698b3c\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 4500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"c4b08c7f-40e1-4982-8e7f-48aea60cf221\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"c4b08c7f-40e1-4982-8e7f-48aea60cf221\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 4600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"f4024a82-d474-4330-8c6f-9ae34eb735a5\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"f4024a82-d474-4330-8c6f-9ae34eb735a5\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 4700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"aa588c10-d50d-4bdc-a9a3-df85810286b4\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"aa588c10-d50d-4bdc-a9a3-df85810286b4\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 4800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"e8d343d1-83a0-4c39-bc72-aa71bddf278d\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"e8d343d1-83a0-4c39-bc72-aa71bddf278d\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 4900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"44c8c6f4-f6f0-41b8-9066-3dd6e3338475\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"44c8c6f4-f6f0-41b8-9066-3dd6e3338475\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 5000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"dd3048d4-101f-4ae4-9a63-e741ade220bb\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"dd3048d4-101f-4ae4-9a63-e741ade220bb\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 5100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"7a8efdb5-54ae-48a4-9b46-19c947f9c1ff\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"7a8efdb5-54ae-48a4-9b46-19c947f9c1ff\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 5200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"e2602818-af97-411a-8b5c-71673d08beb6\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"e2602818-af97-411a-8b5c-71673d08beb6\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 5300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"907a0682-da6f-49ae-a8af-cb4b779b82f3\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"907a0682-da6f-49ae-a8af-cb4b779b82f3\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 5400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"c589e05c-8415-4d16-bf20-25a9172a5d52\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"c589e05c-8415-4d16-bf20-25a9172a5d52\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 5500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"513ab27b-fed5-444c-8557-b0127910f6ca\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"513ab27b-fed5-444c-8557-b0127910f6ca\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 5600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"44033c23-9f8b-4a35-b7a0-ce8f7c2e5fda\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"44033c23-9f8b-4a35-b7a0-ce8f7c2e5fda\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 5700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"80cfa18b-fdf6-4626-adf6-7fd0bbe526ea\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"80cfa18b-fdf6-4626-adf6-7fd0bbe526ea\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 5800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"ede0871b-87fb-4f82-8fe8-e12d45933b9c\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"ede0871b-87fb-4f82-8fe8-e12d45933b9c\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 5900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"f4ef6849-b3b2-42ca-bdb4-3d6710767cd7\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"f4ef6849-b3b2-42ca-bdb4-3d6710767cd7\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 6000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"1990a527-09ae-4c73-bcfe-1bf5d3dc56db\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"1990a527-09ae-4c73-bcfe-1bf5d3dc56db\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 6100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"cf4539df-b283-47d0-9597-334f291b37f7\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"cf4539df-b283-47d0-9597-334f291b37f7\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 6200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"fface0dd-2b5d-4786-a885-ce220b979988\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"fface0dd-2b5d-4786-a885-ce220b979988\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 6300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"7b1e5f79-9832-4896-aa64-37d2aea0b3ba\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"7b1e5f79-9832-4896-aa64-37d2aea0b3ba\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 6400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"1b1434fd-6787-427c-bf77-c43769d53ab8\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"1b1434fd-6787-427c-bf77-c43769d53ab8\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 6500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"6f28a7b5-4270-4198-8694-f7f2f068f4e7\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"6f28a7b5-4270-4198-8694-f7f2f068f4e7\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 6600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"a5996a0b-8847-464b-abcc-98c8c4b1195c\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"a5996a0b-8847-464b-abcc-98c8c4b1195c\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 6700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"97cf50ee-bef8-4c02-9957-e6a43acd3616\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"97cf50ee-bef8-4c02-9957-e6a43acd3616\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 6800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"68c24622-eba3-4fd4-8f70-3e50dc552c9c\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"68c24622-eba3-4fd4-8f70-3e50dc552c9c\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 6900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"c8ddc5f0-112c-4578-a593-d5d81e8aac0f\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"c8ddc5f0-112c-4578-a593-d5d81e8aac0f\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 7000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"4c880efe-4aef-448b-8d01-53150e29f2e3\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"4c880efe-4aef-448b-8d01-53150e29f2e3\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 7100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"796eb8ec-a0a7-4f4d-bae8-8e5416d32e03\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"796eb8ec-a0a7-4f4d-bae8-8e5416d32e03\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 7200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"d3e6c65c-44a7-4a4f-b03d-23e4bb819ed8\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"d3e6c65c-44a7-4a4f-b03d-23e4bb819ed8\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 7300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"6a5b5e3e-12d8-4d25-88fb-b0ef275fc3d6\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"6a5b5e3e-12d8-4d25-88fb-b0ef275fc3d6\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 7400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"5962d60d-c56f-4b38-9268-e3861fb469a4\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"5962d60d-c56f-4b38-9268-e3861fb469a4\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 7500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"865a509c-880a-4f24-8358-1f2b330e7286\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"865a509c-880a-4f24-8358-1f2b330e7286\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 7600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"179c1d32-4f23-49f9-9887-ad8dc2696b41\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"179c1d32-4f23-49f9-9887-ad8dc2696b41\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 7700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"4dd7befb-f5cf-4207-a807-96b6e5620720\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"4dd7befb-f5cf-4207-a807-96b6e5620720\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 7800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"e4d9cc67-afea-4cca-ba5b-453d2cdaf5db\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"e4d9cc67-afea-4cca-ba5b-453d2cdaf5db\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 7900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"e01b91e5-8822-41b1-b603-22b742a4dc05\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"e01b91e5-8822-41b1-b603-22b742a4dc05\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 8000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"103374b6-bad8-4a1d-915a-4904aa808806\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"103374b6-bad8-4a1d-915a-4904aa808806\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 8100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"f265dd61-488b-43c8-a577-0132811cd6d1\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"f265dd61-488b-43c8-a577-0132811cd6d1\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 8200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"981fe7a7-cf17-47a0-8c52-860e8fe98c16\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"981fe7a7-cf17-47a0-8c52-860e8fe98c16\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 8300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"5bafcb20-ebf5-4dfe-96f7-a5433ec56b10\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"5bafcb20-ebf5-4dfe-96f7-a5433ec56b10\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 8400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"dab67412-d7b9-4ad2-8c69-52af361e6d53\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"dab67412-d7b9-4ad2-8c69-52af361e6d53\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 8500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"ccf26d5e-4b1d-48b1-a729-a5e784502188\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"ccf26d5e-4b1d-48b1-a729-a5e784502188\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 8600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"e1a586cc-3b6e-428a-a7dc-4e347f84e7d6\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"e1a586cc-3b6e-428a-a7dc-4e347f84e7d6\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 8700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"43506fcc-e225-42c8-9313-9e7ff676afa5\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"43506fcc-e225-42c8-9313-9e7ff676afa5\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 8800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"c9e6b21d-b9ff-4c7f-981f-e5ff716ae727\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"c9e6b21d-b9ff-4c7f-981f-e5ff716ae727\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 8900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"2a97a88a-3b1f-4d33-9979-4620822428ab\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"2a97a88a-3b1f-4d33-9979-4620822428ab\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 9000
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"dd08975c-dfed-4817-bd38-7250526b479b\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"dd08975c-dfed-4817-bd38-7250526b479b\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 9100
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"a4bc4c62-0b8c-48c4-9a1b-8ad6512d2f39\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"a4bc4c62-0b8c-48c4-9a1b-8ad6512d2f39\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 9200
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"5d58827e-eaa2-48f8-8a65-90a606107453\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"5d58827e-eaa2-48f8-8a65-90a606107453\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 9300
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"7e916342-d0d1-4ef6-8105-870baed21033\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"7e916342-d0d1-4ef6-8105-870baed21033\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 9400
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"23c1ac28-0402-457f-9989-98957a3da530\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"23c1ac28-0402-457f-9989-98957a3da530\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 9500
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"2298bf48-c7db-49f7-bf0b-f5c3fd2853b9\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"2298bf48-c7db-49f7-bf0b-f5c3fd2853b9\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 9600
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"53890f04-8f7c-4000-8afd-40d76c0caceb\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"53890f04-8f7c-4000-8afd-40d76c0caceb\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 9700
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"d58ce296-7dda-4d61-94d4-2570a9c969d5\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"d58ce296-7dda-4d61-94d4-2570a9c969d5\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 9800
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"74278be6-508c-40e2-9ddb-e87690459b92\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"74278be6-508c-40e2-9ddb-e87690459b92\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 9900
+}
+{
+  "sandboxLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"f4cd1064-c819-49cf-9968-8042a6fa5af7\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "lambdaLog": "{\"errorMessage\": \"Syntax error in module 'app': invalid syntax (trader.py, line 221)\", \"errorType\": \"Runtime.UserCodeSyntaxError\", \"requestId\": \"f4cd1064-c819-49cf-9968-8042a6fa5af7\", \"stackTrace\": [\"  File \\\"/var/task/trader.py\\\" Line 221\\n                sd_multiplier = 0.1            market_close_multiplier =  0.1\\n\"]}",
+  "timestamp": 10000
+}
+{
+  "sandboxLog": "Lambda errors have reached maximum value for submission 4ae73502-8976-4a1d-9dcd-a8172ed01602",
+  "lambdaLog": null,
+  "timestamp": 89243
+}
+
+
+
+Activities log:
+day;timestamp;product;bid_price_1;bid_volume_1;bid_price_2;bid_volume_2;bid_price_3;bid_volume_3;ask_price_1;ask_volume_1;ask_price_2;ask_volume_2;ask_price_3;ask_volume_3;mid_price;profit_and_loss
+
+
+
+
+Trade History:
+null

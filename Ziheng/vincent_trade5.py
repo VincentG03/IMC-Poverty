@@ -58,9 +58,11 @@ class Trader:
         if traderData != "":
             traderData = jsonpickle.decode(traderData)
 
-        
+        print(f"observation:{state.observations}")
         #Repeat trading logic for each product
         for product in state.order_depths:
+            if product == "ORCHIDS":
+                continue
             """
             ===================================================================================
                                 Setting up parameters and required variables
@@ -243,13 +245,14 @@ class Trader:
             """
             mm = True   # market make = true
             if product == "AMETHYSTS" and len(traderData["avg"][product]) >= 15:
+                
                 market_quantity = min(abs(market_sell_orders[0][1]), qty_to_mm)
                 average = np.average(traderData["avg"][product])
-                sd = np.std(traderData["avg"][product])
+                sd = np.std(traderData["midprice_dict"][product])
                 print(f"average AMETHYSTS: {average}")
                 print(f"sd AMETHYSTS: {sd}")
 
-                if market_sell_orders[0][0] < average - 2.2 * sd and qty_to_mm != 0:
+                if mid_price < average - 1.5 * sd and qty_to_mm != 0:
                     # if curr_pos < 0:    # if we are short
                     #     # find what our average value is and compare it with the market order
                     #     # we want to trade with the bots ONLY if we can guaranee a profit of 4 seashells per position
@@ -266,7 +269,7 @@ class Trader:
                     print(f"(OUTLIER) Quoting {product}: bid {qty_to_mm - market_quantity}x {mid_price}")
                     # mm = False
 
-                if market_buy_orders[0][0] > average + 2.2 * sd and qty_to_mm != 0:
+                if mid_price > average + 1.5 * sd and qty_to_mm != 0:
 
                     # if curr_pos > 0:
                     #     # find what our average value is and compare it with the market order
@@ -282,8 +285,8 @@ class Trader:
                     # orders.append(Order(product, math.floor(mid_price), -qty_to_mm + market_quantity))
                     orders.append(Order(product, market_sell_orders[0][0] - 1, -qty_to_mm + market_quantity))
                     print(f"(OUTLIER) Quoting {product}: bid {-qty_to_mm + market_quantity}x {mid_price}")
-                    # mm = False
-
+                    mm = False
+                
             elif len(traderData["avg"][product]) >= avg_hist:
 
 

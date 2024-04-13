@@ -22,21 +22,24 @@ def edit(file_name):
     avg_hist = "avg_hist = "
     avg_val = 2
 
+    market_close_multiplier_hist = "market_close_multiplier = "
+    market_close_multiplier_val = 2
+
     # ur gonna have to do some math to change it along side
-    for sd in range(5, 15, 1):       
+    for sd in range(1, 15, 1):       
         sd_checker = True
         sd_new_val = sd /10
 
-        for scale_factor in range(6, 12, 1):
+        for scale_factor in range(7, 14, 1):
             scale_factor = scale_factor / 10    
 
-            for avg_hist_1 in range(10, 25, 1):
-
+            for market_close_multiplier_val in range(1, 10, 1):
+                market_close_multiplier_val = market_close_multiplier_val/10
                 with open(file_name, "r") as f:
                     
                     # writing the file name
                     file_changed = changed + "sd" + str(sd_new_val) + "sf" +\
-                          str(scale_factor) + "avg_hist" + str(avg_hist_1)
+                          str(scale_factor) + "mcm" + str(market_close_multiplier_val)
                     
 
                     file_changed = file_changed.replace(".", "_")
@@ -50,7 +53,7 @@ def edit(file_name):
                             sd_checker = False
                             
                             with open(file_changed, "a") as c:
-                                c.write(f"            {sd_multiplier} {sd_new_val}")
+                                c.write(f"            {sd_multiplier} {sd_new_val}\n")
                             continue
 
                         if scale_factor_dict in line:
@@ -58,15 +61,15 @@ def edit(file_name):
                                 c.write(f"        {scale_factor_dict} {{'AMETHYSTS': {scale_factor}, 'STARFRUIT': {scale_factor}}} \n")
                             continue
 
-                        if avg_hist in line:
+                        if market_close_multiplier_hist in line:
                             with open(file_changed, "a") as c:
-                                c.write(f"            {avg_hist} {avg_hist_1}\n")
+                                c.write(f"            {market_close_multiplier_hist} {market_close_multiplier_val}\n")
                             continue
                         
-                        if midprice_hist in line:   # so mid price matches up with avg hist nums
-                            with open(file_changed, "a") as c:
-                                c.write(f"        {midprice_hist} {avg_hist_1}\n")
-                            continue
+                        # if midprice_hist in line:   # so mid price matches up with avg hist nums
+                        #     with open(file_changed, "a") as c:
+                        #         c.write(f"        {midprice_hist} {market_close_multiplier_val}\n")
+                        #     continue
                         # if product_limits in line:
                         #     with open(file_changed, "a") as c:
                         #         c.write(f"        {product_limits} {{'AMETHYSTS': {product_limit}, 'STARFRUIT': {product_limit}}} \n")
