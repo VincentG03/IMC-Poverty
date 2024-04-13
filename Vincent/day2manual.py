@@ -16,11 +16,11 @@ for trade1 in product:
             for trade4 in product: 
                 trades_to_process.append([trade1, trade2, trade3, trade4])
                 
-best_trade = 1
+best_trade = 2000000
 best_sequence = ""
 
 for trades in trades_to_process:
-    capital = 1
+    capital = 2000000
     current_product = "Shells"
     for next_product in trades: 
         if current_product == "Shells":
@@ -52,6 +52,6 @@ for trades in trades_to_process:
         best_sequence = trades
         best_trade = capital
 
-print(f"From $1, we can make ${best_trade} with a trade sequence of {best_sequence}")
+print(f"From $2,000,000, we can make ${best_trade} with a trade sequence of {best_sequence}")
 
 
