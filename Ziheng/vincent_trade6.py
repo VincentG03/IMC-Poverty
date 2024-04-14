@@ -84,7 +84,7 @@ class Trader:
             market_buy_orders = list(order_depth.buy_orders.items())
             market_sell_orders = list(order_depth.sell_orders.items())
 
-            if state.timestamp != 0:
+            if state.timestamp != 0 and product != "ORCHIDS":
                 last_bid = traderData['history_prices_dict'][product][-1][0]
                 last_ask = traderData['history_prices_dict'][product][-1][1]
 
@@ -220,7 +220,7 @@ class Trader:
             #Define multipliers
             sd_multiplier = 0.4
             market_close_multiplier = 0.3
-
+            conversions = 0
                 
             """
             ===================================================================================
@@ -253,6 +253,7 @@ class Trader:
             #         orders.append(Order(product, market_sell_orders[0][0], -curr_pos))
             #         print(f"We getting rid of position: {curr_pos} at price: {market_sell_orders[0][0]}")
             if product == "ORCHIDS":
+                print(f"curr position ORCHIDS: {curr_pos}")
                 humidity = state.observations.conversionObservations[product].humidity
                 sunlight = state.observations.conversionObservations[product].sunlight
                 transport_fees = state.observations.conversionObservations[product].transportFees
@@ -260,17 +261,43 @@ class Trader:
                 import_tariff = state.observations.conversionObservations[product].importTariff
                 bid_price = state.observations.conversionObservations[product].bidPrice
                 ask_price = state.observations.conversionObservations[product].askPrice
-                if humidity > 60 and humidity < 80 and sunlight > 2555: # optimal time for price to rise, we buy
-                        
-                    orders.append(Order(product, bid_price, 25))
-                    print(f"We buy ORCHIDS: {25} at price: {bid_price}")
-                
-                print(f"own_trades: {state.own_trades[product][-1]}")
-                timestep = state.own_trades[product][-1]    #timestep of last trade
+                if humidity > 60 and humidity < 80 or sunlight > 2555: # optimal time for price to rise, we buy
+                # if True:
+                    orders.append(Order(product, market_sell_orders[0][0], market_sell_orders[0][1]))
+                    print(f"We buy ORCHIDS: {market_sell_orders[0][1]} at price: {market_sell_orders[0][0]}")
+                else:
+                    orders.append(Order(product, market_buy_orders[0][0], -market_buy_orders[0][1]))
+                    print(f"We buy ORCHIDS: {-market_buy_orders[0][1]} at price: {market_buy_orders[0][0]}")
+                if product in state.own_trades:
+                    print(f"own_trades: {state.own_trades[product][-1]}")
+                    timestep = state.own_trades[product][-1].timestamp    #timestep of last trade
+                else:
+                    timestep = state.timestamp
 
-                if state.timestamp - timestep > 700:
-                    
 
+                if int(state.timestamp) - int(timestep) > 700:
+                    # if we have been holding onto it for too long just dump it
+                    # cause it costs us to hold onto it
+                    # orders.append(Order(product, round(ask_price), -curr_pos))
+                    # print(f"We buy ORCHIDS: {25} at price: {round(ask_price)}")
+                    conversions = -curr_pos
+                    if curr_pos > 0:
+                        orders.append(Order(product, market_buy_orders[0][0], -market_buy_orders[0][1]))
+                        print(f"We buy ORCHIDS: {-market_buy_orders[0][1]} at price: {market_buy_orders[0][0]}")
+                    if curr_pos < 0:
+                        orders.append(Order(product, market_sell_orders[0][0], market_sell_orders[0][1]))
+                        print(f"We buy ORCHIDS: {market_sell_orders[0][1]} at price: {market_sell_orders[0][0]}")
+
+                if (humidity < 60 or humidity > 80) and sunlight < 2555 and curr_pos != 0: # just dump it if we think it's sus                      
+                    # orders.append(Order(product, round(ask_price), -curr_pos))
+                    # print(f"We buy ORCHIDS: {-curr_pos} at price: {round(ask_price)}")
+                    conversions = -curr_pos
+                    if curr_pos > 0:
+                        orders.append(Order(product, market_buy_orders[0][0], -market_buy_orders[0][1]))
+                        print(f"We buy ORCHIDS: {-market_buy_orders[0][1]} at price: {market_buy_orders[0][0]}")
+                    if curr_pos < 0:
+                        orders.append(Order(product, market_sell_orders[0][0], market_sell_orders[0][1]))
+                        print(f"We buy ORCHIDS: {market_sell_orders[0][1]} at price: {market_sell_orders[0][0]}")
 
             if len(traderData["avg"][product]) >= avg_hist and product != "ORCHIDS":
 
@@ -396,7 +423,7 @@ class Trader:
         #print(f"TraderData AFTER: {traderData}")
         
         # Sample conversion request. Check more details below. 
-        conversions = 1
+        # conversions = state.position.get("ORCHIDS", 0)
         return result, conversions, jsonpickle.encode(traderData)
     
 
@@ -405,7 +432,7 @@ class Trader:
         For each product, find the position limited set (hard coded).
         """
         #Set position limits 
-        product_limits = {'AMETHYSTS': 20, 'STARFRUIT': 20} 
+        product_limits = {'AMETHYSTS': 20, 'STARFRUIT': 20, 'ORCHIDS': 100} 
         
         if product in product_limits:
             return product_limits[product]
@@ -419,7 +446,7 @@ class Trader:
 
         Change "scale_factor_dict_ to include all items you want to change the scale factor of.
         """
-        scale_factor_dict = {'AMETHYSTS': 1.1, 'STARFRUIT': 1.1}
+        scale_factor_dict = {'AMETHYSTS': 1.1, 'STARFRUIT': 1.1, 'ORCHIDS': 1.1}
         spread_list = traderData["spread_dict"][product]
         
         if product in scale_factor_dict:
