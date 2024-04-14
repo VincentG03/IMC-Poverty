@@ -252,9 +252,25 @@ class Trader:
             #     if curr_pos < 0:
             #         orders.append(Order(product, market_sell_orders[0][0], -curr_pos))
             #         print(f"We getting rid of position: {curr_pos} at price: {market_sell_orders[0][0]}")
-            if product == "ORCHIDS" and state.timestamp > 99600:
-                orders.append(Order(product, market_buy_orders[0][0], market_buy_orders[0][1]))
-                print(f"We getting rid of position: {market_buy_orders[0][1]} at price: {market_buy_orders[0][0]}")
+            if product == "ORCHIDS":
+                humidity = state.observations.conversionObservations[product].humidity
+                sunlight = state.observations.conversionObservations[product].sunlight
+                transport_fees = state.observations.conversionObservations[product].transportFees
+                export_tariff = state.observations.conversionObservations[product].exportTariff
+                import_tariff = state.observations.conversionObservations[product].importTariff
+                bid_price = state.observations.conversionObservations[product].bidPrice
+                ask_price = state.observations.conversionObservations[product].askPrice
+                if humidity > 60 and humidity < 80 and sunlight > 2555: # optimal time for price to rise, we buy
+                        
+                    orders.append(Order(product, bid_price, 25))
+                    print(f"We buy ORCHIDS: {25} at price: {bid_price}")
+                
+                print(f"own_trades: {state.own_trades[product][-1]}")
+                timestep = state.own_trades[product][-1]    #timestep of last trade
+
+                if state.timestamp - timestep > 700:
+                    
+
 
             if len(traderData["avg"][product]) >= avg_hist and product != "ORCHIDS":
 
