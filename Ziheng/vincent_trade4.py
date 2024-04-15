@@ -321,7 +321,7 @@ class Trader:
                     #         orders.append(Order(product, market_buy_orders [0][0], -curr_pos))
                     #         print(f"Closing out position when long. Quoting{product}: ask:{market_buy_orders[0][0]}, qty:{-curr_pos}")
 
-            if mm:
+            if mm and product != "ORCHIDS":
                 """
                 Market make as normal.
                 """
