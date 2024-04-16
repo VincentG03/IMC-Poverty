@@ -342,7 +342,7 @@ class Trader:
                         mm = False
 
 
-            if mm and product not in ["ORCHIDS", "STRAWBERRIES", "CHOCOLATE", "GIFT_BASKET"]:
+            if mm and product not in ["ORCHIDS", "STRAWBERRIES", "ROSES", "CHOCOLATE", "GIFT_BASKET"]:
                 """
                 Market make as normal.
                 """
@@ -396,7 +396,7 @@ class Trader:
         For each product, find the position limited set (hard coded).
         """
         #Set position limits 
-        product_limits = {'AMETHYSTS': 20, 'STARFRUIT': 20, 'ORCHIDS': 100} 
+        product_limits = {'AMETHYSTS': 20, 'STARFRUIT': 20, 'ORCHIDS': 100, 'STRAWBERRIES': 350, 'CHOCOLATE': 250, "GIFT_BASKET": 60, "ROSES": 60} 
         
         if product in product_limits:
             return product_limits[product]
@@ -410,7 +410,7 @@ class Trader:
 
         Change "scale_factor_dict_ to include all items you want to change the scale factor of.
         """
-        scale_factor_dict = {'AMETHYSTS': 1.1, 'STARFRUIT': 1.1, 'ORCHIDS': 1.1}
+        scale_factor_dict = {'AMETHYSTS': 1.1, 'STARFRUIT': 1.1, 'ORCHIDS': 1.1, 'STRAWBERRIES': 1.1, 'CHOCOLATE': 1.1, 'GIFT_BASKET': 1.1, 'ROSES': 1.1}
         spread_list = traderData["spread_dict"][product]
         
         if product in scale_factor_dict:
