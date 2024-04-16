@@ -284,7 +284,7 @@ class Trader:
                         orders.append(Order(product, market_sell_orders[0][0], market_sell_orders[0][1]))
                         print(f"We buy ORCHIDS: {market_sell_orders[0][1]} at price: {market_sell_orders[0][0]}")
 
-            if len(traderData["avg"][product]) >= avg_hist and product not in ["ORCHIDS"]:
+            if len(traderData["avg"][product]) >= avg_hist and product not in ["ORCHIDS", "STRAWBERRIES", "ROSES", "CHOCOLATE", "GIFT_BASKET"]:
 
 
                 if mid_price < next_avg_price - sd_multiplier* sd and qty_to_mm != 0:
@@ -342,7 +342,7 @@ class Trader:
                         mm = False
 
 
-            if mm and product not in ["ORCHIDS", "STRAWBERRIES", "ROSES", "CHOCOLATE", "GIFT_BASKET"]:
+            if mm and product not in ["ORCHIDS"]:
                 """
                 Market make as normal.
                 """
@@ -410,7 +410,7 @@ class Trader:
 
         Change "scale_factor_dict_ to include all items you want to change the scale factor of.
         """
-        scale_factor_dict = {'AMETHYSTS': 1.1, 'STARFRUIT': 1.1, 'ORCHIDS': 1.1, 'STRAWBERRIES': 1.1, 'CHOCOLATE': 1.1, 'GIFT_BASKET': 1.1, 'ROSES': 1.1}
+        scale_factor_dict = {'AMETHYSTS': 1.1, 'STARFRUIT': 1.1, 'ORCHIDS': 1.1, 'STRAWBERRIES': 0.8, 'CHOCOLATE': 0.8, 'GIFT_BASKET': 0.8, 'ROSES': 0.8}
         spread_list = traderData["spread_dict"][product]
         
         if product in scale_factor_dict:
