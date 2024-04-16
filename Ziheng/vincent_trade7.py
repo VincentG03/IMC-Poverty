@@ -243,64 +243,52 @@ class Trader:
             """
             mm = True   # market make = true
 
-            # we get rid of orchids no matter what. 
-            # if product == "ORCHIDS" and curr_pos != 0:
-            #     if curr_pos > 0:    # meaning we hold a long position
-            #         orders.append(Order(product, market_buy_orders[0][0], -curr_pos))
-            #         print(f"We getting rid of position: {curr_pos} at price: {market_buy_orders[0][0]}")
-
-            #     if curr_pos < 0:
-            #         orders.append(Order(product, market_sell_orders[0][0], -curr_pos))
-            #         print(f"We getting rid of position: {curr_pos} at price: {market_sell_orders[0][0]}")
-            if product == "ORCHIDS":
-                print(f"curr position ORCHIDS: {curr_pos}")
-                humidity = state.observations.conversionObservations[product].humidity
-                sunlight = state.observations.conversionObservations[product].sunlight
-                transport_fees = state.observations.conversionObservations[product].transportFees
-                export_tariff = state.observations.conversionObservations[product].exportTariff
-                import_tariff = state.observations.conversionObservations[product].importTariff
-                bid_price = state.observations.conversionObservations[product].bidPrice
-                ask_price = state.observations.conversionObservations[product].askPrice
-                if humidity > 60 and humidity < 80 or sunlight > 2555: # optimal time for price to rise, we buy
-                # if True:
-                    orders.append(Order(product, market_sell_orders[0][0], market_sell_orders[0][1]))
-                    print(f"We buy ORCHIDS: {market_sell_orders[0][1]} at price: {market_sell_orders[0][0]}")
-                else:
-                    orders.append(Order(product, market_buy_orders[0][0], -market_buy_orders[0][1]))
-                    print(f"We buy ORCHIDS: {-market_buy_orders[0][1]} at price: {market_buy_orders[0][0]}")
-                if product in state.own_trades:
-                    print(f"own_trades: {state.own_trades[product][-1]}")
-                    timestep = state.own_trades[product][-1].timestamp    #timestep of last trade
-                else:
-                    timestep = state.timestamp
+            # if product == "ORCHIDS":
+            #     print(f"curr position ORCHIDS: {curr_pos}")
+            #     humidity = state.observations.conversionObservations[product].humidity
+            #     sunlight = state.observations.conversionObservations[product].sunlight
+            #     transport_fees = state.observations.conversionObservations[product].transportFees
+            #     export_tariff = state.observations.conversionObservations[product].exportTariff
+            #     import_tariff = state.observations.conversionObservations[product].importTariff
+            #     bid_price = state.observations.conversionObservations[product].bidPrice
+            #     ask_price = state.observations.conversionObservations[product].askPrice
+            #     if humidity > 60 and humidity < 80 or sunlight > 2555: # optimal time for price to rise, we buy
+            #     # if True:
+            #         orders.append(Order(product, market_sell_orders[0][0], market_sell_orders[0][1]))
+            #         print(f"We buy ORCHIDS: {market_sell_orders[0][1]} at price: {market_sell_orders[0][0]}")
+            #     else:
+            #         orders.append(Order(product, market_buy_orders[0][0], -market_buy_orders[0][1]))
+            #         print(f"We buy ORCHIDS: {-market_buy_orders[0][1]} at price: {market_buy_orders[0][0]}")
+            #     if product in state.own_trades:
+            #         print(f"own_trades: {state.own_trades[product][-1]}")
+            #         timestep = state.own_trades[product][-1].timestamp    #timestep of last trade
+            #     else:
+            #         timestep = state.timestamp
 
 
-                if int(state.timestamp) - int(timestep) > 700:
-                    # if we have been holding onto it for too long just dump it
-                    # cause it costs us to hold onto it
-                    # orders.append(Order(product, round(ask_price), -curr_pos))
-                    # print(f"We buy ORCHIDS: {25} at price: {round(ask_price)}")
-                    conversions = -curr_pos
-                    if curr_pos > 0:
-                        orders.append(Order(product, market_buy_orders[0][0], -market_buy_orders[0][1]))
-                        print(f"We buy ORCHIDS: {-market_buy_orders[0][1]} at price: {market_buy_orders[0][0]}")
-                    if curr_pos < 0:
-                        orders.append(Order(product, market_sell_orders[0][0], market_sell_orders[0][1]))
-                        print(f"We buy ORCHIDS: {market_sell_orders[0][1]} at price: {market_sell_orders[0][0]}")
+            #     if int(state.timestamp) - int(timestep) > 700:
+            #         conversions = -curr_pos
+            #         if curr_pos > 0:
+            #             orders.append(Order(product, market_buy_orders[0][0], -market_buy_orders[0][1]))
+            #             print(f"We buy ORCHIDS: {-market_buy_orders[0][1]} at price: {market_buy_orders[0][0]}")
+            #         if curr_pos < 0:
+            #             orders.append(Order(product, market_sell_orders[0][0], market_sell_orders[0][1]))
+            #             print(f"We buy ORCHIDS: {market_sell_orders[0][1]} at price: {market_sell_orders[0][0]}")
 
-                if (humidity < 60 or humidity > 80) and sunlight < 2555 and curr_pos != 0: # just dump it if we think it's sus                      
-                    # orders.append(Order(product, round(ask_price), -curr_pos))
-                    # print(f"We buy ORCHIDS: {-curr_pos} at price: {round(ask_price)}")
-                    conversions = -curr_pos
-                    if curr_pos > 0:
-                        orders.append(Order(product, market_buy_orders[0][0], -market_buy_orders[0][1]))
-                        print(f"We buy ORCHIDS: {-market_buy_orders[0][1]} at price: {market_buy_orders[0][0]}")
-                    if curr_pos < 0:
-                        orders.append(Order(product, market_sell_orders[0][0], market_sell_orders[0][1]))
-                        print(f"We buy ORCHIDS: {market_sell_orders[0][1]} at price: {market_sell_orders[0][0]}")
+            #     if (humidity < 60 or humidity > 80) and sunlight < 2555 and curr_pos != 0: # just dump it if we think it's sus                      
+            #         conversions = -curr_pos
+            #         if curr_pos > 0:
+            #             orders.append(Order(product, market_buy_orders[0][0], -market_buy_orders[0][1]))
+            #             print(f"We buy ORCHIDS: {-market_buy_orders[0][1]} at price: {market_buy_orders[0][0]}")
+            #         if curr_pos < 0:
+            #             orders.append(Order(product, market_sell_orders[0][0], market_sell_orders[0][1]))
+            #             print(f"We buy ORCHIDS: {market_sell_orders[0][1]} at price: {market_sell_orders[0][0]}")
 
-            if len(traderData["avg"][product]) >= avg_hist and product != "ORCHIDS":
-
+            if len(traderData["avg"][product]) >= avg_hist and product not in ["ORCHIDS", "GIFT_BASKET"]:
+                
+                # if product not in ["STARFRUIT", "AMETHYSTS"]:
+                #     sd_multiplier = 3
+                
 
                 if mid_price < next_avg_price - sd_multiplier* sd and qty_to_mm != 0:
                     """
@@ -315,29 +303,27 @@ class Trader:
                         # find what our average value is and compare it with the market order
                         # we want to trade with the bots ONLY if we can guaranee a profit of 4 seashells per position
                         myavg_pos = traderData["avg_pos"][product]["avg_val"]   # this should not generate an error since we this will only run however many iterations our avg_hist is
+                        
                         if myavg_pos - market_sell_orders[0][0] > 3 * market_close_multiplier:    # 4 is our benchmark of a profit we want
+                        #     if product in ["CHOCOLATE", "STARBERREIS", "ROSES", "GIFT_BASKET"]:
+                        #         orders.append(Order(product, market_buy_orders[0][0], -curr_pos))
+                        #         print(f"Closing out position when short. Quoting {product}: bid:{market_buy_orders[0][0]}, qty:{-curr_pos}")
+                        #     else:
                             orders.append(Order(product, market_sell_orders[0][0], -curr_pos))
                             print(f"Closing out position when short. Quoting {product}: bid:{market_sell_orders[0][0]}, qty:{-curr_pos}")
-
-                    if market_sell_orders[0][0] < next_avg_price:
+                            mm = False
+                        if market_sell_orders[0][0] < next_avg_price:
                         
-                        orders.append(Order(product, market_sell_orders[0][0], market_quantity))
-                        print(f"OUTLIER-BOUGHT: Market_price: {market_sell_orders[0][0]}, QTY: {market_quantity}")
-                        # orders.append(Order(product, math.ceil(mid_price), qty_to_mm- market_quantity))
-                        orders.append(Order(product, market_buy_orders[0][0] + 1, qty_to_mm- market_quantity))
-                        print(f"(OUTLIER) Quoting {product}: bid {qty_to_mm - market_quantity}x {mid_price}")
-                        mm = False
-
-                    # """
-                    # Close out of our current position if necessary when we are in a short position
-                    # """
-                    # if curr_pos < 0:
-                    #     # find what our average value is and compare it with the market order
-                    #     # we want to trade with the bots ONLY if we can guaranee a profit of 4 seashells per position
-                    #     myavg_pos = traderData["avg_pos"][product]["avg_val"]   # this should not generate an error since we this will only run however many iterations our avg_hist is
-                    #     if myavg_pos - market_sell_orders[0][0] > 3 * market_close_multiplier:    # 4 is our benchmark of a profit we want
-                    #         orders.append(Order(product, market_sell_orders[0][0], -curr_pos))
-                    #         print(f"Closing out position when short. Quoting {product}: bid:{market_sell_orders[0][0]}, qty:{-curr_pos}")
+                        # if product in ["CHOCOLATE", "STARBERREIS", "ROSES", "GIFT_BASKET"]:
+                        #     orders.append(Order(product, market_buy_orders[0][0], -curr_pos))
+                        #     print(f"Closing out position when short. Quoting {product}: bid:{market_buy_orders[0][0]}, qty:{-curr_pos}")
+                        # else:
+                            orders.append(Order(product, market_sell_orders[0][0], market_quantity))
+                            print(f"OUTLIER-BOUGHT: Market_price: {market_sell_orders[0][0]}, QTY: {market_quantity}")
+                            # orders.append(Order(product, math.ceil(mid_price), qty_to_mm- market_quantity))
+                            orders.append(Order(product, market_buy_orders[0][0] + 1, qty_to_mm- market_quantity))
+                            print(f"(OUTLIER) Quoting {product}: bid {qty_to_mm - market_quantity}x {mid_price}")
+                            mm = False
 
                 elif mid_price > next_avg_price + sd_multiplier* sd and qty_to_mm != 0: 
                     """
@@ -354,31 +340,28 @@ class Trader:
                         # we want to trade with the bots ONLY if we can guaranee a profit of 4 seashells per position
                         myavg_pos = traderData["avg_pos"][product]["avg_val"]   # this should not generate an error since we this will only run however many iterations our avg_hist is
                         if market_buy_orders[0][0] - myavg_pos > 3 * market_close_multiplier:    # 4 is our benchmark of a profit we want
+                        #     if product in ["CHOCOLATE", "STARBERREIS", "ROSES", "GIFT_BASKET"]:
+                        #         orders.append(Order(product, market_sell_orders[0][0], -curr_pos))
+                        #         print(f"Closing out position when short. Quoting {product}: bid:{market_sell_orders[0][0]}, qty:{-curr_pos}")
+                        #     else:
                             orders.append(Order(product, market_buy_orders [0][0], -curr_pos))
                             print(f"Closing out position when long. Quoting{product}: ask:{market_buy_orders[0][0]}, qty:{-curr_pos}")
-
+                            mm = False
 
                     if market_buy_orders[0][0] > next_avg_price:        
-
+                        # if product in ["CHOCOLATE", "STARBERREIS", "ROSES", "GIFT_BASKET"]:
+                        #     orders.append(Order(product, market_sell_orders[0][0], -curr_pos))
+                        #     print(f"Closing out position when short. Quoting {product}: bid:{market_sell_orders[0][0]}, qty:{-curr_pos}")
+                        # else:
                         orders.append(Order(product, market_buy_orders[0][0], -market_quantity))
                         print(f"OUTLIER-SOLD: Market_price: {market_buy_orders[0][0]}, QTY: {-market_quantity}")
                         # orders.append(Order(product, math.floor(mid_price), -qty_to_mm + market_quantity))
-                        orders.append(Order(product, market_sell_orders[0][0] - 1, -qty_to_mm + market_quantity))
+                        orders.append(Order(product, market_buy_orders[0][0] - 1, -qty_to_mm + market_quantity))
                         print(f"(OUTLIER) Quoting {product}: bid {-qty_to_mm + market_quantity}x {mid_price}")
                         mm = False
 
-                    # """
-                    # Close out of our current position if necessary when we are in a long position
-                    # """
-                    # if curr_pos > 0:
-                    #     # find what our average value is and compare it with the market order
-                    #     # we want to trade with the bots ONLY if we can guaranee a profit of 4 seashells per position
-                    #     myavg_pos = traderData["avg_pos"][product]["avg_val"]   # this should not generate an error since we this will only run however many iterations our avg_hist is
-                    #     if market_buy_orders[0][0] - myavg_pos > 3 * market_close_multiplier:    # 4 is our benchmark of a profit we want
-                    #         orders.append(Order(product, market_buy_orders [0][0], -curr_pos))
-                    #         print(f"Closing out position when long. Quoting{product}: ask:{market_buy_orders[0][0]}, qty:{-curr_pos}")
 
-            if mm and product != "ORCHIDS":
+            if mm and product not in ["ORCHIDS", "GIFT_BASKET"]:
                 """
                 Market make as normal.
                 """
@@ -432,7 +415,7 @@ class Trader:
         For each product, find the position limited set (hard coded).
         """
         #Set position limits 
-        product_limits = {'AMETHYSTS': 20, 'STARFRUIT': 20, 'ORCHIDS': 100} 
+        product_limits = {'AMETHYSTS': 20, 'STARFRUIT': 20, 'ORCHIDS': 100, 'STRAWBERRIES': 350, 'CHOCOLATE': 250, "GIFT_BASKET": 60, "ROSES": 60} 
         
         if product in product_limits:
             return product_limits[product]
@@ -446,7 +429,7 @@ class Trader:
 
         Change "scale_factor_dict_ to include all items you want to change the scale factor of.
         """
-        scale_factor_dict = {'AMETHYSTS': 1.1, 'STARFRUIT': 1.1, 'ORCHIDS': 1.1}
+        scale_factor_dict = {'AMETHYSTS': 1.1, 'STARFRUIT': 1.1, 'ORCHIDS': 1.1, 'STRAWBERRIES': 1.1, 'CHOCOLATE': 1.1, 'GIFT_BASKET': 1.1, 'ROSES': 1.1}
         spread_list = traderData["spread_dict"][product]
         
         if product in scale_factor_dict:
