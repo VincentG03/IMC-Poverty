@@ -166,6 +166,8 @@ class Trader:
                 x = [i for i in range(avg_hist)]
                 y = traderData["avg"][product]
                 gradient, c = np.polyfit(np.array(x), np.array(y), 1)   # finding lin reg equation
+                degree = np.arctan(gradient)
+                traderData = self.handle_degree(traderData, product, degree)
                 # Predicting next time step
                 next_avg_price = gradient * (avg_hist + 1) + c
                 diff_lst = []
@@ -284,11 +286,22 @@ class Trader:
             #             orders.append(Order(product, market_sell_orders[0][0], market_sell_orders[0][1]))
             #             print(f"We buy ORCHIDS: {market_sell_orders[0][1]} at price: {market_sell_orders[0][0]}")
 
-            if len(traderData["avg"][product]) >= avg_hist and product not in ["ORCHIDS", "GIFT_BASKET"]:
+            if len(traderData["avg"][product]) >= avg_hist and product not in ["ORCHIDS", ""]:
                 
                 # if product not in ["STARFRUIT", "AMETHYSTS"]:
                 #     sd_multiplier = 3
-                
+                if len(traderData["degs"][product]) >= 5 and product in ["STRAWBERRIES", "ROSES", "CHOCOLATE", "GIFT_BASKET"]:
+                    # ensure that we are "stable"
+                    # the number 10 here is our threshold for "stability"
+                    market_quantity = min(abs(market_sell_orders[0][1]), qty_to_mm)
+                    if abs(max(traderData["degs"][product]) - min(traderData["degs"][product])) <= 10:
+                        if gradient > 0:    # we expect price to rise - this number is subject to change
+                            orders.append(Order(product, market_sell_orders[0][0], market_quantity))
+                            print(f"OUTLIER-BOUGHT: Market_price: {market_sell_orders[0][0]}, QTY: {market_quantity}")
+                        if gradient < 0:    # we expect price to drop - this number is subject to change
+                            orders.append(Order(product, market_buy_orders[0][0], market_quantity))
+                            print(f"OUTLIER-BOUGHT: Market_price: {market_buy_orders[0][0]}, QTY: {market_quantity}")
+                        continue
 
                 if mid_price < next_avg_price - sd_multiplier* sd and qty_to_mm != 0:
                     """
@@ -361,7 +374,7 @@ class Trader:
                         mm = False
 
 
-            if mm and product not in ["ORCHIDS", "GIFT_BASKET"]:
+            if mm and product not in ["ORCHIDS"]:
                 """
                 Market make as normal.
                 """
@@ -516,7 +529,7 @@ class Trader:
         spread_hist = 40
         
         if traderData == "": #No products. Initialise ALL required for traderData (not just spread, inc ema and everything)
-            traderData = {"spread_dict": {product: [current_spread]}, "history_prices_dict": {}, "midprice_dict": {}, "avg": {}, "avg_pos": {}} 
+            traderData = {"spread_dict": {product: [current_spread]}, "history_prices_dict": {}, "midprice_dict": {}, "avg": {}, "avg_pos": {}, "degs": {}} 
         
         elif product in traderData["spread_dict"]: #Product already exists
             if len(traderData["spread_dict"][product]) < spread_hist:
@@ -541,7 +554,7 @@ class Trader:
         
         if traderData == "": #No products. Initialise ALL required for traderData (not just spread, inc ema and everything)
             traderData = {"spread_dict": {}, "history_prices_dict": {product: [[best_buy_order[0], best_ask_order[0]]] }, "midprice_dict": {},
-                          "avg": {}, "avg_pos": {}}
+                          "avg": {}, "avg_pos": {}, "degs": {}}
         
         elif product in traderData["history_prices_dict"]:
             if len(traderData["history_prices_dict"][product]) < data_hist:
@@ -571,7 +584,7 @@ class Trader:
         
         if traderData == "":
             traderData = {"spread_dict": {}, "history_prices_dict": {}, "midprice_dict": {product: [weighted_midprice]},
-                           "avg": {}, "avg_pos": {}}
+                           "avg": {}, "avg_pos": {}, "degs": {}}
             
         elif product in traderData["midprice_dict"]:
             if len(traderData["midprice_dict"][product]) < midprice_hist:
@@ -638,7 +651,7 @@ class Trader:
         """
         if traderData == "":
             traderData = {"spread_dict": {}, "history_prices_dict": {}, "midprice_dict": {},
-                           "avg": {product: [avg_price]}, "avg_pos": {}}
+                           "avg": {product: [avg_price]}, "avg_pos": {}, "degs": {}}
             
         elif product in traderData["avg"]:
             if len(traderData["avg"][product]) < avg_hist:
@@ -664,7 +677,7 @@ class Trader:
 
         if traderData == "":    # in theory this if statement should never execute
             traderData = {"spread_dict": {}, "history_prices_dict": {}, "midprice_dict": {},
-                           "avg": {}, 
+                           "avg": {}, "degs": {}, 
                            "avg_pos": {product: {"avg_val": 0, "pos": 0}}}
             print("NEVER")
             
@@ -748,7 +761,26 @@ class Trader:
 
 
 
-
+    def handle_degree(self, traderData, product, degree):
+        degree_hist = 5
+        
+        """
+        Find the average of last x values
+        """
+        if traderData == "":
+            traderData = {"spread_dict": {}, "history_prices_dict": {}, "midprice_dict": {},
+                           "avg": {}, "avg_pos": {}, "degs": {product: [degree]}}
+            
+        elif product in traderData["degs"]:
+            if len(traderData["degs"][product]) < degree_hist:
+                traderData["degs"][product].append(degree)
+            else:
+                traderData["degs"][product].pop(0)
+                traderData["degs"][product].append(degree)
+        else: #New product 
+            traderData["degs"][product] = [degree]
+        
+        return traderData
 
 
 
