@@ -16,6 +16,15 @@ def generate_all_combinations(multiplier_array, max_length):
 
 
 def calculate_profit(scenario, multiplier_array, user_array, hunter_array):
+    # if scenario == ((0, 2), (3, 4), (4, 2)) and user_array == [
+    #     [0, 13, 0, 0, 1],
+    #     [2, 9, 12, 7, 0],
+    #     [15, 14, 0, 0, 0],
+    #     [1, 10,11, 5, 0],
+    #     [0, 0, 0, 0, 0]
+    # ]:
+    #     print("yes")
+    
     total_profit = 0
     profit = 0 
     island_value = 7500
@@ -28,6 +37,7 @@ def calculate_profit(scenario, multiplier_array, user_array, hunter_array):
 
         profit =  island_value * (multiplier / total_value)
         total_profit += profit
+        #print("yes")
     return total_profit
 
 def expedition_cost(scenario):
