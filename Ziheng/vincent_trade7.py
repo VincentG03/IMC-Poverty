@@ -58,7 +58,7 @@ class Trader:
         if traderData != "":
             traderData = jsonpickle.decode(traderData)
 
-        
+        print(f"CONVDR: {state.observations}")
         #Repeat trading logic for each product
         for product in state.order_depths:
             """
@@ -84,7 +84,7 @@ class Trader:
             market_buy_orders = list(order_depth.buy_orders.items())
             market_sell_orders = list(order_depth.sell_orders.items())
 
-            if state.timestamp != 0 and product != "ORCHIDS":
+            if state.timestamp != 0:
                 last_bid = traderData['history_prices_dict'][product][-1][0]
                 last_ask = traderData['history_prices_dict'][product][-1][1]
 
@@ -142,8 +142,8 @@ class Trader:
             
             #Find standard deviation
             std_dev =self.find_standard_deviation(traderData, product)
-            upper_bound = ema + 1.5*std_dev
-            lower_bound = ema - 1.5*std_dev
+            upper_bound = ema + 2.5*std_dev
+            lower_bound = ema - 2.5*std_dev
             print(f"lower: {lower_bound}")
             print(f"upper: {upper_bound}")
                 
@@ -165,8 +165,10 @@ class Trader:
             if len(traderData["avg"][product]) >= avg_hist: # must check there is at least 15 data points
                 x = [i for i in range(avg_hist)]
                 y = traderData["avg"][product]
+                # y = y.reverse() - [i**2.718 for i in range(avg_hist)]
+                # y.reverse()
                 gradient, c = np.polyfit(np.array(x), np.array(y), 1)   # finding lin reg equation
-                degree = np.arctan(gradient)
+                degree = np.arctan(gradient) * 180/np.pi
                 traderData = self.handle_degree(traderData, product, degree)
                 # Predicting next time step
                 next_avg_price = gradient * (avg_hist + 1) + c
@@ -244,7 +246,7 @@ class Trader:
                 (!) ELIF (!): we are short, send bid orders to close.
             """
             mm = True   # market make = true
-
+            norm = True     # dont do normal lin reg
             # if product == "ORCHIDS":
             #     print(f"curr position ORCHIDS: {curr_pos}")
             #     humidity = state.observations.conversionObservations[product].humidity
@@ -286,26 +288,40 @@ class Trader:
             #             orders.append(Order(product, market_sell_orders[0][0], market_sell_orders[0][1]))
             #             print(f"We buy ORCHIDS: {market_sell_orders[0][1]} at price: {market_sell_orders[0][0]}")
 
-            if len(traderData["avg"][product]) >= avg_hist and product not in ["ORCHIDS"]:
-                print(f"traderDATA: {traderData["degs"][product]}")
+            if product in ["STRAWBERRIES", "ROSES", "CHOCOLATE", "GIFT_BASKET"]:
+
+                # if mid_price > upper_bound and ema > mid_price: # we sell here
+                #     market_quantity = min(abs(market_buy_orders[0][1]), qty_to_mm)
+
+                #     market_quantity = min(abs(market_buy_orders[0][1]), qty_to_mm)
+                #     orders.append(Order(product, market_buy_orders[0][0], -market_quantity))
+                #     print(f"OUTLIER-SOLD: Market_price: {market_buy_orders[0][0]}, product {product}, QTY: {-market_quantity}")
+
+                # if mid_price < lower_bound and ema < mid_price:    # we buy here
+                #     market_quantity = min(abs(market_sell_orders[0][1]), qty_to_mm)
+
+                #     market_quantity = min(abs(market_sell_orders[0][1]), qty_to_mm)
+                #     orders.append(Order(product, market_sell_orders[0][0], -market_quantity))
+                #     print(f"OUTLIER-BOUGHT: Market_price: {market_sell_orders[0][0]}, product {product}, QTY: {-market_quantity}")
+                # print(f"traderDATA: {traderData["degs"][product]}")
                 # if product not in ["STARFRUIT", "AMETHYSTS"]:
                 #     sd_multiplier = 3
                 if len(traderData["degs"][product]) >= 4 and product in ["STRAWBERRIES", "ROSES", "CHOCOLATE", "GIFT_BASKET"]:
                     # ensure that we are "stable"
                     # the number 10 here is our threshold for "stability"
                     print("HEREEEEEE")
-                    if abs(max(traderData["degs"][product]) - min(traderData["degs"][product])) <= 30:
-                        if gradient > 0 and qty_to_mm != 0:    # we expect price to rise - this number is subject to change
+                    if abs(max(traderData["degs"][product]) - min(traderData["degs"][product])) <= 10:
+                        if degree < -30 and qty_to_mm != 0:    # we expect price to rise - this number is subject to change
                             market_quantity = min(abs(market_sell_orders[0][1]), qty_to_mm)
                             orders.append(Order(product, market_sell_orders[0][0], market_quantity))
-                            print(f"OUTLIER-BOUGHT: Market_price: {market_sell_orders[0][0]}, QTY: {market_quantity}")
-                        if gradient < 0 and qty_to_mm != 0:    # we expect price to drop - this number is subject to change
+                            print(f"OUTLIER-BOUGHT: Market_price: {market_sell_orders[0][0]}, product {product}, QTY: {market_quantity}")
+                        if degree > 30 and qty_to_mm != 0:    # we expect price to drop - this number is subject to change
                             market_quantity = min(abs(market_buy_orders[0][1]), qty_to_mm)
                             orders.append(Order(product, market_buy_orders[0][0], -market_quantity))
-                            print(f"OUTLIER-BOUGHT: Market_price: {market_buy_orders[0][0]}, QTY: {market_quantity}")
-                    continue
-
-                if mid_price < next_avg_price - sd_multiplier* sd and qty_to_mm != 0 and product not in ["STRAWBERRIES", "ROSES", "CHOCOLATE", "GIFT_BASKET"]:
+                            print(f"OUTLIER-SOLD: Market_price: {market_buy_orders[0][0]}, product {product}, QTY: {-market_quantity}")
+                    norm = False
+            if len(traderData["avg"][product]) >= avg_hist:
+                if mid_price < next_avg_price - sd_multiplier* sd and qty_to_mm != 0 and product not in ["STRAWBERRIES", "ROSES", "CHOCOLATE", "GIFT_BASKET", "ORCHIDS"] and norm:
                     """
                     Outlier - Only send bid quotes.
                     """                 
@@ -340,7 +356,7 @@ class Trader:
                             # print(f"(OUTLIER) Quoting {product}: bid {qty_to_mm - market_quantity}x {mid_price}")
                             mm = False
 
-                elif mid_price > next_avg_price + sd_multiplier* sd and qty_to_mm != 0: 
+                elif mid_price > next_avg_price + sd_multiplier* sd and qty_to_mm != 0 and product not in ["STRAWBERRIES", "ROSES", "CHOCOLATE", "GIFT_BASKET", "ORCHIDS"] and norm: 
                     """
                     Outlier - Only send ask quotes.
                     """
