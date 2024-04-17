@@ -286,24 +286,26 @@ class Trader:
             #             orders.append(Order(product, market_sell_orders[0][0], market_sell_orders[0][1]))
             #             print(f"We buy ORCHIDS: {market_sell_orders[0][1]} at price: {market_sell_orders[0][0]}")
 
-            if len(traderData["avg"][product]) >= avg_hist and product not in ["ORCHIDS", ""]:
-                
+            if len(traderData["avg"][product]) >= avg_hist and product not in ["ORCHIDS"]:
+                print(f"traderDATA: {traderData["degs"][product]}")
                 # if product not in ["STARFRUIT", "AMETHYSTS"]:
                 #     sd_multiplier = 3
-                if len(traderData["degs"][product]) >= 5 and product in ["STRAWBERRIES", "ROSES", "CHOCOLATE", "GIFT_BASKET"]:
+                if len(traderData["degs"][product]) >= 4 and product in ["STRAWBERRIES", "ROSES", "CHOCOLATE", "GIFT_BASKET"]:
                     # ensure that we are "stable"
                     # the number 10 here is our threshold for "stability"
-                    market_quantity = min(abs(market_sell_orders[0][1]), qty_to_mm)
-                    if abs(max(traderData["degs"][product]) - min(traderData["degs"][product])) <= 10:
-                        if gradient > 0:    # we expect price to rise - this number is subject to change
+                    print("HEREEEEEE")
+                    if abs(max(traderData["degs"][product]) - min(traderData["degs"][product])) <= 30:
+                        if gradient > 0 and qty_to_mm != 0:    # we expect price to rise - this number is subject to change
+                            market_quantity = min(abs(market_sell_orders[0][1]), qty_to_mm)
                             orders.append(Order(product, market_sell_orders[0][0], market_quantity))
                             print(f"OUTLIER-BOUGHT: Market_price: {market_sell_orders[0][0]}, QTY: {market_quantity}")
-                        if gradient < 0:    # we expect price to drop - this number is subject to change
-                            orders.append(Order(product, market_buy_orders[0][0], market_quantity))
+                        if gradient < 0 and qty_to_mm != 0:    # we expect price to drop - this number is subject to change
+                            market_quantity = min(abs(market_buy_orders[0][1]), qty_to_mm)
+                            orders.append(Order(product, market_buy_orders[0][0], -market_quantity))
                             print(f"OUTLIER-BOUGHT: Market_price: {market_buy_orders[0][0]}, QTY: {market_quantity}")
-                        continue
+                    continue
 
-                if mid_price < next_avg_price - sd_multiplier* sd and qty_to_mm != 0:
+                if mid_price < next_avg_price - sd_multiplier* sd and qty_to_mm != 0 and product not in ["STRAWBERRIES", "ROSES", "CHOCOLATE", "GIFT_BASKET"]:
                     """
                     Outlier - Only send bid quotes.
                     """                 
@@ -332,10 +334,10 @@ class Trader:
                         #     print(f"Closing out position when short. Quoting {product}: bid:{market_buy_orders[0][0]}, qty:{-curr_pos}")
                         # else:
                             orders.append(Order(product, market_sell_orders[0][0], market_quantity))
-                            print(f"OUTLIER-BOUGHT: Market_price: {market_sell_orders[0][0]}, QTY: {market_quantity}")
+                            # print(f"OUTLIER-BOUGHT: Market_price: {market_sell_orders[0][0]}, QTY: {market_quantity}")
                             # orders.append(Order(product, math.ceil(mid_price), qty_to_mm- market_quantity))
                             orders.append(Order(product, market_buy_orders[0][0] + 1, qty_to_mm- market_quantity))
-                            print(f"(OUTLIER) Quoting {product}: bid {qty_to_mm - market_quantity}x {mid_price}")
+                            # print(f"(OUTLIER) Quoting {product}: bid {qty_to_mm - market_quantity}x {mid_price}")
                             mm = False
 
                 elif mid_price > next_avg_price + sd_multiplier* sd and qty_to_mm != 0: 
@@ -358,7 +360,7 @@ class Trader:
                         #         print(f"Closing out position when short. Quoting {product}: bid:{market_sell_orders[0][0]}, qty:{-curr_pos}")
                         #     else:
                             orders.append(Order(product, market_buy_orders [0][0], -curr_pos))
-                            print(f"Closing out position when long. Quoting{product}: ask:{market_buy_orders[0][0]}, qty:{-curr_pos}")
+                            # print(f"Closing out position when long. Quoting{product}: ask:{market_buy_orders[0][0]}, qty:{-curr_pos}")
                             mm = False
 
                     if market_buy_orders[0][0] > next_avg_price:        
@@ -367,10 +369,10 @@ class Trader:
                         #     print(f"Closing out position when short. Quoting {product}: bid:{market_sell_orders[0][0]}, qty:{-curr_pos}")
                         # else:
                         orders.append(Order(product, market_buy_orders[0][0], -market_quantity))
-                        print(f"OUTLIER-SOLD: Market_price: {market_buy_orders[0][0]}, QTY: {-market_quantity}")
+                        # print(f"OUTLIER-SOLD: Market_price: {market_buy_orders[0][0]}, QTY: {-market_quantity}")
                         # orders.append(Order(product, math.floor(mid_price), -qty_to_mm + market_quantity))
                         orders.append(Order(product, market_buy_orders[0][0] - 1, -qty_to_mm + market_quantity))
-                        print(f"(OUTLIER) Quoting {product}: bid {-qty_to_mm + market_quantity}x {mid_price}")
+                        # print(f"(OUTLIER) Quoting {product}: bid {-qty_to_mm + market_quantity}x {mid_price}")
                         mm = False
 
 
@@ -498,7 +500,7 @@ class Trader:
         best_ask_vol = market_sell_orders[0][1]
         spread_difference = required_spread - (my_ask - my_bid)
         print(f"Required spread: {required_spread}, my quoted spread: {(my_ask - my_bid)}, difference of: {spread_difference}")
-        print(f"Old prices are {my_bid} {my_ask}")
+        # print(f"Old prices are {my_bid} {my_ask}")
         
         if spread_difference % 2 == 0: #Even --> split evently between bid and ask
             my_bid = my_bid - spread_difference//2
@@ -511,7 +513,7 @@ class Trader:
             else: #Less volume for bid, more likely to be filled if we try to match.
                 my_bid = my_bid - int(math.floor(spread_difference/2))
                 my_ask = my_ask + int(math.ceil(spread_difference/2))         
-            print(f"Odd spread - new prices are: {my_bid} {my_ask}") 
+            # print(f"Odd spread - new prices are: {my_bid} {my_ask}") 
 
         return my_bid, my_ask
 
@@ -762,7 +764,7 @@ class Trader:
 
 
     def handle_degree(self, traderData, product, degree):
-        degree_hist = 5
+        degree_hist = 4
         
         """
         Find the average of last x values
