@@ -54,11 +54,15 @@ import statsmodels.api as smf
 # print(model.summary())
 
 
-x = np.array([1, 2, 3, 4 ,5])
-y = np.array([1, 2, 3, 4 ,5])
+# x = np.array([1, 2, 3, 4 ,5])
+# y = np.array([1, 2, 3, 4 ,5])
 
-z = smf.add_constant(x)
+# z = smf.add_constant(x)
 
-model = smf.OLS(y, x).fit()
+# model = smf.OLS(y, x).fit()
 
-print(model.tvalues)
+# print(model.tvalues)
+
+
+lst = [1, 2, 3, 4, 5, 6]
+print(lst[:-1])

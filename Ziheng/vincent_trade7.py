@@ -286,31 +286,31 @@ class Trader:
                         orders.append(Order(product, market_sell_orders[0][0], market_sell_orders[0][1]))
                         print(f"We buy ORCHIDS: {market_sell_orders[0][1]} at price: {market_sell_orders[0][0]}")
 
-            if len(traderData["avg"][product]) >= avg_hist and product not in ["ORCHIDS"]:
-                print(f"traderDATA: {traderData["degs"][product]}")
-                # if product not in ["STARFRUIT", "AMETHYSTS"]:
-                #     sd_multiplier = 3
-                if len(traderData["degs"][product]) >= 4 and product in ["STRAWBERRIES", "ROSES", "CHOCOLATE", "GIFT_BASKET"]:
-                    # ensure that we are "stable"
-                    # the number 10 here is our threshold for "stability"
-                    print("HEREEEEEE")
-                    if abs(max(traderData["degs"][product]) - min(traderData["degs"][product])) <= 20:
-                        if degree > 10 and qty_to_mm != 0:    # we expect price to rise - this number is subject to change
-                            market_quantity = min(abs(market_sell_orders[0][1]), qty_to_mm)
-                            orders.append(Order(product, market_sell_orders[0][0], market_quantity))
-                            print(f"OUTLIER-BOUGHT: Market_price: {market_sell_orders[0][0]}, QTY: {market_quantity}")
-                        if degree < -10 and qty_to_mm != 0:    # we expect price to drop - this number is subject to change
-                            market_quantity = min(abs(market_buy_orders[0][1]), qty_to_mm)
-                            orders.append(Order(product, market_buy_orders[0][0], -market_quantity))
-                            print(f"OUTLIER-SELL: Market_price: {market_buy_orders[0][0]}, QTY: {-market_quantity}")
-                        elif curr_pos < 0:
-                            orders.append(Order(product, market_sell_orders[0][0], -curr_pos))
-                            print(f"Closing out position when short. Quoting {product}: bid:{market_sell_orders[0][0]}, qty:{-curr_pos}")
-                        elif curr_pos > 0:
-                            orders.append(Order(product, market_buy_orders[0][0], -curr_pos))
-                            print(f"Closing out position when long. Quoting{product}: ask:{market_buy_orders[0][0]}, qty:{-curr_pos}")
-                    norm = False
-                    mm = False
+            # if len(traderData["avg"][product]) >= avg_hist and product not in ["ORCHIDS"]:
+            #     print(f"traderDATA: {traderData["degs"][product]}")
+            #     # if product not in ["STARFRUIT", "AMETHYSTS"]:
+            #     #     sd_multiplier = 3
+            #     if len(traderData["degs"][product]) >= 4 and product in ["STRAWBERRIES", "ROSES", "CHOCOLATE", "GIFT_BASKET"]:
+            #         # ensure that we are "stable"
+            #         # the number 10 here is our threshold for "stability"
+            #         print("HEREEEEEE")
+            #         if abs(max(traderData["degs"][product]) - min(traderData["degs"][product])) <= 20:
+            #             if degree > 10 and qty_to_mm != 0:    # we expect price to rise - this number is subject to change
+            #                 market_quantity = min(abs(market_sell_orders[0][1]), qty_to_mm)
+            #                 orders.append(Order(product, market_sell_orders[0][0], market_quantity))
+            #                 print(f"OUTLIER-BOUGHT: Market_price: {market_sell_orders[0][0]}, QTY: {market_quantity}")
+            #             if degree < -10 and qty_to_mm != 0:    # we expect price to drop - this number is subject to change
+            #                 market_quantity = min(abs(market_buy_orders[0][1]), qty_to_mm)
+            #                 orders.append(Order(product, market_buy_orders[0][0], -market_quantity))
+            #                 print(f"OUTLIER-SELL: Market_price: {market_buy_orders[0][0]}, QTY: {-market_quantity}")
+            #             elif curr_pos < 0:
+            #                 orders.append(Order(product, market_sell_orders[0][0], -curr_pos))
+            #                 print(f"Closing out position when short. Quoting {product}: bid:{market_sell_orders[0][0]}, qty:{-curr_pos}")
+            #             elif curr_pos > 0:
+            #                 orders.append(Order(product, market_buy_orders[0][0], -curr_pos))
+            #                 print(f"Closing out position when long. Quoting{product}: ask:{market_buy_orders[0][0]}, qty:{-curr_pos}")
+            #         norm = False
+            #         mm = False
             if len(traderData["avg"][product]) >= avg_hist:
                 if mid_price < next_avg_price - sd_multiplier* sd and qty_to_mm != 0 and product not in ["STRAWBERRIES", "ROSES", "CHOCOLATE", "GIFT_BASKET", "ORCHIDS"] and norm:
                     """

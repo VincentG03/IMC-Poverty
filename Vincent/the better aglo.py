@@ -307,17 +307,17 @@ class Trader:
                 # if product not in ["STARFRUIT", "AMETHYSTS"]:
                 #     sd_multiplier = 3
                 last_ema_short = self.find_last_ema(traderData, product, 20)
-                last_ema_long = self.find_last_ema(traderData, product,50)
+                last_ema_long = self.find_last_ema(traderData, product,48)
                 
                 if last_ema_short > last_ema_long and ema_short < ema_long: #Down trend now 
                     market_quantity = min(abs(market_buy_orders[0][1]), qty_to_mm)
-                    orders.append(Order(product, market_buy_orders[0][0], -market_quantity))
-                    print(f"Predicing downtrend for {product}: Sell {market_quantity}x at {market_buy_orders[0][0]}")
+                    orders.append(Order(product, market_buy_orders[0][0], -(market_quantity + abs(curr_pos))))
+                    print(f"Predicing downtrend for {product}: Sell {-(market_quantity + abs(curr_pos))}x at {market_buy_orders[0][0]}")
                     
                 elif last_ema_short < last_ema_long and ema_short > ema_long: #Uptrend now 
                     market_quantity = min(abs(market_sell_orders[0][1]), qty_to_mm)
-                    orders.append(Order(product, market_sell_orders[0][0], market_quantity))
-                    print(f"Predicing uptrend for {product}: Buy {market_quantity}x at {market_sell_orders[0][0]}")
+                    orders.append(Order(product, market_sell_orders[0][0], -(market_quantity + abs(curr_pos))))
+                    print(f"Predicing uptrend for {product}: Buy {-(market_quantity + abs(curr_pos))}x at {market_sell_orders[0][0]}")
 
                 
                 # if len(traderData["degs"][product]) >= 4 and product in ["STRAWBERRIES", "ROSES", "CHOCOLATE", "GIFT_BASKET"]:
@@ -343,7 +343,7 @@ class Trader:
                     mm = False
                     
             if len(traderData["avg"][product]) >= avg_hist:
-                if mid_price < next_avg_price - sd_multiplier* sd and qty_to_mm != 0 and product not in ["STRAWBERRIES", "ROSES", "CHOCOLATE", "GIFT_BASKET", "ORCHIDS"] and norm:
+                if mid_price < next_avg_price - sd_multiplier* sd and qty_to_mm != 0 and product not in ["STRAWBERRIES", "ROSES", "CHOCOLATE", "GIFT_BASKET", "ORCHIDS", "COCONUT_COUPON", "COCONUT"] and norm:
                     """
                     Outlier - Only send bid quotes.
                     """                 
@@ -366,7 +366,7 @@ class Trader:
                             orders.append(Order(product, market_buy_orders[0][0] + 1, qty_to_mm- market_quantity))
                             mm = False
 
-                elif mid_price > next_avg_price + sd_multiplier* sd and qty_to_mm != 0 and product not in ["STRAWBERRIES", "ROSES", "CHOCOLATE", "GIFT_BASKET", "ORCHIDS"] and norm: 
+                elif mid_price > next_avg_price + sd_multiplier* sd and qty_to_mm != 0 and product not in ["STRAWBERRIES", "ROSES", "CHOCOLATE", "GIFT_BASKET", "ORCHIDS", "COCONUT", "COCONUT_COUPON"] and norm: 
                     """
                     Outlier - Only send ask quotes.
                     """
@@ -390,7 +390,7 @@ class Trader:
                         mm = False
 
 
-            if mm and product not in ["ORCHIDS"]:
+            if mm and product not in ["ORCHIDS", "STRAWBERRIES", "ROSES", "CHOCOLATE", "GIFT_BASKET", "ORCHIDS", "COCONUT", "COCONUT_COUPON"]:
                 """
                 Market make as normal.
                 """
@@ -444,7 +444,7 @@ class Trader:
         For each product, find the position limited set (hard coded).
         """
         #Set position limits 
-        product_limits = {'AMETHYSTS': 20, 'STARFRUIT': 20, 'ORCHIDS': 100, 'STRAWBERRIES': 350, 'CHOCOLATE': 250, "GIFT_BASKET": 60, "ROSES": 60} 
+        product_limits = {'AMETHYSTS': 20, 'STARFRUIT': 20, 'ORCHIDS': 100, 'STRAWBERRIES': 350, 'CHOCOLATE': 250, "GIFT_BASKET": 60, "ROSES": 60, "COCONUT": 300, "COCONUT_COUPON": 600} 
         
         if product in product_limits:
             return product_limits[product]
@@ -458,7 +458,7 @@ class Trader:
 
         Change "scale_factor_dict_ to include all items you want to change the scale factor of.
         """
-        scale_factor_dict = {'AMETHYSTS': 1.1, 'STARFRUIT': 1.1, 'ORCHIDS': 1.1, 'STRAWBERRIES': 1.1, 'CHOCOLATE': 1.1, 'GIFT_BASKET': 1.1, 'ROSES': 1.1}
+        scale_factor_dict = {'AMETHYSTS': 1.1, 'STARFRUIT': 1.1, 'ORCHIDS': 1.1, 'STRAWBERRIES': 1.1, 'CHOCOLATE': 1.1, 'GIFT_BASKET': 1.1, 'ROSES': 1.1, 'COCONUT': 1.1, "COCONUT_COUPON": 1.1}
         spread_list = traderData["spread_dict"][product]
         
         if product in scale_factor_dict:
