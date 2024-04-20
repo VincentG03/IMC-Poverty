@@ -136,12 +136,12 @@ class Trader:
             Calculate the EMA and Standard Deviation and determine the upper and lower bounds for this product and time period.
             """
             #Calculate the EMA for this time period
-            ema = self.find_ema(traderData, product, 20)
-            ema_7 = self.find_ema(traderData, product, 7)
-            ema_21 = self.find_ema(traderData, product, 21)
+            
+            ema_7 = self.find_ema(traderData, product, 20)
+            ema_21 = self.find_ema(traderData, product, 50)
             ema_hist_required = 21
             print(f"Mid price: {mid_price}")
-            print(f"Ema: {ema}")
+           
             
             #Find standard deviation (not used)
             #std_dev =self.find_standard_deviation(traderData, product)
@@ -306,8 +306,8 @@ class Trader:
                 #print(f"traderDATA: {traderData["degs"][product]}")
                 # if product not in ["STARFRUIT", "AMETHYSTS"]:
                 #     sd_multiplier = 3
-                last_ema_7 = self.find_last_ema(traderData, product, 7)
-                last_ema_21 = self.find_last_ema(traderData, product, 21)
+                last_ema_7 = self.find_last_ema(traderData, product, 20)
+                last_ema_21 = self.find_last_ema(traderData, product,50)
                 
                 if last_ema_7 > last_ema_21 and ema_7 < ema_21: #Down trend now 
                     market_quantity = min(abs(market_buy_orders[0][1]), qty_to_mm)
