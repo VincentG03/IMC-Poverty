@@ -302,7 +302,7 @@ class Trader:
                         print(f"We buy ORCHIDS: {market_sell_orders[0][1]} at price: {market_sell_orders[0][0]}")
 
             # Trade "STRAWBERRIES", "ROSES", "CHOCOLATE", "GIFT_BASKET" based on two ema 
-            if len(traderData["mid_price"][product]) >= ema_hist_required and product not in ["ORCHIDS"]:
+            if state.timestamp != 0 and len(traderData["mid_price"][product]) >= ema_hist_required and product not in ["ORCHIDS"]:
                 #print(f"traderDATA: {traderData["degs"][product]}")
                 # if product not in ["STARFRUIT", "AMETHYSTS"]:
                 #     sd_multiplier = 3
