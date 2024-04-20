@@ -137,9 +137,9 @@ class Trader:
             """
             #Calculate the EMA for this time period
             
-            ema_7 = self.find_ema(traderData, product, 20)
-            ema_21 = self.find_ema(traderData, product, 50)
-            ema_hist_required = 21
+            ema_short = self.find_ema(traderData, product, 20)
+            ema_long = self.find_ema(traderData, product, 50)
+            ema_hist_required = 50
             print(f"Mid price: {mid_price}")
            
             
@@ -306,15 +306,15 @@ class Trader:
                 #print(f"traderDATA: {traderData["degs"][product]}")
                 # if product not in ["STARFRUIT", "AMETHYSTS"]:
                 #     sd_multiplier = 3
-                last_ema_7 = self.find_last_ema(traderData, product, 20)
-                last_ema_21 = self.find_last_ema(traderData, product,50)
+                last_ema_short = self.find_last_ema(traderData, product, 20)
+                last_ema_long = self.find_last_ema(traderData, product,50)
                 
-                if last_ema_7 > last_ema_21 and ema_7 < ema_21: #Down trend now 
+                if last_ema_short > last_ema_long and ema_short < ema_long: #Down trend now 
                     market_quantity = min(abs(market_buy_orders[0][1]), qty_to_mm)
                     orders.append(Order(product, market_buy_orders[0][0], -market_quantity))
                     print(f"Predicing downtrend for {product}: Sell {market_quantity}x at {market_buy_orders[0][0]}")
                     
-                elif last_ema_7 < last_ema_21 and ema_7 > ema_21: #Uptrend now 
+                elif last_ema_short < last_ema_long and ema_short > ema_long: #Uptrend now 
                     market_quantity = min(abs(market_sell_orders[0][1]), qty_to_mm)
                     orders.append(Order(product, market_sell_orders[0][0], market_quantity))
                     print(f"Predicing uptrend for {product}: Buy {market_quantity}x at {market_sell_orders[0][0]}")
@@ -591,7 +591,7 @@ class Trader:
         
         Change "midprice_hist" to the number of datapoints you want to capture.
         """
-        midprice_hist = 40
+        midprice_hist = 50
         best_bid_price = market_buy_orders[0][0]
         best_ask_price = market_sell_orders[0][0]
         best_bid_vol = market_buy_orders[0][1]
