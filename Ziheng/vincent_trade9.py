@@ -242,11 +242,11 @@ class Trader:
                 bid_price = state.observations.conversionObservations[product].bidPrice
                 ask_price = state.observations.conversionObservations[product].askPrice
                 if humidity > 60 and humidity < 80 or sunlight > 2555: # optimal time for price to rise, we buy
-                    orders.append(Order(product, market_sell_orders[0][0], market_sell_orders[0][1]))
+                    orders.append(Order(product, market_sell_orders[0][0], -market_sell_orders[0][1]))
                     print(f"We buy ORCHIDS: {market_sell_orders[0][1]} at price: {market_sell_orders[0][0]}")
                 else:
                     orders.append(Order(product, market_buy_orders[0][0], -market_buy_orders[0][1]))
-                    print(f"We buy ORCHIDS: {-market_buy_orders[0][1]} at price: {market_buy_orders[0][0]}")
+                    print(f"We selling ORCHIDS: {-market_buy_orders[0][1]} at price: {market_buy_orders[0][0]}")
                     
                 if product in state.own_trades:
                     print(f"own_trades: {state.own_trades[product][-1]}")
@@ -260,7 +260,7 @@ class Trader:
                         orders.append(Order(product, market_buy_orders[0][0], -market_buy_orders[0][1]))
                         print(f"We sell ORCHIDS: {-market_buy_orders[0][1]} at price: {market_buy_orders[0][0]}")
                     if curr_pos < 0:
-                        orders.append(Order(product, market_sell_orders[0][0], market_sell_orders[0][1]))
+                        orders.append(Order(product, market_sell_orders[0][0], -market_sell_orders[0][1]))
                         print(f"We buy ORCHIDS: {market_sell_orders[0][1]} at price: {market_sell_orders[0][0]}")
 
                 if (humidity < 60 or humidity > 80) and sunlight < 2555 and curr_pos != 0: # just dump it if we think it's sus                      
@@ -269,7 +269,7 @@ class Trader:
                         orders.append(Order(product, market_buy_orders[0][0], -market_buy_orders[0][1]))
                         print(f"We sell ORCHIDS: {-market_buy_orders[0][1]} at price: {market_buy_orders[0][0]}")
                     if curr_pos < 0:
-                        orders.append(Order(product, market_sell_orders[0][0], market_sell_orders[0][1]))
+                        orders.append(Order(product, market_sell_orders[0][0], -market_sell_orders[0][1]))
                         print(f"We buy ORCHIDS: {market_sell_orders[0][1]} at price: {market_sell_orders[0][0]}")
 
             # (!!!) DOUBLE EMA - Everything except Orchids
