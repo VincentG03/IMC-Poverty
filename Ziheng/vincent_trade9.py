@@ -232,58 +232,67 @@ class Trader:
             ===================================================================================
             """
             # (!!!) SPECIAL METHOD - Orchids 
-            if product in ["ORCHIDS"]:
-                print(f"curr position ORCHIDS: {curr_pos}")
-                humidity = state.observations.conversionObservations[product].humidity
-                sunlight = state.observations.conversionObservations[product].sunlight
-                transport_fees = state.observations.conversionObservations[product].transportFees
-                export_tariff = state.observations.conversionObservations[product].exportTariff
-                import_tariff = state.observations.conversionObservations[product].importTariff
-                bid_price = state.observations.conversionObservations[product].bidPrice
-                ask_price = state.observations.conversionObservations[product].askPrice
-                if humidity > 60 and humidity < 80 or sunlight > 2555: # optimal time for price to rise, we buy
-                    orders.append(Order(product, market_sell_orders[0][0], -market_sell_orders[0][1]))
-                    print(f"We buy ORCHIDS: {market_sell_orders[0][1]} at price: {market_sell_orders[0][0]}")
-                else:
-                    orders.append(Order(product, market_buy_orders[0][0], -market_buy_orders[0][1]))
-                    print(f"We selling ORCHIDS: {-market_buy_orders[0][1]} at price: {market_buy_orders[0][0]}")
+            # if product in ["ORCHIDS"]:
+            #     print(f"curr position ORCHIDS: {curr_pos}")
+            #     humidity = state.observations.conversionObservations[product].humidity
+            #     sunlight = state.observations.conversionObservations[product].sunlight
+            #     transport_fees = state.observations.conversionObservations[product].transportFees
+            #     export_tariff = state.observations.conversionObservations[product].exportTariff
+            #     import_tariff = state.observations.conversionObservations[product].importTariff
+            #     bid_price = state.observations.conversionObservations[product].bidPrice
+            #     ask_price = state.observations.conversionObservations[product].askPrice
+            #     if humidity > 60 and humidity < 80 or sunlight > 2555: # optimal time for price to rise, we buy
+            #         orders.append(Order(product, market_sell_orders[0][0], -market_sell_orders[0][1]))
+            #         print(f"We buy ORCHIDS: {market_sell_orders[0][1]} at price: {-market_sell_orders[0][0]}")
+            #     else:
+            #         orders.append(Order(product, market_buy_orders[0][0], -market_buy_orders[0][1]))
+            #         print(f"We selling ORCHIDS: {-market_buy_orders[0][1]} at price: {-market_buy_orders[0][0]}")
                     
-                if product in state.own_trades:
-                    print(f"own_trades: {state.own_trades[product][-1]}")
-                    timestep = state.own_trades[product][-1].timestamp    #timestep of last trade
-                else:
-                    timestep = state.timestamp
+            #     if product in state.own_trades:
+            #         print(f"own_trades: {state.own_trades[product][-1]}")
+            #         timestep = state.own_trades[product][-1].timestamp    #timestep of last trade
+            #     else:
+            #         timestep = state.timestamp
 
-                if int(state.timestamp) - int(timestep) > 700: # try to close our pos if its been too long
-                    conversions = -curr_pos
-                    if curr_pos > 0:
-                        orders.append(Order(product, market_buy_orders[0][0], -market_buy_orders[0][1]))
-                        print(f"We sell ORCHIDS: {-market_buy_orders[0][1]} at price: {market_buy_orders[0][0]}")
-                    if curr_pos < 0:
-                        orders.append(Order(product, market_sell_orders[0][0], -market_sell_orders[0][1]))
-                        print(f"We buy ORCHIDS: {market_sell_orders[0][1]} at price: {market_sell_orders[0][0]}")
+            #     if int(state.timestamp) - int(timestep) > 700: # try to close our pos if its been too long
+            #         conversions = -curr_pos
+            #         if curr_pos > 0:
+            #             orders.append(Order(product, market_buy_orders[0][0], -market_buy_orders[0][1]))
+            #             print(f"We sell ORCHIDS: {-market_buy_orders[0][1]} at price: {-market_buy_orders[0][0]}")
+            #         if curr_pos < 0:
+            #             orders.append(Order(product, market_sell_orders[0][0], -market_sell_orders[0][1]))
+            #             print(f"We buy ORCHIDS: {market_sell_orders[0][1]} at price: {-market_sell_orders[0][0]}")
 
-                if (humidity < 60 or humidity > 80) and sunlight < 2555 and curr_pos != 0: # just dump it if we think it's sus                      
-                    conversions = -curr_pos
-                    if curr_pos > 0:
-                        orders.append(Order(product, market_buy_orders[0][0], -market_buy_orders[0][1]))
-                        print(f"We sell ORCHIDS: {-market_buy_orders[0][1]} at price: {market_buy_orders[0][0]}")
-                    if curr_pos < 0:
-                        orders.append(Order(product, market_sell_orders[0][0], -market_sell_orders[0][1]))
-                        print(f"We buy ORCHIDS: {market_sell_orders[0][1]} at price: {market_sell_orders[0][0]}")
+            #     if (humidity < 60 or humidity > 80) and sunlight < 2555 and curr_pos != 0: # just dump it if we think it's sus                      
+            #         conversions = -curr_pos
+            #         if curr_pos > 0:
+            #             orders.append(Order(product, market_buy_orders[0][0], -market_buy_orders[0][1]))
+            #             print(f"We sell ORCHIDS: {-market_buy_orders[0][1]} at price: {-market_buy_orders[0][0]}")
+            #         if curr_pos < 0:
+            #             orders.append(Order(product, market_sell_orders[0][0], -market_sell_orders[0][1]))
+            #             print(f"We buy ORCHIDS: {market_sell_orders[0][1]} at price: {-market_sell_orders[0][0]}")
 
             # (!!!) DOUBLE EMA - Everything except Orchids
-            if state.timestamp != 0 and len(traderData["midprice_dict"][product]) >= ema_hist_required and product in ["AMETHYST", "STARFRUIT", "ROSES", "GIFT_BASKET", "STRAWBERRIES", "COCONUT", "COCONUT_COUPON", "CHOCOLATE"]:
+            if state.timestamp != 0 and len(traderData["midprice_dict"][product]) >= ema_hist_required and product in ["ROSES", "GIFT_BASKET", "STRAWBERRIES", "COCONUT", "COCONUT_COUPON", "CHOCOLATE"]:
                 
                 #Set custom ema depending on product. Check discord for analysis 
                 # NOT IMPLEMENTED
                 
-                ema_short = self.find_ema(traderData, product, 10)
+                # ema_short = self.find_ema(traderData, product, 10)
                 ema_long = self.find_ema(traderData, product, 50)
                 
-                last_ema_short = self.find_last_ema(traderData, product, 10)
+                # last_ema_short = self.find_last_ema(traderData, product, 10)
                 last_ema_long = self.find_last_ema(traderData, product, 50)
 
+                # talor series - best func
+                x = np.array([i for i in range(len(traderData["midprice_dict"][product]))])
+                y = np.array(traderData["midprice_dict"][product])
+                gradient= np.polyfit(x, y, 5)
+                taylor_fun = lambda t, gradient: gradient[0]*t**5 + gradient[1]*t**4 + gradient[2]*t**3 + gradient[3]*t**2 + gradient[4]*t**1 + gradient[5]
+                
+                guess_y = taylor_fun(x, gradient)
+                ema_short = guess_y[-1]
+                last_ema_short = guess_y[-2]
                 # Making sure our current position matches with the actual position we want to be in
                 # EDGE CASE (shouldn't ever happen) - we try to update our position, but our ema's intersect again
                 # hence contradicting our orders
@@ -314,7 +323,7 @@ class Trader:
 
                 
             # (!!!) OUTLIER DETECTION: Amethyst and Starfruit 
-            if len(traderData["avg"][product]) >= avg_hist and qty_to_mm != 0 and product in ["AMETHYST", "STARFRUIT"]:
+            if len(traderData["avg"][product]) >= avg_hist and qty_to_mm != 0 and product in ["AMETHYSTS", "STARFRUIT"]:
                 if mid_price < next_avg_price - sd_multiplier* sd:
                     """
                     Outlier - Only send bid quotes.
@@ -357,7 +366,7 @@ class Trader:
                             orders.append(Order(product, market_buy_orders[0][0] - 1, -qty_to_mm + market_quantity))
 
             # (!!!) MARKET MAKING: Amethyst and Starfruit
-            elif qty_to_mm != 0 and product in ["AMETHYST", "STARFRUIT"]:
+            elif qty_to_mm != 0 and product in ["AMETHYSTS", "STARFRUIT"]:
                 """
                 Market make as normal.
                 """
