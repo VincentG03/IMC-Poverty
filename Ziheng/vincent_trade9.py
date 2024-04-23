@@ -341,9 +341,13 @@ class Trader:
                     # If there is a swing (change in position ie. from short to long) => need to update our position
                     traderData = self.handle_pos(traderData, product, "long")
 
-                
+            print(f"required is: {avg_hist}, current length traderdata is: {len(traderData["avg"][product])}")
+            print(traderData["avg"][product])
+            print(f"qty to market make is fucking: {qty_to_mm}")
+            print("At outlier detection")   
             # (!!!) OUTLIER DETECTION: Amethyst and Starfruit 
             if len(traderData["avg"][product]) >= avg_hist and qty_to_mm != 0 and product in ["AMETHYSTS", "STARFRUIT"]:
+                print("inside outlier detection")
                 if mid_price < next_avg_price - sd_multiplier* sd:
                     """
                     Outlier - Only send bid quotes.
@@ -395,20 +399,22 @@ class Trader:
                         print(f"Trading on outlier. Quoting {product}: ask:{market_buy_orders[0][0]}, qty:{-market_quantity}")
                         print(f"Trading on outlier. Quoting {product}: ask:{market_buy_orders[0][0]+1}, qty:{-qty_to_mm + market_quantity}")
 
+            print("At market making")
             # (!!!) MARKET MAKING: Amethyst and Starfruit
-            if qty_to_mm != 0 and product in ["AMETHYSTS", "STARFRUIT", "GIFT_BASKET"] and mm:
+            if product in ["AMETHYSTS", "STARFRUIT", "GIFT_BASKET"] and mm:
+                print("inside market making")
                 """
                 Market make as normal.
                 """
                 #If calculated prices' spread is large enough, market make (with best prices).
-                if my_bid < mid_price and my_ask > mid_price and current_spread >= required_spread: 
+                if my_bid < mid_price and my_ask > mid_price and current_spread >= required_spread and qty_to_mm != 0: 
                     orders.append(Order(product, my_bid, qty_to_mm))
                     orders.append(Order(product, my_ask, -qty_to_mm))
                 
                     print(f"(MM) Quoting {product}: bid {qty_to_mm}x {my_bid}, ask {qty_to_mm}x {my_ask}")
                 
                 #If calculated prices' spread is not large enough, recalculate bids and asks to meet the required spread (but send worse prices - less likely to be filled)
-                else:
+                elif qty_to_mm != 0:
                     new_my_bid, new_my_ask = self.find_required_bid_ask(market_buy_orders, market_sell_orders, my_bid, my_ask, required_spread)
 
                     if my_bid < mid_price and my_ask > mid_price:
