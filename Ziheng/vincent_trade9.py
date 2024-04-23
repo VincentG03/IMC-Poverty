@@ -231,6 +231,7 @@ class Trader:
             - COCONUT_COUPON: double ema     
             ===================================================================================
             """
+            mm = True
             # (!!!) SPECIAL METHOD - Orchids 
             # if product in ["ORCHIDS"]:
             #     print(f"curr position ORCHIDS: {curr_pos}")
@@ -273,15 +274,15 @@ class Trader:
             #             print(f"We buy ORCHIDS: {market_sell_orders[0][1]} at price: {-market_sell_orders[0][0]}")
 
             # (!!!) DOUBLE EMA - Everything except Orchids
-            if state.timestamp != 0 and len(traderData["midprice_dict"][product]) >= ema_hist_required and product in ["ROSES", "GIFT_BASKET", "STRAWBERRIES", "COCONUT", "COCONUT_COUPON", "CHOCOLATE"]:
+            if state.timestamp != 0 and len(traderData["midprice_dict"][product]) >= ema_hist_required and product in ["ROSES", "GIFT_BASKET"]:
                 
                 #Set custom ema depending on product. Check discord for analysis 
                 # NOT IMPLEMENTED
                 
-                # ema_short = self.find_ema(traderData, product, 10)
+                # ema_short = self.find_ema(traderData, product, 20)
                 ema_long = self.find_ema(traderData, product, 50)
                 
-                # last_ema_short = self.find_last_ema(traderData, product, 10)
+                # last_ema_short = self.find_last_ema(traderData, product, 20)
                 last_ema_long = self.find_last_ema(traderData, product, 50)
 
                 # talor series - best func
@@ -293,20 +294,39 @@ class Trader:
                 guess_y = taylor_fun(x, gradient)
                 ema_short = guess_y[-1]
                 last_ema_short = guess_y[-2]
+
                 # Making sure our current position matches with the actual position we want to be in
                 # EDGE CASE (shouldn't ever happen) - we try to update our position, but our ema's intersect again
                 # hence contradicting our orders
                 if product in traderData["pos"]:
                     pos_we_want_to_be_in = traderData["pos"][product]
+                    # past_5_degrees = traderData["degs"][product]
                     print(f"pos: {pos_we_want_to_be_in}")
                     if curr_pos > 0 and pos_we_want_to_be_in == "short":
                         market_quantity = min(abs(market_buy_orders[0][1]), qty_to_mm)
                         orders.append(Order(product, market_buy_orders[0][0], -(market_quantity)))
 
-                    if curr_pos < 0 and pos_we_want_to_be_in == "long":
+                    elif curr_pos < 0 and pos_we_want_to_be_in == "long":
                         market_quantity = min(abs(market_sell_orders[0][1]), qty_to_mm)
-                        orders.append(Order(product, market_sell_orders[0][0], market_quantity))                                  
+                        orders.append(Order(product, market_sell_orders[0][0], market_quantity))    
+
+                    # basically if theres a very sharp uptrend or downtrend, we will go with the trend
+                    # this is the lin reg gradient converted to degrees
                     
+                    # elif len(traderData["degs"][product]) >= 4:
+                    #     if degree > 30 and qty_to_mm != 0:    # we expect price to rise - this number is subject to change
+                    #         market_quantity = min(abs(market_sell_orders[0][1]), qty_to_mm)
+                    #         orders.append(Order(product, market_sell_orders[0][0], market_quantity))
+                    #         # print(f"OUTLIER-BOUGHT: Market_price: {market_sell_orders[0][0]}, QTY: {market_quantity}")
+                    #         result[product] = orders 
+                    #         continue
+                    #     if degree < -30 and qty_to_mm != 0:    # we expect price to drop - this number is subject to change
+                    #         market_quantity = min(abs(market_buy_orders[0][1]), qty_to_mm)
+                    #         orders.append(Order(product, market_buy_orders[0][0], -market_quantity))
+                    #         # print(f"OUTLIER-SELL: Market_price: {market_buy_orders[0][0]}, QTY: {-market_quantity}")
+                    #         result[product] = orders 
+                    #         continue
+
                 if last_ema_short > last_ema_long and ema_short < ema_long: #Down trend now 
                     market_quantity = min(abs(market_buy_orders[0][1]), qty_to_mm)
                     orders.append(Order(product, market_buy_orders[0][0], -(market_quantity + abs(curr_pos))))
@@ -340,10 +360,12 @@ class Trader:
                         
                         if myavg_pos - market_sell_orders[0][0] > 3 * market_close_multiplier:    # 4 is our benchmark of a profit we want
                             orders.append(Order(product, market_sell_orders[0][0], -curr_pos))
+                            mm = False
                             print(f"Closing out position when short. Quoting {product}: bid:{market_sell_orders[0][0]}, qty:{-curr_pos}")
-                        if market_sell_orders[0][0] < next_avg_price:
-                            orders.append(Order(product, market_sell_orders[0][0], market_quantity))
-                            orders.append(Order(product, market_buy_orders[0][0] + 1, qty_to_mm- market_quantity))
+                    if market_sell_orders[0][0] < next_avg_price:
+                        orders.append(Order(product, market_sell_orders[0][0], market_quantity))
+                        orders.append(Order(product, market_buy_orders[0][0] + 1, qty_to_mm- market_quantity))
+                        mm = False
 
                 elif mid_price > next_avg_price + sd_multiplier* sd: 
                     """
@@ -360,13 +382,15 @@ class Trader:
                         myavg_pos = traderData["avg_pos"][product]["avg_val"]   # this should not generate an error since we this will only run however many iterations our avg_hist is
                         if market_buy_orders[0][0] - myavg_pos > 3 * market_close_multiplier:    # 4 is our benchmark of a profit we want
                             orders.append(Order(product, market_buy_orders[0][0], -curr_pos))
+                            mm = False
 
-                        if market_buy_orders[0][0] > next_avg_price:        
-                            orders.append(Order(product, market_buy_orders[0][0], -market_quantity))
-                            orders.append(Order(product, market_buy_orders[0][0] - 1, -qty_to_mm + market_quantity))
+                    if market_buy_orders[0][0] > next_avg_price:        
+                        orders.append(Order(product, market_buy_orders[0][0], -market_quantity))
+                        orders.append(Order(product, market_buy_orders[0][0] - 1, -qty_to_mm + market_quantity))
+                        mm = False
 
             # (!!!) MARKET MAKING: Amethyst and Starfruit
-            elif qty_to_mm != 0 and product in ["AMETHYSTS", "STARFRUIT"]:
+            if qty_to_mm != 0 and product in ["AMETHYSTS", "STARFRUIT", "GIFT_BASKET"] and mm:
                 """
                 Market make as normal.
                 """
