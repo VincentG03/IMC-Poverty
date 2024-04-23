@@ -362,10 +362,13 @@ class Trader:
                             orders.append(Order(product, market_sell_orders[0][0], -curr_pos))
                             mm = False
                             print(f"Closing out position when short. Quoting {product}: bid:{market_sell_orders[0][0]}, qty:{-curr_pos}")
+                            
                     if market_sell_orders[0][0] < next_avg_price:
                         orders.append(Order(product, market_sell_orders[0][0], market_quantity))
                         orders.append(Order(product, market_buy_orders[0][0] + 1, qty_to_mm- market_quantity))
                         mm = False
+                        print(f"Trading on outlier. Quoting {product}: bid:{market_sell_orders[0][0]}, qty:{market_quantity}")
+                        print(f"Trading on outlier. Quoting {product}: bid:{market_sell_orders[0][0]+1}, qty:{qty_to_mm- market_quantity}")
 
                 elif mid_price > next_avg_price + sd_multiplier* sd: 
                     """
@@ -383,11 +386,14 @@ class Trader:
                         if market_buy_orders[0][0] - myavg_pos > 3 * market_close_multiplier:    # 4 is our benchmark of a profit we want
                             orders.append(Order(product, market_buy_orders[0][0], -curr_pos))
                             mm = False
+                            print(f"Closing out position when long. Quoting {product}: ask:{market_buy_orders[0][0]}, qty:{-curr_pos}")
 
                     if market_buy_orders[0][0] > next_avg_price:        
                         orders.append(Order(product, market_buy_orders[0][0], -market_quantity))
                         orders.append(Order(product, market_buy_orders[0][0] - 1, -qty_to_mm + market_quantity))
                         mm = False
+                        print(f"Trading on outlier. Quoting {product}: ask:{market_buy_orders[0][0]}, qty:{-market_quantity}")
+                        print(f"Trading on outlier. Quoting {product}: ask:{market_buy_orders[0][0]+1}, qty:{-qty_to_mm + market_quantity}")
 
             # (!!!) MARKET MAKING: Amethyst and Starfruit
             if qty_to_mm != 0 and product in ["AMETHYSTS", "STARFRUIT", "GIFT_BASKET"] and mm:
